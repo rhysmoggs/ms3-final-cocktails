@@ -81,6 +81,14 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+@app.route("/logout")
+def logout():
+    # remove user from session cookie
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
+
+
 @app.route("/categories")
 def categories():
     categories = list(Category.query.order_by(Category.category_name).all())
