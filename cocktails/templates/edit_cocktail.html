@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="light-blue-text text-darken-4 center-align">Edit Cocktail</h3>
+
+<div class="row card-panel grey lighten-5">
+    <form class="col s12" method="POST" action="{{ url_for('edit_cocktail', cocktail_id=cocktail._id) }}">
+        <!-- cocktail name -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-glass-martini-alt prefix light-blue-text text-darken-4"></i>
+                <input id="cocktail_name" name="cocktail_name" minlength="2" maxlength="25"
+                    value="{{ cocktail.cocktail_name }}" type="text" class="validate" required>
+                <label for="cocktail_name">Cocktail Name</label>
+            </div>
+        </div>
+        <!-- cocktail category -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                <select id="category_id" name="category_id" class="validate" required>
+                    <option value="" disabled>Choose Category</option>
+                    {% for category in categories %}
+                        {% if category.id == cocktail.category_id | int %}
+                            <option value="{{ category.id }}" selected>{{ category.category_name }}</option>
+                        {% else %}
+                            <option value="{{ category.id }}">{{ category.category_name }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+                <label for="category_name">Cocktail Category</label>
+            </div>
+        </div>
+        <!-- cocktail image -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-glass-martini-alt prefix light-blue-text text-darken-4"></i>
+                <input id="cocktail_img" name="cocktail_img" minlength="2" maxlength="200"
+                    value="{{ cocktail.cocktail_img }}" type="text" class="validate" required>
+                <label for="cocktail_img">Cocktail Image</label>
+            </div>
+        </div>
+        <!-- cocktail description -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <textarea id="cocktail_description" name="cocktail_description" minlength="5" maxlength="150"
+                    class="materialize-textarea validate" required>
+                    {{- cocktail.cocktail_description -}}
+                    </textarea>
+                <label for="cocktail_description">Cocktail Description</label>
+            </div>
+        </div>
+        <!-- main ingredient -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-glass-martini-alt prefix light-blue-text text-darken-4"></i>
+                <input id="main_ingredient" name="main_ingredient" minlength="2" maxlength="25"
+                    value="{{ cocktail.main_ingredient }}" type="text" class="validate" required>
+                <label for="main_ingredient">Main Ingredient</label>
+            </div>
+        </div>
+        <!-- method -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <textarea id="method" name="method" minlength="5" maxlength="150" class="materialize-textarea validate"
+                    required>
+                    {{- cocktail.method -}}
+                    </textarea>
+                <label for="method">Method</label>
+            </div>
+        </div>
+        <!-- other ingredient -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-glass-martini-alt prefix light-blue-text text-darken-4"></i>
+                <input id="other_ingredient" name="other_ingredient" minlength="2" maxlength="25"
+                    value="{{ cocktail.other_ingredient }}" type="text" class="validate" required>
+                <label for="other_ingredient">Other Ingredient</label>
+            </div>
+        </div>
+        <!-- preperation time -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-glass-martini-alt prefix light-blue-text text-darken-4"></i>
+                <input id="prep_time" name="prep_time" minlength="1" maxlength="25" value="{{ cocktail.prep_time }}"
+                    type="text" class="validate" required>
+                <label for="prep_time">Preperation Time</label>
+            </div>
+        </div>
+        <!-- servings -->
+        <!-- change/update to similar to drop down for categories section to edit drop down/selected lala? -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-glass-martini-alt prefix light-blue-text text-darken-4"></i>
+                <input id="servings" name="servings" minlength="1" maxlength="25" type="text" class="validate" required>
+                <label for="servings">Servings</label>
+            </div>
+        </div>
+        <!-- submit button -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <!-- cancel button -->
+                <a href="{{ url_for('get_cocktails') }}" class="btn-large red text-shadow">
+                    Cancel <i class="fas fa-times-circle right"></i>
+                </a>
+                <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                    Edit Cocktail <i class="fas fa-edit right"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
