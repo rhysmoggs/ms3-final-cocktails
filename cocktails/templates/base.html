@@ -22,20 +22,31 @@
         <nav class="brown darken-1">
             <div class="nav-wrapper">
                 <a href="{{ url_for('get_cocktails') }}" class="brand-logo">MS3 Final Cocktails</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_cocktails') }}">Home</a></li>
+                    <li><a href="#">Profile</a></li>
                     <li><a href="{{ url_for('add_cocktail') }}">Add Cocktail</a></li>
-                    <li><a href="{{ url_for('categories') }}">Categories</a></li>
+                    <li><a href="{{ url_for('categories') }}">Manage Categories</a></li>
+                    <li><a href="#">Log Out</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">Register</a></li>
                 </ul>
             </div>
         </nav>
 
         <!-- mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
+            <li>
+                <h4 class="center-align light-blue-text text-darken 4">MS3 Cocktails</h4>
+            </li>
             <li><a href="{{ url_for('get_cocktails') }}">Home</a></li>
+            <li><a href="#">Profile</a></li>
             <li><a href="{{ url_for('add_cocktail') }}">Add Cocktail</a></li>
-            <li><a href="{{ url_for('categories') }}">Categories</a></li>
+            <li><a href="{{ url_for('categories') }}">Manage Categories</a></li>
+            <li><a href="#">Log Out</a></li>
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Register</a></li>
         </ul>
     </header>
 
