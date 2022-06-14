@@ -11,17 +11,25 @@
     </div>
 </div>
 
-{% for recipe in recipes %}
-{{ recipe.cocktail_name }}<br>
-{{ recipe.category_name }}<br>
-{{ recipe.cocktail_img }}<br>
-{{ recipe.cocktail_description }}<br>
-{{ recipe.created_by }}<br>
-{{ recipe.main_ingredient }}<br>
-{{ recipe.method }}<br>
-{{ recipe.other_ingredient }}<br>
-{{ recipe.prep_time }}<br>
-{{ recipe.servings }}<br>
-{% endfor %}
+<ul class="collapsible popout">
+    {% for cocktail in cocktails %}
+    <li>
+        <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+            <i class="fas fa-glass-martini-alt"></i>
+            <strong>{{ cocktail.cocktail_name }}</strong> by: {{ cocktail.created_by }}
+        </div>
+        <div class="collapsible-body">
+            <strong>Category: {{ cocktail.category_name }}</strong>
+            <p>{{ cocktail.cocktail_description }}</p>
+            <p>{{ cocktail.cocktail_img }}</p>
+            <p>Main Ingredient: {{ cocktail.main_ingredient }}</p>
+            <p>Method: {{ cocktail.method }}</p>
+            <p>Other Ingredients: {{ cocktail.other_ingredient }}</p>
+            <p>Prep: {{ cocktail.prep_time }}</p>
+            <p>Servings: {{ cocktail.servings }}</p>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
 
 {% endblock %}
