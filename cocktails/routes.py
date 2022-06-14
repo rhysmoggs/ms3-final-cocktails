@@ -93,3 +93,13 @@ def edit_cocktail(cocktail_id):
 
     categories = list(Category.query.order_by(Category.category_name).all())
     return render_template("edit_cocktail.html", cocktail=cocktail, categories=categories)
+
+
+@app.route("/delete_cocktail/<cocktail_id>")
+def delete_cocktail(cocktail_id):
+
+    cocktail = mongo.db.cocktails.find_one({"_id": ObjectId(cocktail_id)})
+
+    mongo.db.cocktails.delete_one({"_id": ObjectId(cocktail_id)})
+    flash("Cocktail Successfully Deleted")
+    return redirect(url_for("get_cocktails"))
