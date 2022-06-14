@@ -45,3 +45,26 @@ def delete_category(category_id):
     db.session.delete(category)
     db.session.commit()
     return redirect(url_for("categories"))
+
+
+@app.route("/add_cocktail", methods=["GET", "POST"])
+def add_cocktail():
+    if request.method == "POST":
+        cocktail = {
+            "category_id": request.form.get("category_id"),
+            "cocktail_name": request.form.get("cocktail_name"),
+            "cocktail_img": request.form.get("cocktail_img"),
+            "cocktail_description": request.form.get("cocktail_description"),
+            "main_ingredient": request.form.get("main_ingredient"),
+            # "created_by": session["user"],
+            "method": request.form.get("method"),
+            "other_ingredient": request.form.getlist("other_ingredient"),
+            "prep_time": request.form.get("prep_time"),
+            "servings": request.form.get("servings")
+        }
+        mongo.db.cocktails.insert_one(cocktail)
+        flash("Cocktail Successfully Added")
+        return redirect(url_for("get_cocktails"))
+
+    categories = list(Category.query.order_by(Category.category_name).all())
+    return render_template("add_cocktail.html", categories=categories)
