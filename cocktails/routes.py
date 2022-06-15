@@ -14,6 +14,13 @@ def get_cocktails():
     return render_template("cocktails.html", cocktails=cocktails)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    cocktails = list(mongo.db.cocktails.find({"$text": {"$search": query}}))
+    return render_template("cocktails.html", cocktails=cocktails)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
