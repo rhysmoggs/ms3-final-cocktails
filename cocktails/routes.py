@@ -13,6 +13,7 @@ def get_cocktails():
     cocktails = list(mongo.db.cocktails.find())
     return render_template("cocktails.html", cocktails=cocktails)
 
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -89,42 +90,68 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/categories")
-def categories():
+@app.route("/get_categories")
+def get_categories():
+
+    if "user" not in session or session["user"] != "admin":
+        flash("You must be admin to manage categories!")
+        return redirect(url_for("get_cocktails"))
+
     categories = list(Category.query.order_by(Category.category_name).all())
     return render_template("categories.html", categories=categories)
 
 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+
+    if "user" not in session or session["user"] != "admin":
+        flash("You must be admin to manage categories!")
+        return redirect(url_for("get_cocktails"))
+
     if request.method == "POST":
         category = Category(category_name=request.form.get("category_name"))
         db.session.add(category)
         db.session.commit()
-        return redirect(url_for("categories"))
+        flash("New Category Added")
+        return redirect(url_for("get_categories"))
     return render_template("add_category.html")
 
 
 @app.route("/edit_category/<int:category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    if "user" not in session or session["user"] != "admin":
+        flash("You must be admin to manage categories!")
+        return redirect(url_for("get_cocktails"))
+
     category = Category.query.get_or_404(category_id)
     if request.method == "POST":
         category.category_name = request.form.get("category_name")
         db.session.commit()
-        return redirect(url_for("categories"))
+        flash("Category Updated")
+        return redirect(url_for("get_categories"))
     return render_template("edit_category.html", category=category)
 
 
 @app.route("/delete_category/<int:category_id>")
 def delete_category(category_id):
+    if session["user"] != "admin":
+        flash("You must be admin to manage categories!")
+        return redirect(url_for("get_cocktails"))
+
     category = Category.query.get_or_404(category_id)
     db.session.delete(category)
     db.session.commit()
-    return redirect(url_for("categories"))
+    mongo.db.cocktails.delete_many({"category_id": str(category_id)})
+    flash("Category Deleted")
+    return redirect(url_for("get_categories"))
 
 
 @app.route("/add_cocktail", methods=["GET", "POST"])
 def add_cocktail():
+    if "user" not in session:
+        flash("You need to be logged in to add a cocktail")
+        return redirect(url_for("get_cocktails"))
+
     if request.method == "POST":
         cocktail = {
             "category_id": request.form.get("category_id"),
@@ -132,7 +159,7 @@ def add_cocktail():
             "cocktail_img": request.form.get("cocktail_img"),
             "cocktail_description": request.form.get("cocktail_description"),
             "main_ingredient": request.form.get("main_ingredient"),
-            # "created_by": session["user"],
+            "created_by": session["user"],
             "method": request.form.get("method"),
             "other_ingredient": request.form.getlist("other_ingredient"),
             "prep_time": request.form.get("prep_time"),
@@ -151,6 +178,10 @@ def edit_cocktail(cocktail_id):
 
     cocktail = mongo.db.cocktails.find_one({"_id": ObjectId(cocktail_id)})
 
+    if "user" not in session or session["user"] != cocktail["created_by"]:
+        flash("You can only edit your own cocktails!")
+        return redirect(url_for("get_cocktails"))
+
     if request.method == "POST":
         submit = {
             "category_id": request.form.get("category_id"),
@@ -158,7 +189,7 @@ def edit_cocktail(cocktail_id):
             "cocktail_img": request.form.get("cocktail_img"),
             "cocktail_description": request.form.get("cocktail_description"),
             "main_ingredient": request.form.get("main_ingredient"),
-            # "created_by": session["user"],
+            "created_by": session["user"],
             "method": request.form.get("method"),
             "other_ingredient": request.form.getlist("other_ingredient"),
             "prep_time": request.form.get("prep_time"),
@@ -175,6 +206,10 @@ def edit_cocktail(cocktail_id):
 def delete_cocktail(cocktail_id):
 
     cocktail = mongo.db.cocktails.find_one({"_id": ObjectId(cocktail_id)})
+
+    if "user" not in session or session["user"] != cocktail["created_by"]:
+        flash("You can only delete your own cocktails!")
+        return redirect(url_for("get_cocktails"))
 
     mongo.db.cocktails.delete_one({"_id": ObjectId(cocktail_id)})
     flash("Cocktail Successfully Deleted")
