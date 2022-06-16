@@ -1,108 +1,329 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome rhysmoggs,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+technologies used:
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+- python
+- JS
+- CSS3
+- HTML5
 
-## Gitpod Reminders
+- PostgreSQL - 
+- MongoDB - 
+- PsycoPG2 - database adapter. library for connecting Python to PostgreSQL.
+- SQLAlchemy - ORM lirbary
+- PyMongo - 
+- Flask - 
+- Flash - 
+- dnspython - 
+- Jinja2? - template
+- jquery
+- materialize(sp?) - 
+- fontawesome - icons
+- google fonts
+- heroku - 
+- git, gitpod, github
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- image editing websites/software here
+- balsamiq
+- era database/ design
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Data Schema:
 
-A blue button should appear to click: _Make Public_,
+link both together through...
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- Relational Database:
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+    PostgreSQL - open-source, Object-Relational Databse Management System (ORDBMS). fre use, licencing? good for future projects or launching this one if needs be.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+    primary key - A unique ID that identifies individual records regardless of any changes that occur
 
-------
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- Non-Relational Database:
+    mongoDB - 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
 ------
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+deployment of website:
 
-**How will this affect me?**
+1. If you wish to - use Code Institute's template from here:  / copy this projects link/url?
+2. install two python packages. Flask and SQLAlchemy to work with Postgres databases. psycopg2 is necessary to work with Postgres database. In command line type: `pip3 install Flask-SQLAlchemy psycopg2`
+3. create "env.py" file
+4. Create a ".gitignore" file if you choose not to use Code Institute's template. Add `env.py` and the soon to be generated `__pyache__/` to it. All hidden and sensitive files/folders to be added here.
+5. in "env.py", type following:
+    ```
+    import os
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+    os.environ.setdefault("IP", "0.0.0.0")
+    os.environ.setdefault("PORT", "5000")
+    os.environ.setdefault("SECRET_KEY", "any_secret_key")
+    os.environ.setdefault("DEBUG", "True")
+    os.environ.setdefault("DEVELOPMENT", "True")
+    os.environ.setdefault("DB_URL", "postgresql:///<DATABASE>")
+    ```
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+    The `any_secret_key` can be called whatever you wish: `os.environ.setdefault("SECRET_KEY", "any_secret_key")`or generate a random and secure password here: https://randomkeygen.com/
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+    make sure to change `os.environ.setdefault("DEBUG", "True")` to "False" before deploying/launching project.
 
-**So….?**
+    `<DATABASE>` points to the databse to be created, in this case "my_cocktails".
+6. create a folder (in this case, folder is named "cocktails") in the root of your project.
+7. within that newly created folder, create a file called `__init__.py`
+8. write the following in the new file:
+    ```
+    import os
+    from flask import Flask
+    from flask_sqlalchemy import SQLAlchemy
+    if os.path.exists("env.py"):
+        import env  # noqa
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
+    app = Flask(__name__)
+    app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
+    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+    db = SQLAlchemy(app)
 
+    from cocktails import routes  # noqa
+    ```
+9. create a "routes.py" file within the "cocktails" folder
+10. within that "routes.py" file, write the following:
+    ```
+    from flask import render_template
+    from cocktails import app, db
+
+
+    @app.route("/")
+    def home():
+        return render_template("base.html")
+    ```
+11. in root of project, create "run.py" file
+12. within "run.py", write the following:
+    ```
+    import os
+    from cocktails import app
+
+
+    if __name__ == "__main__":
+        app.run(
+            host=os.environ.get("IP"),
+            port=int(os.environ.get("PORT")),
+            debug=os.environ.get("DEBUG")
+        )
+    ```
+13. within "cocktails" folder, create a new "templates" folder. This is where Flask will search for any html templates to be rendered.
+14. create a new file "base.html" within the "templates" folder.
+15. within the "base.html" file, write whatever you wish to be presented on your website.
+16. in the terminal, write `python3 run.py` to launch the project.
+17. add, commit and push.
+
+
+Setting up Databse - postgreSQL database:
+
+make sure you have postgreSQL installed locally if you are not using CI's template?
+set up the databse schema as follows:
+1. define our models by creating a "models.py" file within the "cocktails" folders
+2. write the following in the "models.py" file and create the tables:
+    ```
+    from cocktails import db
+
+
+    class Category(db.Model):
+        # schema for the Category model
+        id = db.Column(db.Integer, primary_key=True)
+        category_name = db.Column(db.String(25), unique=True, nullable=False)
+
+        def __repr__(self):
+            # __repr__ to represent itself in the form of a string
+            return self.category_name
+
+
+    class Users(db.Model):
+        # schema for the Users model
+        id = db.Column(db.Integer, primary_key=True)
+        user_name = db.Column(db.String(20), unique=True, nullable=False)
+        password = db.Column(db.String(260), nullable=False)
+
+        def __repr__(self):
+            # __repr__ to represent itself in the form of a string
+            return self.user_name
+    ```
+3. in "routes.py", import these newly created models:
+    ```
+    from cocktails.models import Category, Users
+    ```
+4. log in to postgreSQL terminal by typing psql in terminal.
+5. type `CREATE DATABASE cocktails;`
+6. then `\c cocktails;` to connect to the newly created database.
+7. finally `\q` to exit.
+8. use python to generate and migrate the models into the database. if any changes are made to this database, you must repeat the same steps to refresh and update your database. in the terminal, type `python3`.
+9. type `from cocktails import db`
+10. type `db.create_all()`
+11. if you wish to check that the tables exist, type `psql -d cocktails` followed by `\dt` then `\q` to quit, otherwise just exit via `exit()`.
+12. commit then push
+
+
+Setting up Database - MongoDB database:
+
+Make sure to that you have a MongoDB account.
+
+1. Create a cluster (https://www.mongodb.com/basics/clusters/mongodb-cluster-setup). This project uses a shared cluster. Choose the closest region to you which is free to use. Free cluster tier and then name your `<CLUSTER>` ("myFirstCluster", in this project).
+2. In Database Access, add a new database user (https://www.mongodb.com/docs/atlas/security-add-mongodb-users/#add-database-users).
+3. In Network Access, click add IP address and choose 'Allow Access From Anywhere'. Input the IP of your hosts here to add further security.
+4. In the newly created `<CLUSTER>`, click on Create a Database and under Database Name, enter a `<DATABASE>` name, ("my_cocktails", in this project)
+5. Under collection name, enter `<COLLECTION>` ("cocktails", in this project).
+6. Within the `<DATABASE>` ("my_cocktails"), click on Create Collection button and enter any other collections you wish to store.
+7. Within each collection, click on Insert Document, and enter the key-value pairs you wish to store in your document. For this project, the following key names and value data types were stored:
+    ```
+    _id: <ObjectId>
+    cocktail_name: <string>
+    category_name: <string>
+    cocktail_img: <string>
+    cocktail_description: <string>
+    created_by: <string>
+    main_ingredient: <string>
+    method: <string>
+    other_ingredients: <array>
+    prep_time: <Int32> with a default value of "0"
+    servings: <Int32> with a default value of "0"
+    ```
+8. In the terminal, install dnspython `pip3 install dnspython`
+9. Install pymongo too `pip3 install flask-pymongo`
+10. on the mongo website, in your collection, connect your cluster. Choose 'Connect your application' and choose Python and your version (3.6 or later, in this project).
+11. Copy the connection string.
+12. In the "env.py" file, add the following environment variables to the already present ones:
+    ```
+    os.environ.setdefault("MONGO_URI", "mongodb+srv://<USERNAME>:<PASSWORD>@<CLUSTER>.1megs.mongodb.net/<DATABASE>?retryWrites=true&w=majority")
+    os.environ.setdefault("MONGO_DBNAME", "<DATABASE>")
+    ```
+    Make sure to insert your own information for `<USERNAME>`, `<PASSWORD>`, `<CLUSTER>` and `<DATABASE>`.
+13. In "__init__.py" add  `from flask_pymongo import PyMongo`.
+14. Add and update:
+    ```
+    app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+    app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+
+    mongo = PyMongo(app)
+    ```
+15. In "routes.py", update entire file to be:
+    ```
+    from flask import (
+        flash, render_template,
+        request, redirect, session, url_for)
+    from bson.objectid import ObjectId
+    from cocktails import app, db, mongo
+    from cocktails.models import Category, Users
+
+
+    @app.route("/")
+    def home():
+        return render_template("cocktails.html")
+    ```
+16. In terminal, write `touch cocktails/templates/cocktails.html`
+17. In "cocktails.html" add your website content here (use templates and link "base.html" to all other pages etc)
+18. In terminal, "python3 run.py" to view your work.
+19. add, commit, push.
+
+
+Linking the databases:
+
+1. Using category_id
+2. 
+
+
+Deploy the application to Heroku:
+
+1. Create a "requirements.txt" by typing `pip3 freeze --local > requirements.txt` in the terminal. This lists what is necessary to run the project.
+2. Create a Procfile by typing `echo web: python run.py > Procfile` in the terminal. In the newly created "Procfile", check to see if a blank line appears under the written code. If there is, delete and save that change. It can cause issues with Heroku.
+3. Commit and push.
+4. On the Heroku website. Create a new app and name it. Choose the regeion closest to you.
+5. Create a new database on Heroku. Resources > Add-ons, search for heroku postgres and choose the 'Hobby Dev - Free' option, or whichever suits your needs.
+6. Once confirmed, go to Settings > Config Vars > Reveal Config Vars, and input the following:
+    ```
+    IP = 0.0.0.0
+    PORT = 5000
+    SECRET_KEY = your_secret_key_here
+    MONGO_URI = mongodb+srv://<USERNAME>:<PASSWORD>@<CLUSTER>.1megs.mongodb.net/<DATABASE>?retryWrites=true&w=majority
+    MONGO_DBNAME = your_database_name_here
+    ```
+    You can add:
+    ```
+    DEBUG = True
+    ```
+    temporarily but make sure to change to `False` when finalizing the app. Keep to `True` for error fixing during development.
+7. In your Config Vars in Heroku, if DATABASE_URL starts with `postgres` instead of `postgresql`, update your `__init__.py` file to:
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+import os
+import re
+from flask import Flask
+from flask_pymongo import PyMongo
+from flask_sqlalchemy import SQLAlchemy
+if os.path.exists("env.py"):
+    import env  # noqa
+
+
+app = Flask(__name__)
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+
+uri = os.environ.get("DATABASE_URL")
+if uri.startswith("postgres://"):
+    uri = uri.replace("postgres://", "postgresql://", 1)
+app.config["SQLALCHEMY_DATABASE_URI"] = uri  # heroku
+
+db = SQLAlchemy(app)
+mongo = PyMongo(app)
+
+from cocktails import routes  # noqa
 ```
+This wil ensure that the database is correctly linked.
+8. In github, make sure you've added, commited and pushed your latest work.
+9. The following point is an extract taken from Code Institute:
 
-**Anything more?**
+    ```Automated Deployments from GitHub disabled by Heroku
+    Due to a security issue, Heroku has disabled automated deployments from GitHub. Unfortunately, we have no indication if or when they will reactivate this. In order for you to deploy while this situation persists, please follow the steps below to deploy from your Gitpod workspace:
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+    - Open the terminal.
+    - For those of you who are using MFA/2FA: please scroll down to see the additional steps required.
+    For those of you not using MFA/2FA: Log in to Heroku and enter your details.
+    command: heroku login -i
+    - Get your app name from heroku.
+    command: heroku apps
+    - Set the heroku remote. (Replace <app_name> with your actual app name and remove the <> characters)
+    command: heroku git:remote -a <app_name>
+    - Add and commit any changes to your code if applicable
+    command: git add . && git commit -m "Deploy to Heroku via CLI"
+    - Push to both GitHub and Heroku
+    command: git push origin main
+    command: git push heroku main
 
----
+    MFA/2FA enabled?
+    - Click on Account Settings (under the avatar menu) on the Heroku Dashboard.
+    - Scroll down to the API Key section and click Reveal. Copy the key.
+    - Back in your Gitpod workspace, enter the command: heroku_config , and enter your API key you copied when prompted.
+    - Continue from step 3 above. If you get prompted to log in at any point:
+      - Enter your Heroku username.
+      - Enter the API key you just copied.
+    
+    Need to deploy again?
+    You should just be able to add, commit and push, and if prompted enter your username and API key again.
 
-Happy coding!
+10. Click 'Open App' in heroku, and your project will be displayed here.
+11. Due to the automatic deployment issues on heroku's part, any changes to your app will need to manually be updated by following step 8. again.
+12. We need to create our tables on the Heroku database. In Heroku, on the top-right, clcik More > Run Console.
+13. Type `python3`
+14. Type `from cocktails import db` then `db.create_all()` then `exit()`
+15. In GitHub, change your `env.py` to reflet the newly created database by deleting `os.environ.setdefault("DB_URL", "postgresql:///cocktails")` and inserting `os.environ.setdefault("DATABASE_URL", "<heroku string>")` from Heroku's config vars.
