@@ -180,6 +180,13 @@ def add_cocktail():
     return render_template("add_cocktail.html", categories=categories)
 
 
+@app.route("/view_cocktail/<cocktail_id>")
+def view_cocktail(cocktail_id):
+
+    cocktail = mongo.db.cocktails.find_one({"_id": ObjectId(cocktail_id)})
+    return render_template("view_cocktail.html", cocktail=cocktail)
+
+
 @app.route("/edit_cocktail/<cocktail_id>", methods=["GET", "POST"])
 def edit_cocktail(cocktail_id):
 
