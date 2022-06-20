@@ -1,23 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="light-blue-text text-darken-4 center-align">Add Cocktail</h3>
+<h3 class="brown-text text-darken-4 center-align">Add Cocktail</h3>
 
 <div class="row card-panel grey lighten-5">
     <form class="col s12" method="POST" action="{{ url_for('add_cocktail') }}">
         <!-- cocktail name -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-glass-martini-alt prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
                 <input id="cocktail_name" name="cocktail_name" minlength="2" maxlength="25" type="text" class="validate"
                     required>
                 <label for="cocktail_name">Cocktail Name</label>
             </div>
         </div>
-        <!-- cocktail category -->
         <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+            <!-- cocktail category -->
+            <div class="input-field col s6">
+                <i class="fas fa-folder-open prefix brown-text text-darken-4"></i>
                 <select id="category_id" name="category_id" class="validate" required>
                     <option value="" disabled selected>Choose Category</option>
                     {% for category in categories %}
@@ -26,11 +26,20 @@
                 </select>
                 <label for="category_id">Cocktail Category</label>
             </div>
+            <!-- main ingredient -->
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
+                    <input id="main_ingredient" name="main_ingredient" minlength="2" maxlength="25"
+                        type="text" class="validate" required>
+                    <label for="main_ingredient">Main Ingredient</label>
+                </div>
+            </div>
         </div>
         <!-- cocktail image -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-glass-martini-alt prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
                 <input id="cocktail_img" name="cocktail_img" minlength="2" maxlength="25"
                     type="text" class="validate" required>
                 <label for="cocktail_img">Cocktail Image</label>
@@ -39,25 +48,16 @@
         <!-- cocktail description -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-align-left prefix brown-text text-darken-4"></i>
                 <textarea id="cocktail_description" name="cocktail_description" minlength="5" maxlength="200"
                     type="text" class="materialize-textarea validate" required></textarea>
                 <label for="cocktail_description">Cocktail Description</label>
             </div>
         </div>
-        <!-- main ingredient -->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-glass-martini-alt prefix light-blue-text text-darken-4"></i>
-                <input id="main_ingredient" name="main_ingredient" minlength="2" maxlength="25"
-                    type="text" class="validate" required>
-                <label for="main_ingredient">Main Ingredient</label>
-            </div>
-        </div>
         <!-- method -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-align-left prefix brown-text text-darken-4"></i>
                 <textarea id="method" name="method" minlength="5"
                     maxlength="150" class="materialize-textarea validate" required></textarea>
                 <label for="method">Method</label>
@@ -66,25 +66,23 @@
         <!-- other ingredient -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-glass-martini-alt prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
                 <input id="other_ingredient" name="other_ingredient" minlength="2" maxlength="50"
                     type="text" class="validate" required>
                 <label for="other_ingredient">Other Ingredient</label>
             </div>
         </div>
-        <!-- preperation time -->
         <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-glass-martini-alt prefix light-blue-text text-darken-4"></i>
+            <!-- preperation time -->
+            <div class="input-field col s12 m6">
+                <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
                 <input id="prep_time" name="prep_time" minlength="2" maxlength="25"
                     type="text" class="validate" required>
                 <label for="prep_time">Preperation Time</label>
             </div>
-        </div>
-        <!-- servings -->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-glass-martini-alt prefix light-blue-text text-darken-4"></i>
+            <!-- servings -->
+            <div class="input-field col s12 m6">
+                <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
                 <input id="servings" name="servings" minlength="1" maxlength="6"
                     type="text" class="validate" required>
                 <label for="servings">Servings</label>
@@ -93,7 +91,7 @@
         <!-- submit button -->
         <div class="row">
             <div class="col s12 center-align">
-                <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                <button type="submit" class="btn-large brown darken-1 text-shadow">
                     Add Cocktail <i class="fas fa-plus-square right"></i>
                 </button>
             </div>

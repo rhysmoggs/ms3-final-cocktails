@@ -43,7 +43,7 @@
         <!-- mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
             <li>
-                <h4 class="center-align light-blue-text text-darken 4">MS3 Final Cocktails</h4>
+                <h4 class="center-align brown-text text-darken 4">MS3 Final Cocktails</h4>
             </li>
             <li><a href="{{ url_for('get_cocktails') }}">Home</a></li>
             {% if session.user %}
@@ -66,7 +66,7 @@
             {% if messages %}
                 {% for message in messages %}
                     <div class="row flashes">
-                        <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+                        <h4 class="brown lighten-4 center-align">{{ message }}</h4>
                     </div>
                 {% endfor %}
             {% endif %}
@@ -78,11 +78,11 @@
         {% endblock %}
     </main>
 
-    <footer class="page-footer blue darken-3">
+    <footer class="page-footer brown darken-3">
         <div class="footer-copyright">
             <div class="container">
                 For educational purposes only
-                <a class="white-text right" href="https://codeinstitute.net" target="_blank">&copy; Code Institute</a>
+                <a class="white-text right" href="https://www.linkedin.com/home" target="_blank">&copy; rhysmoggs</a>
             </div>
         </div>
     </footer>

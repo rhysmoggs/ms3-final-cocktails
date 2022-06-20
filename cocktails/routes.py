@@ -194,7 +194,7 @@ def edit_cocktail(cocktail_id):
     cocktail = mongo.db.cocktails.find_one({"_id": ObjectId(cocktail_id)})
 
     if "user" not in session or session["user"] != cocktail["created_by"]:
-        flash("You can only edit your own cocktails!")
+        flash("You can only remix your own cocktails!")
         return redirect(url_for("get_cocktails"))
 
     if request.method == "POST":
