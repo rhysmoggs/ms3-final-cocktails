@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+<!-- <div class="container"> -->
 <h3 class="light-blue-text text-darken-4 center-align">{{ cocktail.cocktail_name }}</h3>
 
-<div class="col s12 m6 l4">
+<div class="row">
+    <div class="col s12 m8 offset-m2">
     <div class="card">
         <div class="card-image">
             <img src="../static/images/whiskey_sour.jpg" alt="picture of a whiskey sour cocktail" width="100"
@@ -37,10 +38,15 @@
             <p>Prep: {{ cocktail.prep_time }}</p>
             <p>Servings: {{ cocktail.servings }}</p>
         </div>
-        <div class="card-action">
-            <a href="{{ url_for('view_cocktail', cocktail_id=cocktail._id ) }}">View Cocktail</a>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <a href="{{ url_for('get_cocktails') }}" class="btn-small center-align">Return to The Bar</a>
         </div>
     </div>
+    </div>
 </div>
+<!-- </div> -->
+
 
 {% endblock %}

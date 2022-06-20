@@ -84,7 +84,8 @@ def login():
 def profile(username):
 
     if "user" in session:
-        return render_template("profile.html", username=session["user"])
+        cocktails = list(mongo.db.cocktails.find())
+        return render_template("profile.html", username=session["user"], cocktails=cocktails)
 
     return redirect(url_for("login"))
 
