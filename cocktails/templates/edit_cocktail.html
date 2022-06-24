@@ -35,8 +35,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
-                <input id="cocktail_img" name="cocktail_img" minlength="2" maxlength="200"
-                    value="{{ cocktail.cocktail_img }}" type="text" class="validate" required>
+                <input id="cocktail_img" name="cocktail_img" minlength="6" maxlength="150"
+                    value="{{ cocktail.cocktail_img }}" type="url" class="validate" required>
                 <label for="cocktail_img">Cocktail Image</label>
             </div>
         </div>
@@ -44,7 +44,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-align-left prefix brown-text text-darken-4"></i>
-                <textarea id="cocktail_description" name="cocktail_description" minlength="5" maxlength="150"
+                <textarea id="cocktail_description" name="cocktail_description" minlength="5" maxlength="200"
                     class="materialize-textarea validate" required>
                     {{- cocktail.cocktail_description -}}
                     </textarea>
