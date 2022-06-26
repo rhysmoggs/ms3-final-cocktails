@@ -15,6 +15,12 @@ def home():
     return render_template("home.html", categories=categories, cocktails=cocktails)
 
 
+@app.route("/all_cocktails")
+def all_cocktails():
+    cocktails = list(mongo.db.cocktails.find())
+    return render_template("all_cocktails.html", cocktails=cocktails)
+
+
 @app.route("/filter_category/<int:category_id>")
 def filter_category(category_id):
 
@@ -27,7 +33,7 @@ def filter_category(category_id):
 def search():
     query = request.form.get("query")
     cocktails = list(mongo.db.cocktails.find({"$text": {"$search": query}}))
-    return render_template("cocktails.html", cocktails=cocktails)
+    return render_template("all_cocktails.html", cocktails=cocktails)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -112,7 +118,7 @@ def get_categories():
 
     if "user" not in session or session["user"] != "admin":
         flash("You must be admin to manage categories!")
-        return redirect(url_for("get_cocktails"))
+        return redirect(url_for("all_cocktails"))
 
     categories = list(Category.query.order_by(Category.category_name).all())
     return render_template("categories.html", categories=categories)
@@ -123,7 +129,7 @@ def add_category():
 
     if "user" not in session or session["user"] != "admin":
         flash("You must be admin to manage categories!")
-        return redirect(url_for("get_cocktails"))
+        return redirect(url_for("all_cocktails"))
 
     if request.method == "POST":
         category = Category(category_name=request.form.get("category_name"))
@@ -138,7 +144,7 @@ def add_category():
 def edit_category(category_id):
     if "user" not in session or session["user"] != "admin":
         flash("You must be admin to manage categories!")
-        return redirect(url_for("get_cocktails"))
+        return redirect(url_for("all_cocktails"))
 
     category = Category.query.get_or_404(category_id)
     if request.method == "POST":
@@ -153,7 +159,7 @@ def edit_category(category_id):
 def delete_category(category_id):
     if session["user"] != "admin":
         flash("You must be admin to manage categories!")
-        return redirect(url_for("get_cocktails"))
+        return redirect(url_for("all_cocktails"))
 
     category = Category.query.get_or_404(category_id)
     db.session.delete(category)
@@ -167,7 +173,7 @@ def delete_category(category_id):
 def add_cocktail():
     if "user" not in session:
         flash("You need to be logged in to add a cocktail")
-        return redirect(url_for("get_cocktails"))
+        return redirect(url_for("all_cocktails"))
 
     if request.method == "POST":
         cocktail = {
@@ -184,7 +190,7 @@ def add_cocktail():
         }
         mongo.db.cocktails.insert_one(cocktail)
         flash("Cocktail Successfully Added")
-        return redirect(url_for("get_cocktails"))
+        return redirect(url_for("all_cocktails"))
 
     categories = list(Category.query.order_by(Category.category_name).all())
     return render_template("add_cocktail.html", categories=categories)
@@ -204,7 +210,7 @@ def edit_cocktail(cocktail_id):
 
     if "user" not in session or session["user"] != cocktail["created_by"]:
         flash("You can only remix your own cocktails!")
-        return redirect(url_for("get_cocktails"))
+        return redirect(url_for("all_cocktails"))
 
     if request.method == "POST":
         submit = {
@@ -233,8 +239,8 @@ def delete_cocktail(cocktail_id):
 
     if "user" not in session or session["user"] != cocktail["created_by"]:
         flash("You can only delete your own cocktails!")
-        return redirect(url_for("get_cocktails"))
+        return redirect(url_for("all_cocktails"))
 
     mongo.db.cocktails.delete_one({"_id": ObjectId(cocktail_id)})
     flash("Cocktail Successfully Deleted")
-    return redirect(url_for("get_cocktails"))
+    return redirect(url_for("all_cocktails"))
