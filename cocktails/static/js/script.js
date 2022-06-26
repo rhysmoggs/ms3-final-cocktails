@@ -1,6 +1,9 @@
 $(document).ready(function(){
     $(".sidenav").sidenav({edge: "right"});
     $(".collapsible").collapsible();
+    $('.slider').slider({
+        height: 500,
+    });
     $('select').formSelect();
 
     validateMaterializeSelect();
