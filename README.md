@@ -1,8 +1,8 @@
-<h1 align="center">MS3 Final Cocktails</h1>
+<h1 align="center">The Cocktail Cabinet</h1>
 
 [View the live project here.](https://rhysmoggs.github.io/ms3-final-cocktails/)
 
-Welcome to the new cocktail recipe website: Globe Trotter Quiz.
+Welcome to the new cocktail recipe website: The Cocktail Cabinet.
 
 <h2 align="center"><img src="assets/readme-images/am-i-responsive.png"></h2>
 
@@ -636,9 +636,9 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Content & Media
 
--   The questions and answers are all generated via an API from [The Open Trivia Database](https://opentdb.com/api_config.php).
+-  Cocktail recipes from: books,websies
 
--   The main background image (maps.jpg) - Photo by Andrew Neel from Pexels found [here](https://www.pexels.com/photo/assorted-map-pieces-2859169/).
+-   The main background image (bg.jpg) - Photo by Kelly L from Pexels found [here](https://www.pexels.com/photo/assorted-alcoholic-drinks-2796105/).
 
 -   The logo (logo.png) was created using Canva.
 

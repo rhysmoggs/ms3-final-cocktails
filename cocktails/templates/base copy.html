@@ -26,7 +26,7 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('all_cocktails') }}">Cocktails</a></li>
                     {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">My Cabinet</a></li>
+                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="{{ url_for('add_cocktail') }}">Add Cocktail</a></li>
                         {% if session.user|lower == "admin"|lower %}
                             <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
@@ -47,7 +47,7 @@
             </li>
             <li><a href="{{ url_for('all_cocktails') }}">Cocktails</a></li>
             {% if session.user %}
-                <li><a href="{{ url_for('profile', username=session['user']) }}">My Cabinet</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('add_cocktail') }}">Add Cocktail</a></li>
                 {% if session.user|lower == "admin"|lower %}
                     <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
@@ -73,10 +73,10 @@
         {% endwith %}
     </section>
 
-
-    {% block content %}
-    {% endblock %}
-
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
 
     <footer class="page-footer brown darken-3">
         <div class="footer-copyright">
