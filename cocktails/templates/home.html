@@ -39,22 +39,14 @@
   </div>
 </section>
 
-<main class="container">
-  <div class="slider">
-    <ul class="slides">
-      {% for category in categories %}
-      <li>
-        <a href="{{ url_for('filter_category', category_id=category.id) }}">
-          <img src="../static/images/whiskey_sour.jpg" alt="picture of a whiskey sour cocktail" width="100" height="250">
-          <div class="caption left-align">
-            <h2>{{ category.category_name }}</h2>
-            <!-- <h6 class="light grey-text text-lighten-3">Here's our small slogan.</h6> -->
-          </div>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</main>
+<!-- Carousel -->
+<div class="carousel">
+  {% for category in categories %}
+    <a class="carousel-item" href="{{ url_for('filter_category', category_id=category.id) }}">
+      <img src="../static/images/whiskey_sour.jpg" alt="picture of a cocktail" style="width:100%">
+      <div class="carousel-text">{{ category.category_name }}</div>
+    </a>
+  {% endfor %}
+</div>
 
 {% endblock %}
