@@ -26,16 +26,24 @@
         <p>See anything you like at The Bar?</p>
       </li>
       <li>
-        <img class="hoverable" src="../static/images/bar.jpg" alt="Image of a cocktail being mixed">
+        <img class="hoverable" src="../static/images/bar.jpg" alt="Image of a group of people sharing drinks">
         <h4>Mix a Cocktail</h4>
         <hr>
         <p>Feel The Bar is missing your preferred cocktail? Mix your own and add it to My Cabinet.</p>
       </li>
       <li>
-        <img class="hoverable" src="../static/images/bar.jpg" alt="Image of a group of people sharing drinks">
+        {% if session.user  %}
+          <a href="{{ url_for('profile', username=session['user']) }}">
+            <img class="hoverable" src="../static/images/shake.jpg" alt="Image of a cocktail being mixed">
+          </a>
+        {% else %}
+          <a href="{{ url_for('login') }}">
+            <img class="hoverable" src="../static/images/shake.jpg" alt="Image of a cocktail being mixed">
+          </a>
+        {% endif %}
         <h4>Share your Cocktail</h4>
         <hr>
-        <p>Fancy sharing a cocktail? Leave a comment, share a cocktail recipe or save one for later</p>
+        <p>Fancy sharing a cocktail? Add and share your own cocktail recipe or comment, favourite and keep one for later</p>
       </li>
     </ul>
   </div>

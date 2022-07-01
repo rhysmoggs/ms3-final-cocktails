@@ -2,11 +2,14 @@
 
 [View the live project here.](https://rhysmoggs.github.io/ms3-final-cocktails/)
 
-Welcome to the new cocktail recipe website: The Cocktail Cabinet.
+
+--add heroku link here
+
+Welcome to a new cocktail recipe website: The Cocktail Cabinet.
 
 <h2 align="center"><img src="assets/readme-images/am-i-responsive.png"></h2>
 
-This is the first interactive quiz the company has launched, announcing themselves to the world. Globe Trotter Quiz is a passion project, birthed from the creators love of travel and adventure. Having been fortunate enough to travel the world, the creator still longs and obsesses over memories and places visited, and loves to to be reminded about all travel-related things. The creator has a desire to share that love with a greater audience: like-minded people and travellers, keen quizzers, families and students - all are welcome to challenge themselves! The creator is excited to launch their quiz and hope to attract more and more players from across the world.
+This is the first interactive quiz the company has launched, announcing themselves to the world. The Cocktail Cabinet is a passion project, birthed from the creators love of travel and adventure. Having been fortunate enough to travel the world, the creator still longs and obsesses over memories and places visited, and loves to to be reminded about all travel-related things. The creator has a desire to share that love with a greater audience: like-minded people and travellers, keen quizzers, families and students - all are welcome to challenge themselves! The creator is excited to launch their quiz and hope to attract more and more players from across the world.
 
 # Table of Contents
 1. [Intro/Concept](#example)
@@ -45,7 +48,7 @@ This is the first interactive quiz the company has launched, announcing themselv
 
 ### Quiz Concept and Rules:
 
-A classic geography quiz, suitable to single or multiple players of all ages. The Globe Trotter Quiz is a multiple-choice quiz where the user is presented with 10 questions, each correct answer worth 2500 miles. The goal? To answer 10 correct answers totalling a whopping 25,000 miles - about the same distance it is to fly around the world! See if you can travel to the top of the High Scores list!
+A classic geography quiz, suitable to single or multiple players of all ages. The The Cocktail Cabinet is a multiple-choice quiz where the user is presented with 10 questions, each correct answer worth 2500 miles. The goal? To answer 10 correct answers totalling a whopping 25,000 miles - about the same distance it is to fly around the world! See if you can travel to the top of the High Scores list!
 
 The quiz will clearly display information for new and returning customers including the creators contact information via social media links. The quiz is fully responsible on a range of devices - from hand-held devices to larger screens such as monitors or even TVs. This is to ensure that as many people as possible can play the quiz and enjoy this journey.
 
@@ -79,10 +82,10 @@ Following are the goals that the quiz should provide for each user.
 * I want to to be able to access and play the quiz on a range of devices/browsers.
 
 ## Design
-Once the user goals and the projects intentions were set out, the next step was to design the aesthetic aspects of the Globe Trotter quiz.
+Once the user goals and the projects intentions were set out, the next step was to design the aesthetic aspects of the The Cocktail Cabinet.
 
 ### Wireframes
-Wireframes were drawn using [Balsamiq](https://balsamiq.com/) at the beginning of the project. They were referenced throughout the design and building of the quiz. Following are a series of images showing the Globe Trotter Quiz on the three main screen sizes: desktop, tablet and mobile. Every major section of the quiz is also included.
+Wireframes were drawn using [Balsamiq](https://balsamiq.com/) at the beginning of the project. They were referenced throughout the design and building of the quiz. Following are a series of images showing the The Cocktail Cabinet on the three main screen sizes: desktop, tablet and mobile. Every major section of the quiz is also included.
 
 #### Desktop
 
@@ -196,7 +199,7 @@ Plane
 <img src="assets/images/plane.png">
 
 ### Font
--  The Globe Trotter Quiz uses the Poppins font. It provides that clean, clear style without compromising on readability - a vital design feature for any quiz. This is available for free via [Google Fonts](https://fonts.google.com/) and imported via CSS. Sans Serif is used as a secondary option in case of failure to import  the font into the quiz correctly. Poppins is a clean font used frequently in designs, so it is both attractive and appropriate.
+-  The The Cocktail Cabinet uses the Poppins font. It provides that clean, clear style without compromising on readability - a vital design feature for any quiz. This is available for free via [Google Fonts](https://fonts.google.com/) and imported via CSS. Sans Serif is used as a secondary option in case of failure to import  the font into the quiz correctly. Poppins is a clean font used frequently in designs, so it is both attractive and appropriate.
 
 ## Accessibility
 Extremely important aspect.
@@ -226,7 +229,7 @@ Here are the 3 mains sections of the quiz:
 
 ## Interactive Elements
 
--   Following is a list of all interactive elements of the Globe Trotter Quiz.
+-   Following is a list of all interactive elements of the The Cocktail Cabinet.
 
 #### Quiz Logo
 
@@ -559,7 +562,7 @@ Bug fixes were predominantly completed in real-time as soon as any issues arose.
 
 ### Future Updates
 
-There are many planned updates arranged for the Globe Trotter Quiz that include but are not limited to:
+There are many planned updates arranged for the The Cocktail Cabinet that include but are not limited to:
 
 -   Introduction of difficulty level choices i.e. Easy, Normal, Hard.
 -   Introduction of images, linked to the questions.
@@ -622,7 +625,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ### Code
 -   At the early stages of the development, the [How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial](https://www.youtube.com/watch?v=f4fB9Xg2JEY&list=FLoLMoJL7IfiYl8F3sN_CEqQ&index=16) tutorial was followed and the code was used as the basis of the quiz. Supporting GitHub code [here](https://github.com/briancodex/quiz-app-js). Original code was later added alongside that found in the YouTube video to suit the quiz. Code tweaks were made to suit this quiz, pre-determined code edited or removed along with adjustments and restyling to the majority of the CSS found in the credited video. Upon further searching, it seems that [Build a Quiz App - Intro](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) and that playlist of videos may be what that YouTube video was also inspired by.
 
--   'Web Dev Simplified' YouTube [video](https://www.youtube.com/watch?v=riDzcEQbX6k&list=FLoLMoJL7IfiYl8F3sN_CEqQ&index=13) was also used and combined with the above videos to help shape the Globe Trotter Quiz. Supporting GitHub code [here](https://github.com/WebDevSimplified/JavaScript-Quiz-App).
+-   'Web Dev Simplified' YouTube [video](https://www.youtube.com/watch?v=riDzcEQbX6k&list=FLoLMoJL7IfiYl8F3sN_CEqQ&index=13) was also used and combined with the above videos to help shape the The Cocktail Cabinet. Supporting GitHub code [here](https://github.com/WebDevSimplified/JavaScript-Quiz-App).
 
 -   The API aspect of the quiz was introduced thanks to the [Build a Quiz App (11) - Fetch API to Load Questions API](https://www.youtube.com/watch?v=3aKOQn2NPFs&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=12) tutorial, to which edits were then made. Supporting link to GitHub [here](https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript).
 
