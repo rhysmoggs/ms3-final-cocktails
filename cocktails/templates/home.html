@@ -18,19 +18,21 @@
   <div class="house-container">
     <ul>
       <li>
-        <img src="../static/images/bar.jpg" alt="Image of an empty drinks bar">
+        <a href="{{ url_for('all_cocktails') }}">
+          <img class="hoverable" src="../static/images/bar.jpg" alt="Image of an empty drinks bar">
+        </a>
         <h4>Head to The Bar</h4>
         <hr>
         <p>See anything you like at The Bar?</p>
       </li>
       <li>
-        <img src="../static/images/bar.jpg" alt="Image of a cocktail being mixed">
+        <img class="hoverable" src="../static/images/bar.jpg" alt="Image of a cocktail being mixed">
         <h4>Mix a Cocktail</h4>
         <hr>
         <p>Feel The Bar is missing your preferred cocktail? Mix your own and add it to My Cabinet.</p>
       </li>
       <li>
-        <img src="../static/images/bar.jpg" alt="Image of a group of people sharing drinks">
+        <img class="hoverable" src="../static/images/bar.jpg" alt="Image of a group of people sharing drinks">
         <h4>Share your Cocktail</h4>
         <hr>
         <p>Fancy sharing a cocktail? Leave a comment, share a cocktail recipe or save one for later</p>
