@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="brown-text text-darken-4 center-align">Add Cocktail</h3>
+<h3 class="brown-text text-darken-4 center-align">Add Cocktail to My Cabinet</h3>
 
 <main class="container">
     <div class="row card-panel grey lighten-5">
@@ -65,14 +65,29 @@
                 </div>
             </div>
             <!-- other ingredient -->
-            <div class="row">
+            <!-- <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
                     <input id="other_ingredient" name="other_ingredient" minlength="2" maxlength="50"
                         type="text" class="validate" required>
                     <label for="other_ingredient">Other Ingredient</label>
                 </div>
+            </div> -->
+
+            <!-- other ingredient -->
+            <div class="row">
+                <div id="new-input" class="input-field col s6">
+                    <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
+                    <input id="other_ingredient" name="other_ingredient" minlength="2" maxlength="20"
+                        type="text" class="js-remove-test validate" required>
+                    <label for="other_ingredient">Other Ingredients and Measuerments</label>
+                </div>
+                <div class="col s6">
+                    <a id="add-other-btn" class="waves-effect waves-light btn-large brown darken-1 text-shadow">Add</a>
+                    <a id="remove-other-btn" class="hide waves-effect waves-light btn-large brown darken-1 text-shadow">Remove</a>
+                </div>
             </div>
+
             <div class="row">
                 <!-- preperation time -->
                 <div class="input-field col s12 m6">
@@ -85,7 +100,7 @@
                 <div class="input-field col s12 m6">
                     <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
                     <input id="servings" name="servings" minlength="1" maxlength="6"
-                        type="text" class="validate" required>
+                        type="number" class="validate" required>
                     <label for="servings">Servings</label>
                 </div>
             </div>
@@ -93,7 +108,7 @@
             <div class="row">
                 <div class="col s12 center-align">
                     <button type="submit" class="btn-large brown darken-1 text-shadow">
-                        Add Cocktail <i class="fas fa-plus-square right"></i>
+                        Add Cocktail to My Cabinet<i class="fas fa-plus-square right"></i>
                     </button>
                 </div>
             </div>

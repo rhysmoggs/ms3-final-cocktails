@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="brown-text text-darken-4 center-align">Remix Cocktail</h3>
+<h3 class="brown-text text-darken-4 center-align">Edit Cocktail</h3>
 
 <main class="container">
     <div class="row card-panel grey lighten-5">
@@ -74,11 +74,18 @@
             </div>
             <!-- other ingredient -->
             <div class="row">
-                <div class="input-field col s12">
+                <div id="new-input" class="input-field col s6">
                     <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
-                    <input id="other_ingredient" name="other_ingredient" minlength="2" maxlength="25"
-                        value="{{ cocktail.other_ingredient }}" type="text" class="validate" required>
+                    {% for ingredient in cocktail.other_ingredient %}
+                    <input id="other_ingredient" name="other_ingredient" minlength="2" maxlength="150"
+                        value="{{ ingredient }}"  type="text" class="js-remove-test remove-other-btn validate" required>
+                    <!-- <a id="remove-other-btn" class="waves-effect waves-light btn-large brown darken-1 text-shadow">Remove</a> -->
+                    {% endfor %}
                     <label for="other_ingredient">Other Ingredient</label>
+                </div>
+                <div class="col s6">
+                    <a id="add-other-btn" class="waves-effect waves-light btn-large brown darken-1 text-shadow">Add</a>
+                    <a id="remove-other-btn" class="waves-effect waves-light btn-large brown darken-1 text-shadow">Remove</a>
                 </div>
             </div>
             <!-- preperation time -->
@@ -96,7 +103,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
                     <input id="servings" name="servings" minlength="1" maxlength="25" value="{{ cocktail.servings }}"
-                        type="text" class="validate" required>
+                        type="number" class="validate" required>
                     <label for="servings">Servings</label>
                 </div>
             </div>
@@ -108,7 +115,7 @@
                         Cancel <i class="fas fa-times-circle right"></i>
                     </a>
                     <button type="submit" class="btn-large brown darken-1 text-shadow">
-                        Remix Cocktail <i class="fas fa-edit right"></i>
+                        Edit Cocktail <i class="fas fa-edit right"></i>
                     </button>
                 </div>
             </div>

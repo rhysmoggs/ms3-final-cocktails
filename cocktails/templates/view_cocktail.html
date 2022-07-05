@@ -24,9 +24,9 @@
             <div>
                 {% if session.user|lower == cocktail.created_by|lower %}
                 <a href="{{ url_for('delete_cocktail', cocktail_id=cocktail._id ) }}"
-                    class="btn-small green accent-4">Done</a>
+                    class="btn-small green accent-4">Delete</a>
                 <a href="{{ url_for('edit_cocktail', cocktail_id=cocktail._id ) }}"
-                    class="btn-small brown lighten-1">Remix</a>
+                    class="btn-small brown lighten-1">Edit</a>
                 {% endif %}
             </div>
             <div class="card-content">
@@ -34,7 +34,15 @@
                 <p>{{ cocktail.cocktail_description }}</p>
                 <p>Main Ingredient: {{ cocktail.main_ingredient }}</p>
                 <p>Method: {{ cocktail.method }}</p>
-                <p>Other Ingredients: {{ cocktail.other_ingredient }}</p>
+                <p>Other Ingredients:
+                    <ul>
+                    {% for ingredient in cocktail.other_ingredient %}
+                        <li>
+                        {{ ingredient }}
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </p>
                 <p>Prep: {{ cocktail.prep_time }}</p>
                 <p>Servings: {{ cocktail.servings }}</p>
             </div>
