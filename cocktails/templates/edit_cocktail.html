@@ -63,13 +63,16 @@
             </div>
             <!-- method -->
             <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix brown-text text-darken-4"></i>
-                    <textarea id="method" name="method" minlength="5" maxlength="150" class="materialize-textarea validate"
-                        required>
-                        {{- cocktail.method -}}
-                        </textarea>
+                <div id="new-method" class="input-field col s6">
+                    <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                    {% for method in cocktail.method %}
+                    <input id="method" name="method" minlength="5" maxlength="75" value="{{ method }}" type="text" class="remove-meth remove-meth-btn validate" required>
+                    {% endfor %}
                     <label for="method">Method</label>
+                </div>
+                <div class="col s6">
+                    <a id="add-meth-btn" class="waves-effect waves-light btn-large brown darken-1 text-shadow">Add</a>
+                    <a id="remove-meth-btn" class="waves-effect waves-light btn-large brown darken-1 text-shadow">Remove</a>
                 </div>
             </div>
             <!-- other ingredient -->

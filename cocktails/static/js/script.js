@@ -35,7 +35,68 @@ $(document).ready(function(){
     }
 });
 
+// variables related to add and remove 'method'
+let new_method = document.getElementById('new-method');
+let add_meth_btn = document.getElementById('add-meth-btn');
+let remove_meth_btn = document.getElementById('remove-meth-btn');
+let maximum = 8;
+let remove_meth = document.getElementsByClassName('remove-meth');
+let tally = remove_meth.length
 
+if (tally === 1) {
+    remove_meth_btn.classList.add("disabled");
+};
+
+// adding a new input for 'method'
+// a maximum of 8 inputs are possible
+// if the user attempts to add more than 8, an error msg appears on-screen
+add_meth_btn.onclick = function() {
+    if (tally === maximum) {
+        var errorMethod = document.createElement('p');
+        errorMethod.setAttribute('id', 'error-method');
+        errorMethod.innerHTML = "Maximum number of steps reached";
+        errorMethod.style.textAlign = "center";
+        new_method.appendChild(errorMethod);
+        add_meth_btn.classList.add("disabled");
+    } else {
+    var newMethod = document.createElement('input');
+    newMethod.setAttribute('name', 'method');
+    newMethod.setAttribute('minlength', '5');
+    newMethod.setAttribute('max-length', '75');
+    newMethod.setAttribute('class', 'remove-meth remove-meth-btn validate');
+    newMethod.setAttribute('type', 'text');
+    newMethod.setAttribute('placeholder', 'Add another step');
+    newMethod.required = true;
+    new_method.appendChild(newMethod);
+    remove_meth_btn.classList.remove("disabled");
+    tally++;
+    console.log(tally);
+    }
+};
+
+// removing the previous input for 'method'
+remove_meth_btn.onclick = function() {
+    var remove_meth = new_method.getElementsByClassName('remove-meth');
+    var error_method = document.getElementById('error-method');
+    if(tally > 1) {
+        new_method.removeChild(remove_meth[(tally) - 1]);
+        if (tally === maximum) {
+            if (document.contains(error_method)) {
+                error_method.remove();
+                add_meth_btn.classList.remove("disabled");
+            }
+            add_meth_btn.classList.remove("disabled");
+        } else if (tally === 2) {
+            remove_meth_btn.classList.add("disabled");
+        } else {
+            remove_meth_btn.classList.remove("disabled");
+        }
+    }
+    tally--;
+    console.log(tally);
+};
+
+// variables related to add and remove 'other ingredients'
 let new_input = document.getElementById('new-input');
 let add_other_btn = document.getElementById('add-other-btn');
 let remove_other_btn = document.getElementById('remove-other-btn');

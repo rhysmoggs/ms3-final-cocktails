@@ -33,7 +33,15 @@
                 <strong>Category: {{ cocktail.category_name }}</strong>
                 <p>{{ cocktail.cocktail_description }}</p>
                 <p>Main Ingredient: {{ cocktail.main_ingredient }}</p>
-                <p>Method: {{ cocktail.method }}</p>
+                <p>Method:
+                    <ol>
+                    {% for method in cocktail.method %}
+                        <li>
+                        {{ method }}
+                        </li>
+                    {% endfor %}
+                    </ol>
+                </p>
                 <p>Other Ingredients:
                     <ul>
                     {% for ingredient in cocktail.other_ingredient %}

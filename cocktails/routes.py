@@ -183,7 +183,7 @@ def add_cocktail():
             "cocktail_description": request.form.get("cocktail_description"),
             "main_ingredient": request.form.get("main_ingredient"),
             "created_by": session["user"],
-            "method": request.form.get("method"),
+            "method": request.form.getlist("method"),
             "other_ingredient": request.form.getlist("other_ingredient"),
             "prep_time": request.form.get("prep_time"),
             "servings": request.form.get("servings")
@@ -220,7 +220,7 @@ def edit_cocktail(cocktail_id):
             "cocktail_description": request.form.get("cocktail_description"),
             "main_ingredient": request.form.get("main_ingredient"),
             "created_by": session["user"],
-            "method": request.form.get("method"),
+            "method": request.form.getlist("method"),
             "other_ingredient": request.form.getlist("other_ingredient"),
             "prep_time": request.form.get("prep_time"),
             "servings": request.form.get("servings")

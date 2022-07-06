@@ -57,12 +57,13 @@
             </div>
             <!-- method -->
             <div class="row">
-                <div class="input-field col s12">
+                <div id="new-method" class="input-field col s6">
                     <i class="fas fa-align-left prefix brown-text text-darken-4"></i>
-                    <textarea id="method" name="method" minlength="5"
-                        maxlength="150" class="materialize-textarea validate" required></textarea>
+                    <input id="method" name="method" minlength="5" maxlength="75" class="remove-meth validate" type="text" required>
                     <label for="method">Method</label>
                 </div>
+                <a id="add-meth-btn" class="waves-effect waves-light btn-large brown darken-1 text-shadow">Add</a>
+                <a id="remove-meth-btn" class="waves-effect waves-light btn-large brown darken-1 text-shadow">Remove</a>
             </div>
             <!-- other ingredient -->
             <!-- <div class="row">
