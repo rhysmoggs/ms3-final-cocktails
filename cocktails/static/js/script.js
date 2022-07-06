@@ -36,12 +36,29 @@ $(document).ready(function(){
 });
 
 
-// add and remove other ingredients
 let new_input = document.getElementById('new-input');
 let add_other_btn = document.getElementById('add-other-btn');
 let remove_other_btn = document.getElementById('remove-other-btn');
+let max = 8;
+let js_remove_test = document.getElementsByClassName('js-remove-test');
+let counter = js_remove_test.length
 
+if (counter === 1) {
+    remove_other_btn.classList.add("disabled");
+};
+
+// adding a new input for 'other ingredients'
+// a maximum of 8 inputs are possible
+// if the user attempts to add more than 8, an error msg appears on-screen
 add_other_btn.onclick = function() {
+    if (counter === max) {
+        var errorFlash = document.createElement('p');
+        errorFlash.setAttribute('id', 'error-flash');
+        errorFlash.innerHTML = "Max reached";
+        errorFlash.style.textAlign = "center";
+        new_input.appendChild(errorFlash);
+        add_other_btn.classList.add("disabled");
+    } else {
     var newIngredient = document.createElement('input');
     newIngredient.setAttribute('name', 'other_ingredient');
     newIngredient.setAttribute('minlength', '2');
@@ -51,16 +68,30 @@ add_other_btn.onclick = function() {
     newIngredient.setAttribute('placeholder', 'Add more ingredients and measurements');
     newIngredient.required = true;
     new_input.appendChild(newIngredient);
-    remove_other_btn.classList.remove("hide")
+    remove_other_btn.classList.remove("disabled");
+    counter++;
+    console.log(counter);
+    }
 };
 
+// removing the previous input for 'other ingredients'
 remove_other_btn.onclick = function() {
-    var input_count = new_input.getElementsByClassName('js-remove-test');
-    var btn_count = new_input.getElementsByClassName('remove-other-btn');
-    if(input_count.length > 1) {
-        new_input.removeChild(input_count[(input_count.length) - 1]);
-        if(input_count.length = 1 && btn_count.length < 1) {
-            remove_other_btn.classList.add("hide");
-        };
+    var js_remove_test = new_input.getElementsByClassName('js-remove-test');
+    var error_flash = document.getElementById('error-flash');
+    if(counter > 1) {
+        new_input.removeChild(js_remove_test[(counter) - 1]);
+        if (counter === max) {
+            if (document.contains(error_flash)) {
+                error_flash.remove();
+                add_other_btn.classList.remove("disabled");
+            }
+            add_other_btn.classList.remove("disabled");
+        } else if (counter === 2) {
+            remove_other_btn.classList.add("disabled");
+        } else {
+            remove_other_btn.classList.remove("disabled");
+        }
     }
+    counter--;
+    console.log(counter);
 };
