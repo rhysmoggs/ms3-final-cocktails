@@ -5,6 +5,7 @@ $(document).ready(function(){
         numVisible: 4,
     });
     $('select').formSelect();
+    $('.modal').modal();
 
     validateMaterializeSelect();
     function validateMaterializeSelect() {
