@@ -1,6 +1,7 @@
 from flask import (
     flash, render_template,
     request, redirect, session, url_for)
+from flask_paginate import Pagination, get_page_args
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 from cocktails import app, db, mongo
@@ -15,10 +16,31 @@ def home():
     return render_template("home.html", categories=categories, cocktails=cocktails)
 
 
+# @app.route("/all_cocktails")
+# def all_cocktails():
+#     cocktails = list(mongo.db.cocktails.find())
+#     return render_template("all_cocktails.html", cocktails=cocktails)
+
+
 @app.route("/all_cocktails")
 def all_cocktails():
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    # maximum amount of cocktails to be displayed per page
+    per_page = 9
+    offset
+    offset = (page - 1) * per_page
     cocktails = list(mongo.db.cocktails.find())
-    return render_template("all_cocktails.html", cocktails=cocktails)
+    # the total amount of cocktails found in the mongo cocktails collection
+    total = len(cocktails)
+    cocktails_paginated = cocktails[offset: offset + per_page]
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template("all_cocktails.html",
+                           cocktails=cocktails_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination)
 
 
 @app.route("/filter_category/<int:category_id>")
