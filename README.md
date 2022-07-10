@@ -633,6 +633,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 -   This README.md document was based on Code Institutes [SampleREADME](https://github.com/Code-Institute-Solutions/SampleREADME/blob/master/README.md). The template was used as a guide, then filled with content related to this website. The MS2 Quiz [README.md](https://github.com/rhysmoggs/ms2-quiz/blob/main/README.md) file - the developers personal MS2 submission for the Code Institute course - was also used and then edited to suit this project.
 
+- Pagination [setup](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9).
+
 ### Inspiration
 
 -   The Code Institute Slack community, especially projects from the peer-code-review channel.
@@ -673,6 +675,7 @@ technologies used:
 - Flash - 
 - dnspython - 
 - Jinja2? - template
+- flask-paginate
 - jquery
 - materialize(sp?) - 
 - fontawesome - icons
