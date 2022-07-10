@@ -1,27 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* body {
-    display: flex;
+html {
+    height: 100%;
+}
+
+body {
     min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    display: flex;
     flex-direction: column;
-} */
+}
+
 
 /* hero image setup from following link, then tweaked */
 /* https://www.w3schools.com/howto/howto_css_hero_image.asp */
-body,
-html {
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-}
+
 
 /* The hero image */
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/bg.jpg");
 
-    /* Set a specific height */
-    height: 100%;
+    /* Set a specific vh so that the footer doesn't rise up the page */
+    height: 100vh;
 
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
@@ -34,8 +36,8 @@ html {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/bar-big.jpg");
 
-    /* Set a specific height */
-    height: 40%;
+    /* Set a specific vh so that the footer doesn't rise up the page */
+    height: 40vh;
 
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
@@ -174,4 +176,10 @@ main {
 /* to overwrite default materializecss pagination style, centre page info */
 .pagination-page-info {
     text-align: center;
+}
+
+
+
+footer {
+    margin-top: auto;
 }
