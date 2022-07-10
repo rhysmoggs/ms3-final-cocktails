@@ -5,7 +5,10 @@ $(document).ready(function(){
         numVisible: 4,
     });
     $('select').formSelect();
-    $('.modal').modal();
+    $('.modal').modal({
+        opacity: 0.8,
+        endingTop: '20%'
+    });
 
     validateMaterializeSelect();
     function validateMaterializeSelect() {
