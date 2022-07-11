@@ -1,23 +1,26 @@
 <h1 align="center">The Cocktail Cabinet</h1>
 
-[View the live project here.](https://rhysmoggs.github.io/ms3-final-cocktails/)
-
-
---add heroku link here
+[View the live project here.](https://ms3-final-cocktails.herokuapp.com/)
 
 Welcome to a new cocktail recipe website: The Cocktail Cabinet.
 
 <h2 align="center"><img src="assets/readme-images/am-i-responsive.png"></h2>
 
-This is the first interactive quiz the company has launched, announcing themselves to the world. The Cocktail Cabinet is a passion project, birthed from the creators love of travel and adventure. Having been fortunate enough to travel the world, the creator still longs and obsesses over memories and places visited, and loves to to be reminded about all travel-related things. The creator has a desire to share that love with a greater audience: like-minded people and travellers, keen quizzers, families and students - all are welcome to challenge themselves! The creator is excited to launch their quiz and hope to attract more and more players from across the world.
+The Cocktail Cabinet for the Milestone Project 3, for [Code Institute's](https://codeinstitute.net/) Diploma in Web App Development.
+
+The Cocktail Cabinet is a passion project, with its idea birthed from the depths of a continious and a seemingly neverending lockdown during the COVID-19 pandemic. Just like many others, the creator discovered a range of hobbies and projects ranging from the wholesome, worthwhile to the downright forgettable (or wish to forget?). Some of those interests stuck around and become a part of everyday normality, others were left behind and to be stowed away to never be spoken about again. Thankfully, cocktail making and drinking (responsibly) remained. The creator has a desire to share that love with a greater audience: those new to cocktails, other like-minded people, creative minds and curious tipple chasers - all are welcome to discover, share and enjoy! The creator is excited to launch The Cocktail Cabinet and hope to attract more and more cocktail lovers from across the world.
+
+The website is a full stack project that covers backend and frontend, ...etc
+
+
 
 # Table of Contents
 1. [Intro/Concept](#example)
 2. [User Stories](#user-stories)
     - [As a New User](#as-a-new-user)
     - [As a Returning User](#as-a-returning-user)
-3. [Design/Data Schema](#tdesign)
-3. [Design](#tdesign)
+3. [Design/Data Schema](#data-schema-design)
+3. [Aesthetic Design](#aesthetic-design)
     - [Wireframes](#wireframes)
         - [Desktop](#desktop)
         - [Tablet](#tablet)
@@ -45,14 +48,17 @@ This is the first interactive quiz the company has launched, announcing themselv
 ## [Fourth Example](http://www.fourthexample.com) 
 
 
+### Project Goals:
 
-### Quiz Concept and Rules:
+The main brief for this project is to showcase the CRUD featuresa of both a relational and a non-relational database management ssytem. The goal is to combine a conventional relational database (postgreSQL) and a non-relational database (mongodb) and to allow them to work seemlessly together, with the ability to link both databases with no impact on the user experience. By combining both, the project can serve multiple approches to database management and CRUD functionality.
 
-A classic geography quiz, suitable to single or multiple players of all ages. The The Cocktail Cabinet is a multiple-choice quiz where the user is presented with 10 questions, each correct answer worth 2500 miles. The goal? To answer 10 correct answers totalling a whopping 25,000 miles - about the same distance it is to fly around the world! See if you can travel to the top of the High Scores list!
+### Website Concept:
 
-The quiz will clearly display information for new and returning customers including the creators contact information via social media links. The quiz is fully responsible on a range of devices - from hand-held devices to larger screens such as monitors or even TVs. This is to ensure that as many people as possible can play the quiz and enjoy this journey.
+A website open to all above the age of 18 (due to drinking age). The The Cocktail Cabinet is a fully interactive and social website, with it's purpose to find, share and enjoy cocktail and mocktail recipes.
 
-The quiz can be played by one person or as many as would like to partake. There are rumours of a more child-friendly version to follow with additions of sound and pictures and even theme changes.
+The website will clearly display information for new and returning customers including the creators contact information via social media links. The website is fully responsible on a range of devices - from hand-held devices to larger screens such as monitors and even TVs. This is to ensure that as many people as possible can visit the website.
+
+The website is welcoming to a range of visitors, and gives a very nice user experience with plenty of on-screen prompts (explained here[Features](#features)) on dispaly and a whole host of fancy tech working in the background to ensure a smooth and easy experince.
 
 The quiz generates 1 question at a time, with 4 multiple choice options as answers.
 The player clicks on the buttons/answers and the quiz gives a visual prompt via the colour change to signify the players selection is correct (gold) or incorrect (red).
@@ -63,119 +69,215 @@ A player can enter their name to save their high score to the High Scores list.
 
 ## User Stories
 
-Following are the goals that the quiz should provide for each user.
+Following are the goals that the website should provide for each user.
 
 #### As a New User :
-* I want to to be able to access and play quiz on the device I'm using.
-* I want to to be able to play with ease.
-* I want to to be able to understand the quiz immediately.
-* I want to to be able to access instructions if need be.
-* I want to to be able to contact the quiz developers if I wish to.
+* I want to to be able to access and view the website on the device I'm using.
+* I want to to be able to navigate the website with ease.
+* I want to to be able to understand the website immediately.
+* I want to to be able to view guidence or some for of help if needs be.
+* I want to to be able to contact the website developers if I wish to.
 * I want there to be plenty of variety.
+* I want a reason to return.
 
 #### As a Returning User :
 * I want to find information about the company's background, their story and growth.
 * I want to find the best way to get in contact with the company with any questions I may have.
 * I want to be able to contact the company in many different ways.
-* I want to be able to view my high scores.
-* I want to be able to save my score after the quiz.
-* I want to to be able to access and play the quiz on a range of devices/browsers.
+* I want to be able to add my own recipes.
+* I want to be able to view my own recipes.
+* I want to to be able to access and view the website on a range of devices/browsers.
 
-## Design
+
+## Data Schema Design
+Here is the database schema layout for The Cocktail Cabinet website. It shows each collection, what data is kept, their type and how they are linked together.
+
+<img src="wireframes/data-schema.png">
+
+This schema is vital in developing the website's functionality, it's features and what all users are capable of doing. A breakdown of every feature can be found here [Features]() along with the code, and how everything links together.
+
+The models.py file [link or screenshot ]holds the postgres side of things (list data and purpose), and the mongodb (give more info) holds the rest. A full setup can be found here [Development?](link) These can be adjusted for future projects or an adjustment to this one by:
+
+explain steps. for admin. developer/creator and for end-user
+
+
+
+
+## Aesthetic Design
 Once the user goals and the projects intentions were set out, the next step was to design the aesthetic aspects of the The Cocktail Cabinet.
 
+
+
+show flow of website, what page links to where etc
+
+
 ### Wireframes
-Wireframes were drawn using [Balsamiq](https://balsamiq.com/) at the beginning of the project. They were referenced throughout the design and building of the quiz. Following are a series of images showing the The Cocktail Cabinet on the three main screen sizes: desktop, tablet and mobile. Every major section of the quiz is also included.
+Wireframes were drawn using [Balsamiq](https://balsamiq.com/) at the beginning of the project. They were referenced throughout the design and building of the website. Following are a series of images showing the The Cocktail Cabinet on the three main screen sizes: desktop, tablet and mobile. Every major section of the website is also included.
 
 #### Desktop
 
+
+(((link in file? less clutter)))
+
+
 - Home Page Wireframe
 
-<img src="wireframes/desktop-index.png">
+<img src="wireframes/desktop-home.png">
 
-- Quiz Wireframe
+- The Bar / All Cocktails Wireframe
 
-<img src="wireframes/desktop-quiz.png">
+<img src="wireframes/desktop-all-cocktails.png">
 
-- How To Play Wireframe
+- Filtered Cocktails Wireframe
 
-<img src="wireframes/desktop-how-to.png">
+<img src="wireframes/desktop-filtered.png">
 
-- Contact Wireframe
+- View Cocktail Wireframe
 
-<img src="wireframes/desktop-contact.png">
+<img src="wireframes/desktop-view-cocktail.png">
 
-- High Scores Wireframe
+- My Cabinet / Profile Wireframe
 
-<img src="wireframes/desktop-highscore.png">
+<img src="wireframes/desktop-profile.png">
 
-- End Screen Wireframe
+- Add Cocktail Wireframe
 
-<img src="wireframes/desktop-end.png">
+<img src="wireframes/desktop-add-cocktail.png">
+
+- Edit Cocktail Wireframe
+
+<img src="wireframes/desktop-edit-cocktail.png">
+
+- Manage Categories Wireframe
+
+<img src="wireframes/desktop-manage-categories.png">
+
+- Add Category Wireframe
+
+<img src="wireframes/desktop-add-category.png">
+
+- Edit Category Wireframe
+
+<img src="wireframes/desktop-edit-category.png">
+
+- Log In Wireframe
+
+<img src="wireframes/desktop-login.png">
+
+- Register Wireframe
+
+<img src="wireframes/desktop-register.png">
 
 #### Tablet
 
 - Home Page Wireframe
 
-<img src="wireframes/tablet-index.png">
+<img src="wireframes/tablet-home.png">
 
-- Quiz Wireframe
+- The Bar / All Cocktails Wireframe
 
-<img src="wireframes/tablet-quiz.png">
+<img src="wireframes/tablet-all-cocktails.png">
 
-- How To Play Wireframe
+- Filtered Cocktails Wireframe
 
-<img src="wireframes/tablet-how-to.png">
+<img src="wireframes/tablet-filtered.png">
 
-- Contact Wireframe
+- View Cocktail Wireframe
 
-<img src="wireframes/tablet-contact.png">
+<img src="wireframes/tablet-view-cocktail.png">
 
-- High Scores Wireframe
+- My Cabinet / Profile Wireframe
 
-<img src="wireframes/tablet-highscore.png">
+<img src="wireframes/tablet-profile.png">
 
-- End Screen Wireframe
+- Add Cocktail Wireframe
 
-<img src="wireframes/tablet-end.png">
+<img src="wireframes/tablet-add-cocktail.png">
+
+- Edit Cocktail Wireframe
+
+<img src="wireframes/tablet-edit-cocktail.png">
+
+- Manage Categories Wireframe
+
+<img src="wireframes/tablet-manage-categories.png">
+
+- Add Category Wireframe
+
+<img src="wireframes/tablet-add-category.png">
+
+- Edit Category Wireframe
+
+<img src="wireframes/tablet-edit-category.png">
+
+- Log In Wireframe
+
+<img src="wireframes/tablet-login.png">
+
+- Register Wireframe
+
+<img src="wireframes/tablet-register.png">
 
 #### Mobile
 
 - Home Page Wireframe
 
-<img src="wireframes/mobile-index.png">
+<img src="wireframes/mobile-home.png">
 
-- Quiz Wireframe
+- The Bar / All Cocktails Wireframe
 
-<img src="wireframes/mobile-quiz.png">
+<img src="wireframes/mobile-all-cocktails.png">
 
-- How To Play Wireframe
+- Filtered Cocktails Wireframe
 
-<img src="wireframes/mobile-how-to.png">
+<img src="wireframes/mobile-filtered.png">
 
-- Contact Wireframe
+- View Cocktail Wireframe
 
-<img src="wireframes/mobile-contact.png">
+<img src="wireframes/mobile-view-cocktail.png">
 
-- High Scores Wireframe
+- My Cabinet / Profile Wireframe
 
-<img src="wireframes/mobile-highscore.png">
+<img src="wireframes/mobile-profile.png">
 
-- End Screen Wireframe
+- Add Cocktail Wireframe
 
-<img src="wireframes/mobile-end.png">
+<img src="wireframes/mobile-add-cocktail.png">
+
+- Edit Cocktail Wireframe
+
+<img src="wireframes/mobile-edit-cocktail.png">
+
+- Manage Categories Wireframe
+
+<img src="wireframes/mobile-manage-categories.png">
+
+- Add Category Wireframe
+
+<img src="wireframes/mobile-add-category.png">
+
+- Edit Category Wireframe
+
+<img src="wireframes/mobile-edit-category.png">
+
+- Log In Wireframe
+
+<img src="wireframes/mobile-login.png">
+
+- Register Wireframe
+
+<img src="wireframes/mobile-register.png">
 
 ### Colour Palette
-- The colour palette has an old-fashioned, nostalgic theme which pays homage to classic travel and adventure when combined with the imagery. This contrasted well with a modern and functional quiz in terms of layout, and the general theme of travelling around the world by plane. The background image (maps.jpg) provides an array of browns, yellows, black and some shaded/darker colours.
+- The colour palette leans towards a darker range of shades and colours in an effort to evoke a cool, mysterious mood - inspired  by some of the cocktail bars the creator has visited. This contrasted well with what is predicted to be a faily vast range of imagery chosen by the users - with cocktails covering every colour imaginable, often vibrant and bright. The main background hero image (bg.jpg) provides an array of browns, yellows, black and some shaded/darker colours.
 - The heading and the game container use the same colour (rgba(230,236,240)), with a slight opacity for the container, allowing the background image to be seen, but not interfere too much with the flow and visibility of the quiz/content.
 - By default, all buttons have a colour of "cultured/ whitesmoke" (rgb(239, 239, 239)) and that simplicity allows other colours and content to shine.
-- The text colour is mostly black (rgb(0,0,0)) to ensure a greater contrast between the buttons and container colours. 
-- The most important text is a gold or "cyber yellow" (rgb(255,210,0)) colour. This colour is synonymous with victory, champions and has forever been a highly desirable and attractive colour. The reason for choosing this colour is obviously to entice the user to keep totalling up the golden numbers during the quiz, and also to challenge the users to reach the top of the High Scores list.
-- A slightly opaque antique brass (rgb(187 148 133) is often for shadows, to help bring depth and highlight some interactive features such as buttons.
+- The text colour is mostly white (rgb(255,255,255)) for the website's footer and navbar and also when placed upon hero images and cocktail imagery. This ensures a constant and obvious contrast between text and any background content or colours. When the background is much lighter, the text is black (rgb(0,0,0)), again to ensure clarity and readability.
+- Some shadows to texts and containers are used to help with depth and contast.
 
 <img src="assets/readme-images/palette.png">
 
-- It was decided early on in the design stage that the gold (cyber yellow) colour would be important for the quiz. Some of the other colours were chosen around having this colour in mind, especially to ensure the colour was a focal point - always drawing the user's eyes to it and never obstructed or poorly contrasted by other colours. Therefore, the black font colour and the container and button colours provided the perfect colours to balance this. These combinations helped highlight the importance of providing a visually appealing quiz but also with high contrast and readability a priority.
+- It was decided early on in the design stage that the gold (cyber yellow) colour would be important for the website. Some of the other colours were chosen around having this colour in mind, especially to ensure the colour was a focal point - always drawing the user's eyes to it and never obstructed or poorly contrasted by other colours. Therefore, the black font colour and the container and button colours provided the perfect colours to balance this. These combinations helped highlight the importance of providing a visually appealing quiz but also with high contrast and readability a priority.
 
 - Here is the [Contrast Checker](https://webaim.org/resources/contrastchecker/) tool used to support this:
 
@@ -184,22 +286,18 @@ Wireframes were drawn using [Balsamiq](https://balsamiq.com/) at the beginning o
 
 
 ### Images
-- The use of photography is vital in creating allure and desire, especially for an interactive quiz. Users are drawn by what they see. The maps.jpg background image is large and provides a fantastic colour to build an interface on. It also provided contrast and highlighted the actual game area from the background itself. 
+- The use of photography is vital in creating allure and desire, especially for cocktail recipe website. Users are drawn by what they see. The bg.jpg background image is large and provides a fantastic colour to build an interface on.
 
-- It's vital for the theme to be clear and obvious. The background image makes the quiz recognizable and memorable so people recall and return to it, which will draw more eyes to the quiz. This, along with the CSS styling and colour palette, helps build and clarify that the quiz is travel related. The following image was used.
+- It's vital for the theme to be clear and obvious. The background image makes the website recognizable and memorable so people recall and return to it, which will draw more eyes to the website. This, along with the CSS styling and colour palette solidifies the theme. The following image was used.
 
-<img src="assets/readme-images/maps.jpg">
+<img src="assets/readme-images/bg.jpg">
 
 Logo
 
 <img src="assets/images/logo.png">
 
-Plane
-
-<img src="assets/images/plane.png">
-
 ### Font
--  The The Cocktail Cabinet uses the Poppins font. It provides that clean, clear style without compromising on readability - a vital design feature for any quiz. This is available for free via [Google Fonts](https://fonts.google.com/) and imported via CSS. Sans Serif is used as a secondary option in case of failure to import  the font into the quiz correctly. Poppins is a clean font used frequently in designs, so it is both attractive and appropriate.
+-  The The Cocktail Cabinet uses the Poppins font. It provides that clean, clear style without compromising on readability - a vital design feature for any website. This is available for free via [Google Fonts](https://fonts.google.com/) and imported via CSS. Sans Serif is used as a secondary option in case of failure to import the font into the website correctly. Poppins is a clean font used frequently in designs, so it is both attractive and appropriate.
 
 ## Accessibility
 Extremely important aspect.
@@ -208,6 +306,7 @@ Extremely important aspect.
 -   Aria-labelledby to link sections.
 -   Colour and contrast considerations and testing.
 -   Adding labels to forms.
+-   Prompts to help guide users.
 
 ## Features
 
@@ -393,17 +492,7 @@ fetch(
     })
 ```
 
-#### - Alternative Ending
 
-This snippet of code shows two possible outcomes when the user answers all 10 questions. The first outcome displays the message if the maximum score (25000) is reached, if not, the else statement triggers. It gives added importance and attention to those users capable of answering 10 correct questions.
-
-```javascript
-if (mostRecentScore == 25000) {
-    finalScore.innerHTML = `<span id="span-score"> ${mostRecentScore} miles travelled!<br><br>You successfully travelled the world!</span>`;
-  } else {
-    finalScore.innerHTML = `<span id="span-score"> ${mostRecentScore} miles travelled</span>`;
-}
-```
 
 ## Technologies Used
 
