@@ -165,7 +165,6 @@ main {
 
 
   /* Pagination */
-
 /* to overwrite default materializecss pagination style, centre page numbers */
 .pagination {
     position: absolute;
@@ -178,6 +177,12 @@ main {
     text-align: center;
 }
 
+  /* Modal */
+.modal {
+    text-shadow: none;
+}
+
+  /* Footer */
 footer {
     margin-top: auto;
 }
