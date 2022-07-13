@@ -28,7 +28,6 @@ def all_cocktails():
                                            per_page_parameter='per_page')
     # maximum amount of cocktails to be displayed per page
     per_page = 9
-    offset
     offset = (page - 1) * per_page
     cocktails = list(mongo.db.cocktails.find())
     # the total amount of cocktails found in the mongo cocktails collection
@@ -139,7 +138,7 @@ def logout():
 def get_categories():
 
     if "user" not in session or session["user"] != "admin":
-        flash("You must be admin to manage categories!")
+        flash("You must be admin to manage cocktail categories!")
         return redirect(url_for("all_cocktails"))
 
     categories = list(Category.query.order_by(Category.category_name).all())
@@ -150,14 +149,14 @@ def get_categories():
 def add_category():
 
     if "user" not in session or session["user"] != "admin":
-        flash("You must be admin to manage categories!")
+        flash("You must be admin to manage ccktail categories!")
         return redirect(url_for("all_cocktails"))
 
     if request.method == "POST":
         category = Category(category_name=request.form.get("category_name"))
         db.session.add(category)
         db.session.commit()
-        flash("New Category Added")
+        flash("New Cocktail Category Added")
         return redirect(url_for("get_categories"))
     return render_template("add_category.html")
 
@@ -172,7 +171,7 @@ def edit_category(category_id):
     if request.method == "POST":
         category.category_name = request.form.get("category_name")
         db.session.commit()
-        flash("Category Updated")
+        flash("Cocktail Category Updated")
         return redirect(url_for("get_categories"))
     return render_template("edit_category.html", category=category)
 
@@ -187,7 +186,7 @@ def delete_category(category_id):
     db.session.delete(category)
     db.session.commit()
     mongo.db.cocktails.delete_many({"category_id": str(category_id)})
-    flash("Category Deleted")
+    flash("Cocktail Category Deleted")
     return redirect(url_for("get_categories"))
 
 

@@ -75,17 +75,16 @@ Following are the goals that the website should provide for each user.
 * I want to to be able to access and view the website on the device I'm using.
 * I want to to be able to navigate the website with ease.
 * I want to to be able to understand the website immediately.
-* I want to to be able to view guidence or some for of help if needs be.
+* I want to to be able to view guidence or some form of help if needs be.
 * I want to to be able to contact the website developers if I wish to.
-* I want there to be plenty of variety.
 * I want a reason to return.
 
 #### As a Returning User :
 * I want to find information about the company's background, their story and growth.
 * I want to find the best way to get in contact with the company with any questions I may have.
 * I want to be able to contact the company in many different ways.
-* I want to be able to add my own recipes.
-* I want to be able to view my own recipes.
+* I want to be able to view my own cocktail recipes.
+* I want to be able to add my own cocktail recipes.
 * I want to to be able to access and view the website on a range of devices/browsers.
 
 
@@ -319,6 +318,7 @@ There are universal features that are present throughout The Cocktail Cabinet we
 - Social links in footer, linking to creator/website social links and provides ways to contact them.
 - Name of website along with copyright info in footer.
 - All clickable images, buttons, links etc have a hovering cursor/pointer to signify that that element can be interacted with. The majority of these elements being visually promted either throgh a short zoom in/out animation, colour change or highlighting.
+- A Flash text appears at the top of the webpage whenever a user or admin completes a task - by either adding, editing or deleting information. They are informed of this.
 
 Here's a breakdown of all the design features on each of the main webpages within The Cocktail Cabinet website:
 
@@ -358,8 +358,8 @@ My Cabinet. This is where every cocktail recipe the user has submitted is stored
 
 ### Add Cocktail (add_cocktail.html)
 <img src="assets/readme-images/add-cocktail-page.png">
-The Add Cocktail / Add Cocktail to My Cabinet page is for users to add their cocktail recipie to the website via a form. Only rgistered users(and admin) can use this feature. The cocktail recipie is added to The Bar (all_cocktails.html), the My Cabinet (profile.html) page and to the cocktail's collection (whichever the user selects) that can then be found through either searching The Bar, or by the carousel on the home page which then leads to the (filter_category) page. The features include:
-- Placeholders on all inputs serve as helpful guidence for users.
+The Add Cocktail / Add Cocktail to My Cabinet page is for users to add their cocktail recipie to the website via a form. Only registered users(and admin) can use this feature. The cocktail recipie is added to The Bar (all_cocktails.html), the My Cabinet (profile.html) page and to the cocktail's collection (whichever the user selects) that can then be found through either searching The Bar, or by the carousel on the home page which then leads to the (filter_category) page. The features include:
+- Placeholders and labels on all inputs serve as helpful guidence for users.
 - Validation on all user inputs (see code breakdown again? validate class).
 - Several inputs linked to the database (see data schema, code breakdown etc for explanation of inputs, types, data links etc.)
 - Cocktail Name - The cocktail name that will be presented for all to see on the recipes image.
@@ -375,39 +375,73 @@ The Add Cocktail / Add Cocktail to My Cabinet page is for users to add their coc
 - 'Cancel' button. Leaves the page and returns to the users My Cabinet.
 
 ### Edit Cocktail (edit_cocktail.html)
-<img src="assets/readme-images/add-cocktail-page.png">
-The Edit Cocktail / Add Cocktail to My Cabinet page is for users to add their cocktail recipie to the website via a form. Only rgistered users(and admin) can use this feature. The cocktail recipie is added to The Bar (all_cocktails.html), the My Cabinet (profile.html) page and to the cocktail's collection (whichever the user selects) that can then be found through either searching The Bar, or by the carousel on the home page which then leads to the (filter_category) page. The features include:
-- Placeholders on all inputs serve as helpful guidence for users.
+<img src="assets/readme-images/edit-cocktail-page.png">
+The Edit Cocktail page is for users to edit their own cocktail recipie via a form. Only registered users(and admin) can use this feature. The cocktail edited cocktail recipie is updated when the form is submitted and found in the same places as the original recipie. The information expected from the user is the same as the add_cocktail.html page. The features include:
+- Labels on all inputs with the current cocktail related data/value on each input.
 - Validation on all user inputs (see code breakdown again? validate class).
-- Several inputs linked to the database (see data schema, code breakdown etc for explanation of inputs, types, data links etc.)
-- Cocktail Name - The cocktail name that will be presented for all to see on the recipes image.
-- Dropdown select options for user to choose the Cocktail Category their cocktail belongs to. Admin has control over which categories are added to the website/database.
-- Main Ingredient - The cocktails main ingredient. Tends to be the most prominent ingredient/alcoholic spirit (but also mocktails accepted).
-- Ability for user to add a URL for their cocktail image. This is validated and has some error handling linked to it (see code breakdown, error handling)
--Cocktail Description - A text input to accept the users description of their cocktail.
-- Method. A maximum of 8 methods that the user can add. 'Add' a new method or 'Remove' a previous method via the linked buttons. If the user attempts to add more than 8 methods, the user is informed of this via an error message underneath the last input field. The Add and Remove buttons are disabled (via the materializecss class="disabled") if there's no need for them to be used.
-- Other Ingredients and Measurments. Just like the the Method input, a maximum of 8 other ingredients can be added by the user. The user can add or remove a previous other ingredient via the linked buttons during the form filling. If the user attempts to add more than 8, the user is informed of this via an error message underneath the last input field. The Add and Remove buttons are disabled (via the materializecss class="disabled") if there's no need for them to be used.
-- Preperation Time - How long it takes to prepare the cocktail.
-- Servings. This is set to only accept numerical inputs, and a helpful up/down scroll number can be used instead of manually typing.
-- 'Add Cocktail Button to My Cabinet'. This button submits the form to the mongodb database if all inputs are valid and met.
-- 'Cancel' button. Leaves the page and returns to the users My Cabinet.
+- 'Edit Button'. This button submits the form to the mongodb database if all inputs are valid and met and updates that specific cocktail recipie.
+- 'Cancel' button. Leaves the page and returns to The Bar page.
+
+### - View Cocktail page (view_cocktail.html)
+<img src="assets/readme-images/view-cocktail-page.png">
+The View Cocktail page is where the visitor can see the full recipie for the cocktail they selected. All visitors to the website can view this webpage. The features include:
+- Cocktail Name in large above the recipie.
+- All data/cocktail information presented.
+- A large image of the cocktail.
+- 'Edit' and 'Delete' buttons if the cocktail recipie was submitted by the user (Edit and Delete buttons work the same as the others on the website).
+- 'Return to The Bar' button, which redirects the user to The Bar page.
+
+### - Manage Categories page (/get_categories)
+<img src="assets/readme-images/get-categories-page.png">
+The Manage Categories page is where admin can view all the cocktail categories available. Only the website's admin can view this webpage. The features include:
+- All cocktail categories information presented in a list.
+- 'Add Cocktail Category' button. When clicked, it goes to the Add Cocktail Category (add_category.html) form page.
+- 'Delete' button when clicked will show the modal, just like other delete featues. The admin chooses from Delete to confirm or Cancel to return to the exit the modal.
+- 'Edit' button when clicked will forward the admin to the Edit Cocktail Category (edit_category.html) form page.
+
+### - Add Category page (add_category.html)
+<img src="assets/readme-images/add-category-page.png">
+The Add Cocktail Category page is where the admin can add new cocktail categories to the website. These categories will then be avaiable to choose from the cocktail forms via dropdown (see add_cocktail.html and edit_cocktail.html). Again, only the admin can view this page. The features include:
+- Page title in large at top of the page.
+- Category Name placeholder and label on input.
+- 'Cancel' button. When clicked, leaves the page and returns to the Manage Categories page.
+- 'Add Cocktail Category' button. When clicked, submits the form and returns to the Manage Categories page, where the newly created category is added to the list.
+
+### - Edit Category page (edit_category.html)
+<img src="assets/readme-images/edit-category-page.png">
+The Edit Cocktail Category page is where the admin can edit a current cocktail category. These categories will then be updated in the database and shown via the dropdown select options (see add_cocktail.html and edit_cocktail.html). Again, only the admin can view this page. The features include:
+- Page title in large at top of the page.
+- Category Name label  and current value in input.
+- 'Cancel' button. When clicked, leaves the page and returns to the Manage Categories page.
+- 'Edit Cocktail Category' button. When clicked, submits the form and returns to the Manage Categories page, where the edit category is updated on the list.
+
+### - Log In page (login.html)
+<img src="assets/readme-images/login-page.png">
+The Log In page is where visitors can enter their details and log in to their account. All visitors to the website can view this webpage. The features include:
+- 'Log In' title on top of the page.
+- Username input with placeholder and validation applied.
+- Password input with placeholder and validation applied.
+- 'Log In' button. When clicked, the user is forwarded to their personal My Cabinet (profile.html) page.
+
+### - Register page (register.html)
+<img src="assets/readme-images/register-page.png">
+The Register page is where visitors can enter their details for the first time to register their new account. All visitors to the website can view this webpage. The features include:
+- 'Register' title on top of the page.
+- Username input with placeholder and validation applied.
+- Password input with placeholder and validation applied.
+- 'Register' button. When clicked, the user is forwarded to their personal My Cabinet (profile.html) page.
+
 
 ## Interactive Elements
+Following is a list of all interactive elements of the The Cocktail Cabinet website.
 
--   Following is a list of all interactive elements of the The Cocktail Cabinet website.
-
-#### Quiz Logo
-
-As shown on the images below, the website logo and title is very clear and bright. The centrepiece, always there and clickable. It shows off the quiz nicely, it's obviously related to geography and serves as a constant reminder to the user about where they are and what they are playing. The logo itself is a clickable link (a cursor appears when hovering over), and returns the user back to the home page at any time. 
+#### The Cocktail Cabinet website logo
+As shown on the images below, the website logo and title is very clear and obvious. The centrepiece, always there and clickable. It serves as a constant reminder to the user about the brand and the website they are visiting. The logo itself is a clickable link (a cursor appears when hovering over), and returns the user back to the home page at any time. 
 
 <img src="assets/readme-images/logo-click.png">
 
-```javascript
-logoReload.addEventListener("click", reloadGame);
-
-function reloadGame() {
-    window.location.assign('index.html');
-}
+```
+<a href="{{ url_for('home') }}" class="brand-logo">The Cocktail Cabinet</a>
 ```
 
 #### Toggle Menu Elements
@@ -484,8 +518,7 @@ highscoresButton.onclick = function () {
 #### Buttons
 
 #### - General Buttons
-
-- Almost every button is styled to look the same. A clean and clear button to make for user readability and speed, paramount to elite quizzing.
+- Almost every button is styled to look the same. A clean and clear button to make for user readability.
 
 <img src="assets/readme-images/button.png">
 
@@ -493,71 +526,27 @@ highscoresButton.onclick = function () {
 
 <img src="assets/readme-images/button-hover.png">
 
-#### - High Scores Button
-
-- The few exception to the rule is the High Scores button (and mention the disabled button). Due to the nature of this button and it's significance, it was decided to style this differently with a golden (#) hue/ . This is pure bragging rights and to entice the players to compete for the highest score. it will be big factor for returning players.
+#### - Delete Button
+- Due to the nature of this button and it's significance, it was decided to style this differently with a golden (#) hue/ . This is pure bragging rights and to entice the players to compete for the highest score. it will be big factor for returning players.
 
 <img src="assets/readme-images/button-highscore.png">
 
-#### - Save Button
+#### - Edit Button
 - The Save button is set as disabled as a default. Once the user inputs their name, the button returns to a normal state, just like the others.
 
 <img src="assets/readme-images/button-disabled.png">
 
-#### - Correct Answer Button
+#### - Cancel Button
 
 - Gold (rgb(255,210,0)) indicates a correct answer.
 
 <img src="assets/readme-images/button-correct.png">
-
-#### - Incorrect Answer Button
-
-- Red (rgb(255,0,0)) indicates an incorrect answer.
-
-<img src="assets/readme-images/button-incorrect.png">
 
 #### - Input
 
 - The 'Enter your name' input field has a very basic style applied. IF the user chooses not to enter their name, then the Save button remains disabled and the user will not be able to save their score to the High Scores section.
 
 <img src="assets/readme-images/input.png">
-
-#### - Progress Bar
-
-- The progress bar indicates the progress made by the user via the golden colour-fill and plane image. Every correct answer adds 10% to the progress bar - with the user's aim to reach 100%, a total of 10/10 correct answers and maximum score.
-
-Here is the code that increments the score and allows the plane image to track the progress bar with each correct answer. This all happens simultaneously.
-
-```javascript
-if(classToApply === 'correct') {
-    correctAnswers = (correctAnswers + 1);
-    
-    incrementScore(SCORE_POINTS);
-    progressBarFull.style.width = `${correctAnswers * 10}%`;
-    plane.style.left = "100%";
-}
-```
-
-<img src="assets/readme-images/progressbar.png">
-
-
-#### - API
-The URL in the JS code below were preselected by the developer. The categories for the quiz are:
-- Number of Questions - 10
-- Category - Geography
-- Difficulty - Easy
-- Type - Multiple Choice
-- Default Encoding
-
-```javascript
-fetch(
-    'https://opentdb.com/api.php?amount=10&category=22&difficulty=easy&type=multiple'
-)
-    .then((res) => {
-        return res.json();
-    })
-```
-
 
 
 ## Technologies Used
@@ -567,6 +556,7 @@ fetch(
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+-   Python
 
 ### Frameworks, Libraries, Programs and Tools Used
 
@@ -638,31 +628,31 @@ end.js
 Following are the original [User Stories](#user-stories) set out in the early design stages of the project. They were individually tested to see if each goal was satisfied against the completed project.
 
 #### As a New User :
-* I want to to be able to access and play quiz on the device I'm using.
+* I want to to be able to access and view the website on the device I'm using.
     - The quiz has been tested for ease of access and responsiveness on dozens of devices (handheld devices such as mobile phones and tablets, laptops, desktop computers and larger Samsung TVs) and is fully responsible from at least a minimum of 320px up to at least 1200px. See [here](#further-testing) for more testing related tasks.
-* I want to to be able to play with ease.
+* I want to to be able to navigate the website with ease..
     - Part of the biggest draw to quiz by nature is their simplicity and easy of use. The quiz is a click-and-play format and the interactive prompts and layout make it very clear to understand for any first-time user.
-* I want to to be able to understand the quiz immediately.
+* I want to to be able to understand the website immediately.
     - The style and layout, along with the interactive features and prompts enable first-time users to understand the quiz, the theme and it's purpose.
-* I want to to be able to access instructions if need be.
+* I want to to be able to view guidence or some form of help if needs be.
     - The How to Play [button](#how-to-play) is clear and obvious from the first screen the user is presented with. A minimal styling setup and only 4 buttons ensure that information is displayed clearly and to not overwhelm users. All instructions are found after clicking on this button.
-* I want to to be able to contact the quiz developers if I wish to.
+* I want to to be able to contact the website developers if I wish to.
     - The Contact [button](#contact) is clear and obvious from the first screen the user is presented with. A minimal styling setup and only 4 buttons ensure that information is displayed clearly and to not overwhelm users. All contact information is found after clicking on this button.
-* I want there to be plenty of variety.
-    - Thanks to the API automatically generating questions from a deep database and also having the answers randomly ordered from the 4 possible choice-containers, the variety and quiz is never the same.
+* I want a reason to return.
+    - The ability for the user to view cocktail the entire libraby of cocktail recipes is a reason to return. The option to register and share their own is another. The very likely possibility for new recipes to be added by other users is too.
 
 #### As a Returning User :
 * I want to find information about the developer's background, their story and growth.
-    - The Contact [button](#contact) provides links to all the developers social media [links](#contact) (twitter, YouTube, instagram and LinkedIn). The contact information can be found on those platforms. For example the developers contact information is on each profile of these social media websites, there are YouTube vlogs of the company's developing stage, snippets of inside-info on instagram and all professional history and access via LinkedIn.
+    - The social media links found on the footer [footer](#footer) of every page provides links to all of the developers social media [links](#contact) (instagram, facebook, twitter, tikitok and LinkedIn). The contact information can be found on those platforms. For example the developers contact information is on each profile of these social media websites e.g. there tikitoks of the developing stage, snippets of inside-info on instagram stories and all professional history and access via LinkedIn.
 * I want to find the best way to get in contact with the company with any questions I may have.
-    - Once the Contact [button](#contact) is clicked., it provides links to all the developers social media links (twitter, YouTube, instagram and LinkedIn). The contact information can be found on those platforms and provides a quick and direct link to the users queries.
+    - The contact information can be found on the social media platforms, linked in the footer of each page. They provide a quick and direct link to the website's developer.
 * I want to be able to contact the company in many different ways.
-    - Once the Contact [button](#contact) is clicked, it gives access to 4 social media options the user can choose to contact the developer through.
-* I want to be able to view my high scores.
+    - The footer links gives access to 5 social media options the user can choose to contact the developer through.
+* I want to be able to view my own cocktail recipes.
     - Once the High Scores [button](#high-scores) is clicked, it gives access to the high scores list, with a maximum of 5 user names and scores capable of being displayed.
-* I want to be able to save my score after the quiz.
+* I want to be able to add my own cocktail recipes.
     - After completing all 10 questions, the quiz displays the [end screen](#the-end-screen) to the user. Here, the user can choose to enter their name in the prompted [input field](#input) and the previously disabled Save [button](#save-button) is made clickable. If clicked, the user name is saved to the High Scores list if it made the top 5 high scores.
-* I want to to be able to access and play the quiz on a range of devices/browsers.
+* I want to to be able to access and view the website on a range of devices/browsers.
     - The quiz has been tested for ease of access and responsiveness on dozens of devices (handheld devices such as mobile phones and tablets, laptops, desktop computers and larger Samsung TVs) and is fully responsible from at least a minimum of 320px up to at least 1200px. it also works on multiple browsers as stated [here](#further-testing).
 
 ## Google Chrome Lighthouse Test

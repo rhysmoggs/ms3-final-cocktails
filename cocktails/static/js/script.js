@@ -119,7 +119,7 @@ add_other_btn.onclick = function() {
     if (counter === max) {
         var errorFlash = document.createElement('p');
         errorFlash.setAttribute('id', 'error-flash');
-        errorFlash.innerHTML = "Max reached";
+        errorFlash.innerHTML = "Maximum number of other ingredients reached";
         errorFlash.style.textAlign = "center";
         new_input.appendChild(errorFlash);
         add_other_btn.classList.add("disabled");
