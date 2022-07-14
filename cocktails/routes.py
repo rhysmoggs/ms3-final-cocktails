@@ -50,11 +50,30 @@ def filter_category(category_id):
     return render_template("filter_category.html", cocktails=cocktails)
 
 
-@app.route("/search", methods=["GET", "POST"])
+# @app.route("/search", methods=["GET", "POST"])
+# def search():
+#     query = request.form.get("query")
+#     cocktails = list(mongo.db.cocktails.find({"$text": {"$search": query}}))
+#     return render_template("all_cocktails.html", cocktails=cocktails)
+
+
+@app.route("/search")
 def search():
-    query = request.form.get("query")
+    query = request.args.get("query")
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    per_page = 9
+    offset = (page - 1) * per_page
     cocktails = list(mongo.db.cocktails.find({"$text": {"$search": query}}))
-    return render_template("all_cocktails.html", cocktails=cocktails)
+    total = len(cocktails)
+    cocktails_paginated = cocktails[offset: offset + per_page]
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='materializecss')
+    return render_template("all_cocktails.html",
+                           cocktails=cocktails_paginated,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination)
 
 
 @app.route("/register", methods=["GET", "POST"])

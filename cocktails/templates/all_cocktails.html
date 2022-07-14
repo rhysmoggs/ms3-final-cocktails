@@ -11,11 +11,12 @@
 <main class="container">
     <div class="row">
     <!-- <div class="row card-panel grey lighten-5"> -->
-        <form action="{{ url_for('search') }}" method="POST" class="col s12">
+        <form action="{{ url_for('search') }}" method="GET" class="col s12">
+        <!-- <form action="{{ url_for('search') }}" method="POST" class="col s12"> -->
             <div class="row valign-wrapper center-align">
                 <div class="input-field col s12 m8">
                     <i class="fas fa-search prefix brown-text text-darken-4"></i>
-                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                    <input type="text" name="query" id="query" minlength="3" minlength="20" class="validate" required>
                     <label for="query">cocktail name, alcohol, ingredients</label>
                 </div>
                 <div class="col s12 m4">
