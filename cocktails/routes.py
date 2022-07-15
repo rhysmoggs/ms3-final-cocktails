@@ -86,6 +86,11 @@ def register():
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
+        
+        # check if password and confirm password do not match:
+        if request.form.get("password") != request.form.get("confirm-password"):
+            flash("Passwords do not match. Please tyry again.")
+            return redirect(url_for("register"))
 
         # create a dictionary
         user = Users(
@@ -98,7 +103,8 @@ def register():
 
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
-        flash("Registration Successful!")
+        flash("Registration Successful! Welcome, {}".format(
+                            request.form.get("username")))
         return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")

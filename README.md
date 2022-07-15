@@ -780,6 +780,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 - Pagination [setup](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9).
 
+- Dynamically setting active class with Flask and jinja2 [setup](https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621).
+
 ### Inspiration
 
 -   The Code Institute Slack community, especially projects from the peer-code-review channel.
