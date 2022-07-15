@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% set active_page = 'register' %}
 {% block content %}
 
 <h3 class="center-align">Register</h3>
@@ -10,7 +11,7 @@
                 <!-- username -->
                 <div class="row">
                     <div class="input-field col s12">
-                        <i class="fas fa-user-plus prefix brown-text text-darken-4"></i>
+                        <i class="fas fa-user-plus prefix"></i>
                         <input id="username" name="username" type="text" minlength="5" maxlength="15"
                             pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                         <label for="username">Username</label>
@@ -19,7 +20,7 @@
                 <!-- passowrd -->
                 <div class="row">
                     <div class="input-field col s12">
-                        <i class="fas fa-user-lock prefix brown-text text-darken-4"></i>
+                        <i class="fas fa-user-lock prefix"></i>
                         <input id="password" name="password" type="password" minlength="5" maxlength="15"
                             pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                         <label for="password">Password</label>
@@ -27,7 +28,7 @@
                 </div>
                 <!-- register -->
                 <div class="row">
-                    <button type="submit" class="col s12 btn-large brown darken-4 text-shadow">
+                    <button type="submit" class="col s12 btn-large">
                         Register <i class="fas fa-sign-in-alt"></i>
                     </button>
                 </div>
@@ -39,7 +40,7 @@
         <div class="col s12">
             <p class="center-align">
                 Already Registered?
-                <a href="{{ url_for('login') }}" class="brown-text text-darken-4">Log In</a>
+                <a href="{{ url_for('login') }}">Log In</a>
             </p>
         </div>
     </div>

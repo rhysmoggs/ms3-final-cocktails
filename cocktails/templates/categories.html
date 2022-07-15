@@ -1,7 +1,6 @@
 {% extends "base.html" %}
+{% set active_page = 'get_categories' %}
 {% block content %}
-
-<!-- <h3 class="brown-text text-darken-4 center-align">Cocktail Categories</h3> -->
 
 <div class="category-image">
     <div class="category-text">
@@ -14,14 +13,6 @@
 </div>
 
 <main class="container">
-    <!-- <div class="row">
-        <div class="col s12 center-align">
-            <a href="{{ url_for('add_category') }}" class="btn-large brown darken-2 text-shadow">
-                Add Cocktail Category <i class="fas fa-plus-square right"></i>
-            </a>
-        </div>
-    </div> -->
-
     <div class="row">
         {% for category in categories %}
         <div class="col s12 m6 l3">
@@ -31,7 +22,7 @@
                 </div>
                 <div class="card-action">
                     <a href="#{{ category.id }}" class="btn-small green accent-4 modal-trigger">Delete</a>
-                    <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn-small brown lighten-1">Edit</a>
+                    <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn-small">Edit</a>
                 </div>
                 <!-- Modal Structure -->
                 <div id="{{ category.id }}" class="modal">

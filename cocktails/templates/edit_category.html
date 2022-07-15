@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="brown-text text-darken-4 center-align">Edit Cocktail Category</h3>
+<h3 class="center-align">Edit Cocktail Category</h3>
 
 <main class="container">
     <div class="row card-panel grey lighten-5">
@@ -9,7 +9,7 @@
             <!-- category name -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-folder-open prefix brown-text text-darken-4"></i>
+                    <i class="fas fa-folder-open prefix"></i>
                     <input id="category_name" name="category_name" value="{{ category.category_name }}" minlength="3" maxlength="25" type="text" class="validate"
                         required>
                     <label for="category_name">Category Name</label>
@@ -21,7 +21,7 @@
                     <a href="{{ url_for('get_categories') }}" class="btn-large red text-shadow">
                         Cancel <i class="fas fa-times-circle right"></i>
                     </a>
-                    <button type="submit" class="btn-large brown darken-1 text-shadow">
+                    <button type="submit" class="btn-large">
                         Edit Cocktail Category <i class="fas fa-edit right"></i>
                     </button>
                 </div>

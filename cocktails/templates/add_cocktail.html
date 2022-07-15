@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="brown-text text-darken-4 center-align">Add Cocktail to My Cabinet</h3>
+<h3 class="center-align">Add Cocktail to My Cabinet</h3>
 
 <main class="container">
     <div class="row card-panel grey lighten-5">
@@ -9,7 +9,7 @@
             <!-- cocktail name -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
+                    <i class="fas fa-glass-martini-alt prefix"></i>
                     <input id="cocktail_name" name="cocktail_name" minlength="2" maxlength="25" type="text" class="validate"
                         required>
                     <label for="cocktail_name">Cocktail Name</label>
@@ -18,7 +18,7 @@
             <div class="row">
                 <!-- cocktail category -->
                 <div class="input-field col s12 m6">
-                    <i class="fas fa-folder-open prefix brown-text text-darken-4"></i>
+                    <i class="fas fa-folder-open prefix"></i>
                     <select id="category_id" name="category_id" class="validate" required>
                         <option value="" disabled selected>Choose Category</option>
                         {% for category in categories %}
@@ -30,7 +30,7 @@
                 <!-- main ingredient -->
                 <div class="row">
                     <div class="input-field col s12 m6">
-                        <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
+                        <i class="fas fa-glass-martini-alt prefix"></i>
                         <input id="main_ingredient" name="main_ingredient" minlength="2" maxlength="25"
                             type="text" class="validate" required>
                         <label for="main_ingredient">Main Ingredient</label>
@@ -40,7 +40,7 @@
             <!-- cocktail image -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
+                    <i class="fas fa-glass-martini-alt prefix"></i>
                     <input id="cocktail_img" name="cocktail_img" minlength="6" maxlength="150"
                         type="url" class="validate" required>
                     <label for="cocktail_img">Cocktail Image</label>
@@ -49,7 +49,7 @@
             <!-- cocktail description -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix brown-text text-darken-4"></i>
+                    <i class="fas fa-align-left prefix"></i>
                     <textarea id="cocktail_description" name="cocktail_description" minlength="5" maxlength="200"
                         type="text" class="materialize-textarea validate" required></textarea>
                     <label for="cocktail_description">Cocktail Description</label>
@@ -58,37 +58,37 @@
             <!-- method -->
             <div class="row">
                 <div id="new-method" class="input-field col s6">
-                    <i class="fas fa-align-left prefix brown-text text-darken-4"></i>
+                    <i class="fas fa-align-left prefix"></i>
                     <input id="method" name="method" minlength="5" maxlength="75" class="remove-meth validate" type="text" required>
                     <label for="method">Method</label>
                 </div>
-                <a id="add-meth-btn" class="waves-effect waves-light btn-large brown darken-1 text-shadow">Add</a>
-                <a id="remove-meth-btn" class="waves-effect waves-light btn-large brown darken-1 text-shadow">Remove</a>
+                <a id="add-meth-btn" class="waves-effect waves-light btn-large">Add</a>
+                <a id="remove-meth-btn" class="waves-effect waves-light btn-large">Remove</a>
             </div>
             <!-- other ingredient -->
             <div class="row">
                 <div id="new-input" class="input-field col s6">
-                    <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
+                    <i class="fas fa-glass-martini-alt prefix"></i>
                     <input id="other_ingredient" name="other_ingredient" minlength="2" maxlength="20"
                         type="text" class="js-remove-test validate" required>
                     <label for="other_ingredient">Other Ingredients and Measuerments</label>
                 </div>
                 <div class="col s6">
-                    <a id="add-other-btn" class="waves-effect waves-light btn-large brown darken-1 text-shadow">Add</a>
-                    <a id="remove-other-btn" class="waves-effect waves-light btn-large brown darken-1 text-shadow">Remove</a>
+                    <a id="add-other-btn" class="waves-effect waves-light btn-large">Add</a>
+                    <a id="remove-other-btn" class="waves-effect waves-light btn-large">Remove</a>
                 </div>
             </div>
             <div class="row">
                 <!-- preperation time -->
                 <div class="input-field col s12 m6">
-                    <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
+                    <i class="fas fa-glass-martini-alt prefix"></i>
                     <input id="prep_time" name="prep_time" minlength="2" maxlength="25"
                         type="text" class="validate" required>
                     <label for="prep_time">Preperation Time</label>
                 </div>
                 <!-- servings -->
                 <div class="input-field col s12 m6">
-                    <i class="fas fa-glass-martini-alt prefix brown-text text-darken-4"></i>
+                    <i class="fas fa-glass-martini-alt prefix"></i>
                     <input id="servings" name="servings" min="1" max="10"
                         type="number" class="validate" required>
                     <label for="servings">Servings</label>
@@ -101,7 +101,7 @@
                         Cancel <i class="fas fa-times-circle right"></i>
                     </a>
                     <!-- submit button -->
-                    <button type="submit" class="btn-large brown darken-1 text-shadow">
+                    <button type="submit" class="btn-large">
                         Add Cocktail to My Cabinet<i class="fas fa-plus-square right"></i>
                     </button>
                 </div>
