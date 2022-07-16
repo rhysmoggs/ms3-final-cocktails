@@ -5,10 +5,10 @@
   <div class="hero-text">
     <h1>The Cocktail Cabinet</h1>
     <h5>Share a Drink With Us</h5>
-    {% if session.user  %}
-      <a href="{{ url_for('profile', username=session['user']) }}" class="btn-small green accent-4">My Cabinet</a>
+    {% if session.user %}
+      <a href="{{ url_for('profile', username=session['user']) }}" class="btn-large green accent-4 text-shadow">My Cabinet</a>
     {% else %}
-      <a href="{{ url_for('login') }}" class="btn-small green accent-4">Log In</a>
+      <a href="{{ url_for('login') }}" class="btn-large green accent-4 text-shadow">Log In</a>
     {% endif %}
   </div>
 </div>

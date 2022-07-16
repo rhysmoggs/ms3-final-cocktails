@@ -16,14 +16,14 @@
                 {% endif %}
                 <span class="card-title"><strong>{{ cocktail.cocktail_name }}</strong></span>
             </div>
-            <div>
+            <div class="center-align">
                 {% if session.user|lower == cocktail.created_by|lower %}
-                    <a href="#{{ cocktail._id }}" class="btn-small green accent-4 modal-trigger">Delete</a>
-                    <a href="{{ url_for('edit_cocktail', cocktail_id=cocktail._id ) }}" class="btn-small">Edit</a>
+                    <a href="#{{ cocktail._id }}" class="btn-small red darken-1 modal-trigger"><i class="fas fa-trash"></i> Delete</a>
+                    <a href="{{ url_for('edit_cocktail', cocktail_id=cocktail._id ) }}" class="btn-small blue lighten-1">Edit <i class="fas fa-edit right"></i></a>
                 {% endif %}
             </div>
             <!-- Modal Structure -->
-            <div id="{{ cocktail._id }}" class="modal">
+            <div id="{{ cocktail._id }}" class="modal center-align">
                 <div class="modal-content">
                     <h4>Wait...</h4>
                     <p>Are you sure you want to delete this<strong>{{ cocktail.cocktail_name }}</strong> cocktail?</p>
