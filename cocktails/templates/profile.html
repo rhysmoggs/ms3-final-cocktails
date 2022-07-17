@@ -27,7 +27,7 @@
                                 <img src="{{ url_for('static', filename='static/images/whiskey_sour.jpg') }}" alt="picture of a whiskey sour cocktail" width="100"
                                 height="250">
                             {% endif %}
-                            <span class="card-title"><strong>{{ cocktail.cocktail_name }}</strong></span>
+                            <span class="card-title"><strong class="text-pop">{{ cocktail.cocktail_name }}</strong></span>
                         </a>
                     </div>
                     <div class="center-align">
@@ -41,8 +41,8 @@
                             <p>Are you sure you want to delete this<strong>{{ cocktail.cocktail_name }}</strong> cocktail?</p>
                         </div>
                         <div class="modal-footer">
-                            <a href="{{ url_for('delete_cocktail', cocktail_id=cocktail._id ) }}" class="modal-close waves-effect waves-green btn-flat">Delete</a>
-                            <a href="#!" class="modal-close waves-effect waves-green btn-small">Cancel</a>
+                            <a href="{{ url_for('delete_cocktail', cocktail_id=cocktail._id ) }}" class="modal-close btn-small red darken-1 text-shadow">Delete</a>
+                            <a href="#!" class="modal-close btn-small green accent-4 text-shadow">Cancel</a>
                         </div>
                     </div>
                     <div class="card-content">

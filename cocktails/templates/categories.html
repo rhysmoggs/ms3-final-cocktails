@@ -31,8 +31,8 @@
                         <p>Are you sure you want to delete this <strong>{{ category.category_name }}</strong> category?</p>
                     </div>
                     <div class="modal-footer">
-                        <a href="{{ url_for('delete_category', category_id=category.id) }}" class="modal-close waves-effect waves-green btn-flat">Delete</a>
-                        <a href="#!" class="modal-close waves-effect waves-green btn-small">Cancel</a>
+                        <a href="{{ url_for('delete_category', category_id=category.id) }}" class="modal-close btn-small red darken-1 text-shadow">Delete</a>
+                        <a href="#!" class="modal-close btn-small green accent-4 text-shadow">Cancel</a>
                     </div>
                 </div>
             </div>
