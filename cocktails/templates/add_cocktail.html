@@ -9,7 +9,7 @@
             <!-- cocktail name -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-glass-martini-alt prefix"></i>
+                    <i class="fas fa-glass-martini-alt prefix tooltipped" data-position="bottom" data-tooltip="Cocktail Name must be between 2 and 25 characters long"></i>
                     <input id="cocktail_name" name="cocktail_name" minlength="2" maxlength="25" type="text" class="validate"
                         required>
                     <label for="cocktail_name">Cocktail Name</label>
@@ -18,7 +18,7 @@
             <div class="row">
                 <!-- cocktail category -->
                 <div class="input-field col s12 m6">
-                    <i class="fas fa-folder-open prefix"></i>
+                    <i class="fas fa-folder-open prefix tooltipped" data-position="bottom" data-tooltip="Choose the Cateogry that your Cocktail best suits"></i>
                     <select id="category_id" name="category_id" class="validate" required>
                         <option value="" disabled selected>Choose Category</option>
                         {% for category in categories %}
@@ -28,19 +28,17 @@
                     <label for="category_id">Cocktail Category</label>
                 </div>
                 <!-- main ingredient -->
-                <div class="row">
-                    <div class="input-field col s12 m6">
-                        <i class="fas fa-glass-martini-alt prefix"></i>
-                        <input id="main_ingredient" name="main_ingredient" minlength="2" maxlength="25"
-                            type="text" class="validate" required>
-                        <label for="main_ingredient">Main Ingredient</label>
-                    </div>
+                <div class="input-field col s12 m6">
+                    <i class="fas fa-glass-martini-alt prefix tooltipped" data-position="bottom" data-tooltip="Main Ingredient must be between 2 and 25 characters long"></i>
+                    <input id="main_ingredient" name="main_ingredient" minlength="2" maxlength="25"
+                        type="text" class="validate" required>
+                    <label for="main_ingredient">Main Ingredient</label>
                 </div>
             </div>
             <!-- cocktail image -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-glass-martini-alt prefix"></i>
+                    <i class="fas fa-glass-martini-alt prefix tooltipped" data-position="bottom" data-tooltip="Cocktail Image must be a url link of an image"></i>
                     <input id="cocktail_img" name="cocktail_img" minlength="6" maxlength="150"
                         type="url" class="validate" required>
                     <label for="cocktail_img">Cocktail Image</label>
@@ -49,7 +47,7 @@
             <!-- cocktail description -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix"></i>
+                    <i class="fas fa-align-left prefix tooltipped" data-position="bottom" data-tooltip="Write between 5 and 200 characters to describe your Cocktail"></i>
                     <textarea id="cocktail_description" name="cocktail_description" minlength="5" maxlength="200"
                         type="text" class="materialize-textarea validate" required></textarea>
                     <label for="cocktail_description">Cocktail Description</label>
@@ -58,7 +56,8 @@
             <!-- method -->
             <div class="row">
                 <div id="new-method" class="input-field col s6">
-                    <i class="fas fa-align-left prefix"></i>
+                    <i class="fas fa-align-left prefix tooltipped" data-position="bottom" 
+                        data-tooltip="Explain the Method with each step. We will auto-number your steps. Click the Add/Remove buttons opposite to add/remove steps"></i>
                     <input id="method" name="method" minlength="5" maxlength="75" class="remove-meth validate" type="text" required>
                     <label for="method">Method</label>
                 </div>
@@ -68,7 +67,8 @@
             <!-- other ingredient -->
             <div class="row">
                 <div id="new-input" class="input-field col s6">
-                    <i class="fas fa-glass-martini-alt prefix"></i>
+                    <i class="fas fa-glass-martini-alt prefix tooltipped" data-position="bottom" 
+                        data-tooltip="Add your other ingredients and measurements. Click the Add/Remove buttons opposite to add/remove other ingredients"></i>
                     <input id="other_ingredient" name="other_ingredient" minlength="2" maxlength="20"
                         type="text" class="js-remove-test validate" required>
                     <label for="other_ingredient">Other Ingredients and Measuerments</label>
@@ -81,14 +81,14 @@
             <div class="row">
                 <!-- preperation time -->
                 <div class="input-field col s12 m6">
-                    <i class="fas fa-glass-martini-alt prefix"></i>
+                    <i class="fas fa-glass-martini-alt prefix tooltipped" data-position="bottom" data-tooltip="How long does it take to create your Cocktail (please write in minutes)"></i>
                     <input id="prep_time" name="prep_time" minlength="2" maxlength="25"
                         type="text" class="validate" required>
                     <label for="prep_time">Preperation Time</label>
                 </div>
                 <!-- servings -->
                 <div class="input-field col s12 m6">
-                    <i class="fas fa-glass-martini-alt prefix"></i>
+                    <i class="fas fa-glass-martini-alt prefix tooltipped" data-position="bottom" data-tooltip="How many servings does this Cocktail recipie make? Enter up to 10"></i>
                     <input id="servings" name="servings" min="1" max="10"
                         type="number" class="validate" required>
                     <label for="servings">Servings</label>

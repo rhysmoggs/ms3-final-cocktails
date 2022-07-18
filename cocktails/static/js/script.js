@@ -2,6 +2,9 @@ $(document).ready(function(){
     $("#copyright").text(new Date().getFullYear()); //Flask Tutorial Code Institute
     $(".sidenav").sidenav({edge: "right"});
     $(".collapsible").collapsible();
+    $('.tooltipped').tooltip({
+        enterDelay: 250
+    });
     $('.carousel').carousel({
         numVisible: 4,
     });
