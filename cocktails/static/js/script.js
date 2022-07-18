@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $("#copyright").text(new Date().getFullYear()); //Flask Tutorial Code Institute
     $(".sidenav").sidenav({edge: "right"});
     $(".collapsible").collapsible();
     $('.carousel').carousel({
