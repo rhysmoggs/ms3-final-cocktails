@@ -291,3 +291,34 @@ def delete_cocktail(cocktail_id):
     mongo.db.cocktails.delete_one({"_id": ObjectId(cocktail_id)})
     flash("Cocktail Successfully Deleted")
     return redirect(url_for("all_cocktails"))
+
+
+# Error handling
+# 400 error page is displayed
+@app.errorhandler(400)
+def bad_request(error):
+    return render_template('400.html'), 400
+
+
+# 401 error page is displayed
+@app.errorhandler(401)
+def unauthorized(error):
+    return render_template('401.html'), 401
+
+
+# 404 error page is displayed
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html'), 404
+
+
+# 405 error page is displayed
+@app.errorhandler(405)
+def method_not_allowed(error):
+    return render_template('405.html'), 405
+
+
+# 500 error page is displayed
+@app.errorhandler(500)
+def internal_server_error(error):
+    return render_template('500.html'), 500
