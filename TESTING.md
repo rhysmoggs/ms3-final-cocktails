@@ -57,144 +57,65 @@ Extremely important aspect.
 -   Prompts to help guide users.
 
 ## Features Testing
+
+### There are universal features that are present throughout The Cocktail Cabinet website. These are tested here:
+
 <img src="cocktails/documentation/screenshots/main-test.png">
-There are universal features that are present throughout The Cocktail Cabinet website. These feature are:
-- Responsive on all device sizes - from 320px upwards to larger desktops reaching 1200px and more.
-- Fully-responsive nav bar, with simple, obvious and clean lines and text.
-- The nav bar menu is mobile friendly, adusting automatically at specific breakpoints thanks to Materializecss's easy-to-use framework.
-- The Cocktail Cabinet brand logo/name is seen at all times whether tucked to the left, central on reduced screen-sizes or at the top of the mobile menu on smaller and mobile devices. This is vital for brand consistency and serves as a simple way of reminding the user of the website's name. The logo is clickable and always takes the user to The Cocktail Cabinet home page (home.html).
-- Clear and obvious navbar links to other pages within the website.
-- Fully responsible footer which matches the design and colour palette of the top navbar.
-- Social links in footer, linking to creator/website social links and provides ways to contact them.
-- Name of website along with copyright info in footer.
-- All clickable images, buttons, links etc have a hovering cursor/pointer to signify that that element can be interacted with. The majority of these elements being visually promted either throgh a short zoom in/out animation, colour change or highlighting.
-- A Flash text appears at the top of the webpage whenever a user or admin completes a task - by either adding, editing or deleting information. They are informed of this.
 
-Here's a breakdown of all the design features on each of the main webpages within The Cocktail Cabinet website:
+### Here's a breakdown of all the design features on each of the main webpages within The Cocktail Cabinet website:
 
-### - The Cocktail Cabinet home page (home.html)
+### The Cocktail Cabinet home page (home.html)
 <img src="cocktails/documentation/screenshots/home-test.png">
 
-The home page for The Cocktail Cabinet website. All visitors will be welcomed by this webpage. The features include:
-- The user is met with a 100vh hero image (bg.jpg) of a selection of alcohol bottles on a dark and slightly dimmed background - an obvious theme and impactful. A brief text gives the website's slogan.
-- A button to entice the user to 'Log In'. This button changes to 'My Cabinet' if the user is already logged in.
-- Underneath the hero image, a few simple suggestions/steps/instructions for users to follow and explore. Some guidence on what to do if new to the site, with the rounded images clickable and related to the text below. Quick links.
-- Carousel. A carousel of all cocktail categories avilable on the website. Click leads to (filter_category.html) with all the related cocktails listed.
-
-### - The Bar page (all_cocktails.html)
+### The Bar page (all_cocktails.html)
 <img src="cocktails/documentation/screenshots/bar-test1.png">
 <img src="cocktails/documentation/screenshots/bar-test2.png">
 <img src="cocktails/documentation/screenshots/bar-test3.png">
 <img src="cocktails/documentation/screenshots/bar-test4.png">
 
-The Bar. This is where every cocktail recipe on The Cocktail Cabinet website is listed. All visitors to the website can view this webpage. The features include:
-- Current/active page is highlighted on the nav bar
-- The user is met with a large image (bar.jpg) and the title of the page (The Bar) centered to the image with a brief text description of the pages purpose.
-- A search bar is located just under the image, for quick, easy access for user preferred searches. The user can search by name, ingredients, alcohol, as suggested by the placeholder and either use a keyboard ENTER entry, or use the 'Search' button to seatch though the entire websites's database of cocktail recipes.
-- Reset button next to the Seach bar, to clear and restart the user's search options.
-- A list of every cocktail recipes on the website presented in card format, with purposefully limited but relavant information related to each cocktail recipe.
-- Ability to click on each cocktail recipie image to advance to the full recipe page (view_cocktail).
-- If the cocktail recipie was submitted by the user, the 'Edit' button under the cocktail recipe image forwards the user to the Edit Cocktail (edit_cocktail.html) page.
-- If the cocktail recipie was submitted by the user, the 'Delete' button under the cocktail recipe image allows the user to delete the cocktail recipe. The user is met with a modal that asks for confirmation on wheither they want to delete that cocktail or not. User must click 'Delete' again to confirm this (which will then delete the cocktail recipie from the website and the database), otherwise they can cancel by clicking the 'Cancel' button or by just clicking off screen or pressing ESC on the keyboard and the cocktail recipe will remain on the website. 
-- The 'Edit' and 'Delete' buttons are hidden if the user did not submit the cocktail recipe.
-- A clickable link at the bottom of each seperate cocktail recipie card to advance to the full recipe page (view_cocktail).
-- Pagination. A total of 9 cocktail recipes per page. The number of pages is based on the number of recipes found in the database. The user can select a specific page, or browse the list of recipes by clciking the previous or next buttons on either side of the page numbers.
-- Pagination info. A small text area informing the user of the amount of recipes on the current page and the total amount of cocktails in the database.
+### Filter Cocktails by Category (filter_category.html)
+<img src="cocktails/documentation/screenshots/filter_category-test1.png">
+<img src="cocktails/documentation/screenshots/filter_category-test2.png">
 
-### - My Cabinet page (profile.html)
-<img src="assets/readme-images/profile-test.png">
-
-My Cabinet. This is where every cocktail recipe the user has submitted is stored. Only rgistered users(and admin) can view this page. The features include:
-- Current/active page is highlighted on the nav bar
-- The users username presented in large text at the top of the page.
-- The 'Add Cocktail to My Cabinet' button under the username, when clicked advances to the 'Add Cocktail to My Cabinet' page.
-- A list of the specific users submitted cocktail recipes presented in card format, with purposefully limited but relavant information related to each cocktail recipe.
-- The 'Delete' and 'Edit' buttons visible on every cocktail recipie. As previously metioned, these have the same links and path, linked to the chosen cocktail and their data.
-- A clickable link at the bottom of each seperate cocktail recipie card to advance to the full recipe page (view_cocktail).
+### My Cabinet page (profile.html)
+<img src="cocktails/documentation/screenshots/profile-test1.png">
+<img src="cocktails/documentation/screenshots/profile-test2.png">
 
 ### Add Cocktail (add_cocktail.html)
-<img src="assets/readme-images/add-cocktail-test.png">
-
-The Add Cocktail / Add Cocktail to My Cabinet page is for users to add their cocktail recipie to the website via a form. Only registered users(and admin) can use this feature. The cocktail recipie is added to The Bar (all_cocktails.html), the My Cabinet (profile.html) page and to the cocktail's collection (whichever the user selects) that can then be found through either searching The Bar, or by the carousel on the home page which then leads to the (filter_category) page. The features include:
-- Placeholders and labels on all inputs serve as helpful guidence for users.
-- Validation on all user inputs (see code breakdown again? validate class).
-- Several inputs linked to the database (see data schema, code breakdown etc for explanation of inputs, types, data links etc.)
-- Cocktail Name - The cocktail name that will be presented for all to see on the recipes image.
-- Dropdown select options for user to choose the Cocktail Category their cocktail belongs to. Admin has control over which categories are added to the website/database.
-- Main Ingredient - The cocktails main ingredient. Tends to be the most prominent ingredient/alcoholic spirit (but also mocktails accepted).
-- Ability for user to add a URL for their cocktail image. This is validated and has some error handling linked to it (see code breakdown, error handling)
--Cocktail Description - A text input to accept the users description of their cocktail.
-- Method. A maximum of 8 methods that the user can add. 'Add' a new method or 'Remove' a previous method via the linked buttons. If the user attempts to add more than 8 methods, the user is informed of this via an error message underneath the last input field. The Add and Remove buttons are disabled (via the materializecss class="disabled") if there's no need for them to be used.
-- Other Ingredients and Measurments. Just like the the Method input, a maximum of 8 other ingredients can be added by the user. The user can add or remove a previous other ingredient via the linked buttons during the form filling. If the user attempts to add more than 8, the user is informed of this via an error message underneath the last input field. The Add and Remove buttons are disabled (via the materializecss class="disabled") if there's no need for them to be used.
-- Preperation Time - How long it takes to prepare the cocktail.
-- Servings. This is set to only accept numerical inputs, and a helpful up/down scroll number can be used instead of manually typing.
-- 'Add Cocktail Button to My Cabinet'. This button submits the form to the mongodb database if all inputs are valid and met.
-- 'Cancel' button. Leaves the page and returns to the users My Cabinet.
+<img src="cocktails/documentation/screenshots/add-cocktail-test1.png">
+<img src="cocktails/documentation/screenshots/add-cocktail-test2.png">
+<img src="cocktails/documentation/screenshots/add-cocktail-test3.png">
+<img src="cocktails/documentation/screenshots/add-cocktail-test4.png">
 
 ### Edit Cocktail (edit_cocktail.html)
-<img src="assets/readme-images/edit-cocktail-test.png">
+<img src="cocktails/documentation/screenshots/edit-cocktail-test1.png">
+<img src="cocktails/documentation/screenshots/edit-cocktail-test2.png">
+<img src="cocktails/documentation/screenshots/edit-cocktail-test3.png">
+<img src="cocktails/documentation/screenshots/edit-cocktail-test4.png">
 
-The Edit Cocktail page is for users to edit their own cocktail recipie via a form. Only registered users(and admin) can use this feature. The cocktail edited cocktail recipie is updated when the form is submitted and found in the same places as the original recipie. The information expected from the user is the same as the add_cocktail.html page. The features include:
-- Labels on all inputs with the current cocktail related data/value on each input.
-- Validation on all user inputs (see code breakdown again? validate class).
-- 'Edit Button'. This button submits the form to the mongodb database if all inputs are valid and met and updates that specific cocktail recipie.
-- 'Cancel' button. Leaves the page and returns to The Bar page.
+### View Cocktail page (view_cocktail.html)
+<img src="cocktails/documentation/screenshots/view-cocktail-test1.png">
+<img src="cocktails/documentation/screenshots/view-cocktail-test2.png">
 
-### - View Cocktail page (view_cocktail.html)
-<img src="assets/readme-images/view-cocktail-test.png">
+### Manage Categories page (/get_categories)
+<img src="cocktails/documentation/screenshots/get-categories-test1.png">
+<img src="cocktails/documentation/screenshots/get-categories-test2.png">
 
-The View Cocktail page is where the visitor can see the full recipie for the cocktail they selected. All visitors to the website can view this webpage. The features include:
-- Cocktail Name in large above the recipie.
-- All data/cocktail information presented.
-- A large image of the cocktail.
-- 'Edit' and 'Delete' buttons if the cocktail recipie was submitted by the user (Edit and Delete buttons work the same as the others on the website).
-- 'Return to The Bar' button, which redirects the user to The Bar page.
+### Add Category page (add_category.html)
+<img src="cocktails/documentation/screenshots/add-category-test1.png">
+<img src="cocktails/documentation/screenshots/add-category-test2.png">
 
-### - Manage Categories page (/get_categories)
-<img src="assets/readme-images/get-categories-test.png">
+### Edit Category page (edit_category.html)
+<img src="cocktails/documentation/screenshots/edit-category-test1.png">
+<img src="cocktails/documentation/screenshots/edit-category-test2.png">
 
-The Manage Categories page is where admin can view all the cocktail categories available. Only the website's admin can view this webpage. The features include:
-- All cocktail categories information presented in a list.
-- 'Add Cocktail Category' button. When clicked, it goes to the Add Cocktail Category (add_category.html) form page.
-- 'Delete' button when clicked will show the modal, just like other delete featues. The admin chooses from Delete to confirm or Cancel to return to the exit the modal.
-- 'Edit' button when clicked will forward the admin to the Edit Cocktail Category (edit_category.html) form page.
+### Log In page (login.html)
+<img src="cocktails/documentation/screenshots/login-test1.png">
+<img src="cocktails/documentation/screenshots/login-test2.png">
 
-### - Add Category page (add_category.html)
-<img src="assets/readme-images/add-category-test.png">
-
-The Add Cocktail Category page is where the admin can add new cocktail categories to the website. These categories will then be avaiable to choose from the cocktail forms via dropdown (see add_cocktail.html and edit_cocktail.html). Again, only the admin can view this page. The features include:
-- Page title in large at top of the page.
-- Category Name placeholder and label on input.
-- 'Cancel' button. When clicked, leaves the page and returns to the Manage Categories page.
-- 'Add Cocktail Category' button. When clicked, submits the form and returns to the Manage Categories page, where the newly created category is added to the list.
-
-### - Edit Category page (edit_category.html)
-<img src="assets/readme-images/edit-category-test.png">
-
-The Edit Cocktail Category page is where the admin can edit a current cocktail category. These categories will then be updated in the database and shown via the dropdown select options (see add_cocktail.html and edit_cocktail.html). Again, only the admin can view this page. The features include:
-- Page title in large at top of the page.
-- Category Name label  and current value in input.
-- 'Cancel' button. When clicked, leaves the page and returns to the Manage Categories page.
-- 'Edit Cocktail Category' button. When clicked, submits the form and returns to the Manage Categories page, where the edit category is updated on the list.
-
-### - Log In page (login.html)
-<img src="assets/readme-images/login-test.png">
-
-The Log In page is where visitors can enter their details and log in to their account. All visitors to the website can view this webpage. The features include:
-- 'Log In' title on top of the page.
-- Username input with placeholder and validation applied.
-- Password input with placeholder and validation applied.
-- 'Log In' button. When clicked, the user is forwarded to their personal My Cabinet (profile.html) page.
-
-### - Register page (register.html)
-<img src="assets/readme-images/register-test.png">
-
-The Register page is where visitors can enter their details for the first time to register their new account. All visitors to the website can view this webpage. The features include:
-- 'Register' title on top of the page.
-- Username input with placeholder and validation applied.
-- Password input with placeholder and validation applied.
-- 'Register' button. When clicked, the user is forwarded to their personal My Cabinet (profile.html) page.
-
+### Register page (register.html)
+<img src="cocktails/documentation/screenshots/register-test1.png">
+<img src="cocktails/documentation/screenshots/register-test2.png">
 
 ## Interactive Elements
 Following is a list of all interactive elements of the The Cocktail Cabinet website.

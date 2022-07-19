@@ -349,6 +349,18 @@ The Bar. This is where every cocktail recipe on The Cocktail Cabinet website is 
 - Pagination. A total of 9 cocktail recipes per page. The number of pages is based on the number of recipes found in the database. The user can select a specific page, or browse the list of recipes by clciking the previous or next buttons on either side of the page numbers.
 - Pagination info. A small text area informing the user of the amount of recipes on the current page and the total amount of cocktails in the database.
 
+### - Filter Cocktails by Category (filter_category.html)
+<img src="cocktails/documentation/wireframes/filter_category.png">
+The Filter Cocktails by Category page is where users can view every cocktail recipie listed in a certain cocktail category (depending on which cocktail category they choose on the previous page, home.html) All visitors to the website can view this webpage. The features include:
+
+- Name of the selected cocktail Category displayed as the page title in large text at top of page.
+- A list of every cocktail recipe within the selected cocktail Category presented in card format, with purposefully limited but relavant information related to each cocktail recipe.
+- Ability to click on each cocktail recipie image to advance to the full recipe page (view_cocktail).
+- If the cocktail recipie was submitted by the user, the 'Edit' button under the cocktail recipe image forwards the user to the Edit Cocktail (edit_cocktail.html) page.
+- If the cocktail recipie was submitted by the user, the 'Delete' button under the cocktail recipe image allows the user to delete the cocktail recipe. The user is met with a modal that asks for confirmation on wheither they want to delete that cocktail or not. User must click 'Delete' again to confirm this (which will then delete the cocktail recipie from the website and the database), otherwise they can cancel by clicking the 'Cancel' button or by just clicking off screen or pressing ESC on the keyboard and the cocktail recipe will remain on the website. 
+- The 'Edit' and 'Delete' buttons are hidden if the user did not submit the cocktail recipe.
+- A clickable link at the bottom of each seperate cocktail recipie card to advance to the full recipe page (view_cocktail).
+
 ### - My Cabinet page (profile.html)
 <img src="cocktails/documentation/screenshots/profile-page.png">
 
