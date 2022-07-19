@@ -2,20 +2,14 @@
 
 [View the live project here.](https://ms3-final-cocktails.herokuapp.com/)
 
-Welcome to a new cocktail recipe website: The Cocktail Cabinet.
 
-<h2 align="center"><img src="assets/readme-images/am-i-responsive.png"></h2>
-
-The Cocktail Cabinet for the Milestone Project 3, for [Code Institute's](https://codeinstitute.net/) Diploma in Web App Development.
+The Full Testing documentation, following on from the README [found here](README.md)
 
 
 
 # Testing Table of Contents
-1. [Intro/Concept](#example)
-2. [User Stories](#user-stories)
-    - [As a New User](#as-a-new-user)
-    - [As a Returning User](#as-a-returning-user)
-3. [Design/Data Schema](#data-schema-design)
+1. [Intro](#example)
+2. [Design/Data Schema](#data-schema-design)
 3. [Aesthetic Design](#aesthetic-design)
     - [Wireframes](#wireframes)
         - [Desktop](#desktop)
@@ -26,22 +20,12 @@ The Cocktail Cabinet for the Milestone Project 3, for [Code Institute's](https:/
     - [Font](#font)
 4. [Accessibility](#accessibility)
 4. [Features](#features)
-4. [Technologies Used](#technologies-used)
-    - [Languages Used](#languages-used)
-    - [Frameworks, Libraries, Programs and Tools Used](#frameworks-libraries-programs-and-tools-used)
+
 4. [Testing](#testing) tidy up and organize all.
 4. [Testing Original User Stories](#testing-original-user-stories)
     - [As a New User](#as-a-new-user) this goes to the first one?
     - [As a Returning User](#as-a-returning-user) this goes to the first one?
-4. [Deployment](#deployment)
 4. [Credits](#credits)
-4. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
-
-
-## Example
-## Example2
-## Third Example
-## [Fourth Example](http://www.fourthexample.com) 
 
 
 
@@ -49,7 +33,7 @@ The Cocktail Cabinet for the Milestone Project 3, for [Code Institute's](https:/
 
 
 
-### Images
+### Images Testing
 - The use of photography is vital in creating allure and desire, especially for this cocktail recipe website. Users are drawn by what they see. The bg.jpg background image is large and provides a fantastic colour to build an interface on. This inspired more imagery to be used for The Bar and My Cabinet especially.
 
 - It's vital for the theme to be clear and obvious. The background image makes the website recognizable and memorable so people recall and return to it, which will draw more eyes to the website. This, along with the CSS styling and colour palette solidifies the theme. The following image was used.
@@ -60,10 +44,10 @@ Logo
 
 <img src="assets/images/logo.png">
 
-### Font
+### Font Testing
 -  The The Cocktail Cabinet uses the Poppins font. It provides that clean, clear style without compromising on readability - a vital design feature for any website. This is available for free via [Google Fonts](https://fonts.google.com/) and imported via CSS. Sans Serif is used as a secondary option in case of failure to import the font into the website correctly. Poppins is a clean font used frequently in designs, so it is both attractive and appropriate.
 
-## Accessibility
+## Accessibility Testing
 Extremely important aspect.
 -   Semantic design.
 -   The use of alt to describe images and other content.
@@ -72,7 +56,8 @@ Extremely important aspect.
 -   Adding labels to forms.
 -   Prompts to help guide users.
 
-## Features
+## Features Testing
+<img src="cocktails/documentation/screenshots/main-test.png">
 There are universal features that are present throughout The Cocktail Cabinet website. These feature are:
 - Responsive on all device sizes - from 320px upwards to larger desktops reaching 1200px and more.
 - Fully-responsive nav bar, with simple, obvious and clean lines and text.
@@ -88,7 +73,7 @@ There are universal features that are present throughout The Cocktail Cabinet we
 Here's a breakdown of all the design features on each of the main webpages within The Cocktail Cabinet website:
 
 ### - The Cocktail Cabinet home page (home.html)
-<img src="assets/readme-images/home-page.png">
+<img src="cocktails/documentation/screenshots/home-test.png">
 
 The home page for The Cocktail Cabinet website. All visitors will be welcomed by this webpage. The features include:
 - The user is met with a 100vh hero image (bg.jpg) of a selection of alcohol bottles on a dark and slightly dimmed background - an obvious theme and impactful. A brief text gives the website's slogan.
@@ -97,7 +82,10 @@ The home page for The Cocktail Cabinet website. All visitors will be welcomed by
 - Carousel. A carousel of all cocktail categories avilable on the website. Click leads to (filter_category.html) with all the related cocktails listed.
 
 ### - The Bar page (all_cocktails.html)
-<img src="assets/readme-images/the-bar-page.png">
+<img src="cocktails/documentation/screenshots/bar-test1.png">
+<img src="cocktails/documentation/screenshots/bar-test2.png">
+<img src="cocktails/documentation/screenshots/bar-test3.png">
+<img src="cocktails/documentation/screenshots/bar-test4.png">
 
 The Bar. This is where every cocktail recipe on The Cocktail Cabinet website is listed. All visitors to the website can view this webpage. The features include:
 - Current/active page is highlighted on the nav bar
@@ -114,7 +102,7 @@ The Bar. This is where every cocktail recipe on The Cocktail Cabinet website is 
 - Pagination info. A small text area informing the user of the amount of recipes on the current page and the total amount of cocktails in the database.
 
 ### - My Cabinet page (profile.html)
-<img src="assets/readme-images/profile-page.png">
+<img src="assets/readme-images/profile-test.png">
 
 My Cabinet. This is where every cocktail recipe the user has submitted is stored. Only rgistered users(and admin) can view this page. The features include:
 - Current/active page is highlighted on the nav bar
@@ -125,7 +113,7 @@ My Cabinet. This is where every cocktail recipe the user has submitted is stored
 - A clickable link at the bottom of each seperate cocktail recipie card to advance to the full recipe page (view_cocktail).
 
 ### Add Cocktail (add_cocktail.html)
-<img src="assets/readme-images/add-cocktail-page.png">
+<img src="assets/readme-images/add-cocktail-test.png">
 
 The Add Cocktail / Add Cocktail to My Cabinet page is for users to add their cocktail recipie to the website via a form. Only registered users(and admin) can use this feature. The cocktail recipie is added to The Bar (all_cocktails.html), the My Cabinet (profile.html) page and to the cocktail's collection (whichever the user selects) that can then be found through either searching The Bar, or by the carousel on the home page which then leads to the (filter_category) page. The features include:
 - Placeholders and labels on all inputs serve as helpful guidence for users.
@@ -144,7 +132,7 @@ The Add Cocktail / Add Cocktail to My Cabinet page is for users to add their coc
 - 'Cancel' button. Leaves the page and returns to the users My Cabinet.
 
 ### Edit Cocktail (edit_cocktail.html)
-<img src="assets/readme-images/edit-cocktail-page.png">
+<img src="assets/readme-images/edit-cocktail-test.png">
 
 The Edit Cocktail page is for users to edit their own cocktail recipie via a form. Only registered users(and admin) can use this feature. The cocktail edited cocktail recipie is updated when the form is submitted and found in the same places as the original recipie. The information expected from the user is the same as the add_cocktail.html page. The features include:
 - Labels on all inputs with the current cocktail related data/value on each input.
@@ -153,7 +141,7 @@ The Edit Cocktail page is for users to edit their own cocktail recipie via a for
 - 'Cancel' button. Leaves the page and returns to The Bar page.
 
 ### - View Cocktail page (view_cocktail.html)
-<img src="assets/readme-images/view-cocktail-page.png">
+<img src="assets/readme-images/view-cocktail-test.png">
 
 The View Cocktail page is where the visitor can see the full recipie for the cocktail they selected. All visitors to the website can view this webpage. The features include:
 - Cocktail Name in large above the recipie.
@@ -163,7 +151,7 @@ The View Cocktail page is where the visitor can see the full recipie for the coc
 - 'Return to The Bar' button, which redirects the user to The Bar page.
 
 ### - Manage Categories page (/get_categories)
-<img src="assets/readme-images/get-categories-page.png">
+<img src="assets/readme-images/get-categories-test.png">
 
 The Manage Categories page is where admin can view all the cocktail categories available. Only the website's admin can view this webpage. The features include:
 - All cocktail categories information presented in a list.
@@ -172,7 +160,7 @@ The Manage Categories page is where admin can view all the cocktail categories a
 - 'Edit' button when clicked will forward the admin to the Edit Cocktail Category (edit_category.html) form page.
 
 ### - Add Category page (add_category.html)
-<img src="assets/readme-images/add-category-page.png">
+<img src="assets/readme-images/add-category-test.png">
 
 The Add Cocktail Category page is where the admin can add new cocktail categories to the website. These categories will then be avaiable to choose from the cocktail forms via dropdown (see add_cocktail.html and edit_cocktail.html). Again, only the admin can view this page. The features include:
 - Page title in large at top of the page.
@@ -181,7 +169,7 @@ The Add Cocktail Category page is where the admin can add new cocktail categorie
 - 'Add Cocktail Category' button. When clicked, submits the form and returns to the Manage Categories page, where the newly created category is added to the list.
 
 ### - Edit Category page (edit_category.html)
-<img src="assets/readme-images/edit-category-page.png">
+<img src="assets/readme-images/edit-category-test.png">
 
 The Edit Cocktail Category page is where the admin can edit a current cocktail category. These categories will then be updated in the database and shown via the dropdown select options (see add_cocktail.html and edit_cocktail.html). Again, only the admin can view this page. The features include:
 - Page title in large at top of the page.
@@ -190,7 +178,7 @@ The Edit Cocktail Category page is where the admin can edit a current cocktail c
 - 'Edit Cocktail Category' button. When clicked, submits the form and returns to the Manage Categories page, where the edit category is updated on the list.
 
 ### - Log In page (login.html)
-<img src="assets/readme-images/login-page.png">
+<img src="assets/readme-images/login-test.png">
 
 The Log In page is where visitors can enter their details and log in to their account. All visitors to the website can view this webpage. The features include:
 - 'Log In' title on top of the page.
@@ -199,7 +187,7 @@ The Log In page is where visitors can enter their details and log in to their ac
 - 'Log In' button. When clicked, the user is forwarded to their personal My Cabinet (profile.html) page.
 
 ### - Register page (register.html)
-<img src="assets/readme-images/register-page.png">
+<img src="assets/readme-images/register-test.png">
 
 The Register page is where visitors can enter their details for the first time to register their new account. All visitors to the website can view this webpage. The features include:
 - 'Register' title on top of the page.
@@ -325,46 +313,6 @@ highscoresButton.onclick = function () {
 <img src="assets/readme-images/input.png">
 
 
-## Technologies Used
-
-### Languages Used
-
--   [HTML5](https://en.wikipedia.org/wiki/HTML5)
--   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
--   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
--   Python
-
-### Frameworks, Libraries, Programs and Tools Used
-
-1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts is used to import the 'Poppins' font into the style.css file which is used on all fonts within the quiz.
-1. [Font Awesome:](https://fontawesome.com/)
-    - Font Awesome is used on all pages throughout the quiz to add icons for aesthetic and UX purposes.
-1. [jQuery:](https://jquery.com/)
-    - jQuery is used to simplify and manipulate some tasks instead of regular JS.
-1. [Git:](https://git-scm.com/)
-    - Git is used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
-1. [GitHub:](https://github.com/)
-    - GitHub is used to store the projects code after being pushed from Git.
-1. [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq is used to create the [wireframes](#wireframes) during the design process.
-1. [Eye Dropper:](https://eyedropper.org/).
-    - This colour picker tool was used to to pick and experiment with colours.
-1. [Coolors:](https://coolors.co/)
-    - This tool was used to to setup the colour palette [here](#colour-palette).
-1. [Canva:](https://www.canva.com/)
-    - Canva is used to create the quiz logo and small plane image seen in the progress bar.
-1. [TinyPNG:](https://tinypng.com/)
-    - TinyPNG is used to optimize images used in the quiz and this README.
-1. [Miscrosoft Paint:](https://support.microsoft.com/en-us/windows/get-microsoft-paint-a6b9578c-ed1c-5b09-0699-4ed8115f9aa9)
-    - Microsoft Paint is used to crop and resize images and editing photos for the project.
-1. [Snip & Sketch:](https://www.microsoft.com/en-gb/p/snip-sketch/9mz95kl8mr0l)
-    - Snip & Sketch is used to screenshot the majority of images used for this README.
-1. [WPS Office:](https://www.wps.com/)
-    - WPS Office is used to create the table for the [Testing Quiz Flow and Functionality](#testing-quiz-flow-and-functionality) and README.md spell-checking.
-1. [Am I Responsive?:](http://ami.responsivedesign.is/)
-    - Used to create the image at the very top of this document.
-
 ## Testing
 
 The W3C Markup Validator, W3C CSS Validator and JSHint tools were used to validate every page of the project to ensure there were no syntax errors in the project. If any were found during development, they were addressed.
@@ -482,27 +430,6 @@ Bug fixes were predominantly completed in real-time as soon as any issues arose.
 
 -   The background image (maps.jpg) repeats slightly towards the very bottom of the Surface Pro 7 (912px x 1368px) device. It can also do this on larger TVs or wide-display devices such as tablets.
 
-### Future Updates
-
-There are many planned updates arranged for the The Cocktail Cabinet that include but are not limited to:
-
--   Introduction of more social features such as:
-    - Ability to like/rate other cocktails
-    - Ability to favourite cocktails and add to the users profile
-    - Commenting on cocktail recipes
-    - Instant social media links to share, comment, link etc
--   Link email for subscription, mail etc
--   Link email for subscription, mail etc
--   Delete profile
--   Give suggested cocktail categories to Admin/creator
--   More admin rights such as:
-    - Delete all user profiles
-    - Edit all user profiles
--   Images linked to the Cocktail Categories.
--   Theme colour changes.
--   Theme/colour palette toggle.
--   +18 age restriction modal on site load
-
 
 ## Credits
 
@@ -520,43 +447,5 @@ There are many planned updates arranged for the The Cocktail Cabinet that includ
 - Pagination [setup](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9).
 
 - Dynamically setting active class with Flask and jinja2 [setup](https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621).
-
-
-
-### Acknowledgements
-
--   Stack Overflow [website](https://stackoverflow.com/) for general problem solving.
-
--   My Mentor for helpful feedback and input, especially with help towards the [progress bar](#progress-bar) development.
-
--   Tutor support at Code Institute.
-
-technologies used:
-
-- python
-- JS
-- CSS3
-- HTML5
-
-- PostgreSQL - 
-- MongoDB - 
-- PsycoPG2 - database adapter. library for connecting Python to PostgreSQL.
-- SQLAlchemy - ORM lirbary
-- PyMongo - 
-- Flask - 
-- Flash - 
-- dnspython - 
-- Jinja2? - template
-- flask-paginate
-- jquery
-- materialize(sp?) - 
-- fontawesome - icons
-- google fonts
-- heroku - 
-- git, gitpod, github
-
-- image editing websites/software here
-- balsamiq
-- era database/ design
 
 
