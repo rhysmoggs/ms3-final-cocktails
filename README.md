@@ -83,11 +83,12 @@ Following are the goals that the website should provide for each user.
 
 
 ## Data Schema Design
-Here is the Database Schema layout for The Cocktail Cabinet website. It shows each collection, what data is kept, their type and how they are linked together.
+Here is the Database Schema layout for The Cocktail Cabinet website:
 
-<img src="wireframes/data-schema.png">
+<img src="cocktails/documentation/data-schema.png">
 
-This schema is vital in developing the website's functionality, it's features and what all users are capable of doing. A breakdown of every feature can be found here [Features]() along with the code, and how everything links together.
+It shows each collection, what data is kept, their type and how they are linked together.
+This schema is vital in developing the website's functionality, its features and what users are capable of doing. A breakdown of every feature can be found here [Features](#features) along with the code, and how everything links together.
 
 The models.py file [link or screenshot] holds the postgres side of things (list data and purpose), and the mongodb (give more info) holds the rest. A full setup can be found here [Development?](link) These can be adjusted for future projects or an adjustment to this one by:
 
@@ -114,10 +115,6 @@ Once the user goals and the projects intentions were set out, the next step was 
 Wireframes were drawn using [Balsamiq](https://balsamiq.com/) at the beginning of the project. They were referenced throughout the design and building of the website. Following are a series of images showing The Cocktail Cabinet on the three main screen sizes: desktop, tablet and mobile. Every major section of the website is also included.
 
 #### Desktop
-
-
-(((link in file? less clutter)))
-
 
 - Home Page Wireframe
 
@@ -470,7 +467,7 @@ As shown on the images below, the website logo and title is very clear and obvio
 
 #### Toggle Menu Elements
 
-Listed are the main features of the main menu of the quiz. The user simply clicks to show or hide the buttons to display info or return back to the main menu.
+Listed are the main features of the main menu of the website. The user simply clicks to show or hide the buttons to display info or return back to the main menu.
 
 #### - How to Play
 

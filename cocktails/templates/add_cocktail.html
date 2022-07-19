@@ -55,28 +55,28 @@
             </div>
             <!-- method -->
             <div class="row">
-                <div id="new-method" class="input-field col s6">
+                <div id="new-method" class="input-field col s8">
                     <i class="fas fa-align-left prefix tooltipped" data-position="bottom" 
                         data-tooltip="Explain the Method with each step. We will auto-number your steps. Click the Add/Remove buttons opposite to add/remove steps"></i>
                     <input id="method" name="method" minlength="5" maxlength="75" class="remove-meth validate" type="text" required>
                     <label for="method">Method</label>
                 </div>
-                <a id="add-meth-btn" class="btn-large green accent-4 text-shadow">Add</a>
-                <a id="remove-meth-btn" class="btn-large red darken-1 text-shadow">Remove</a>
+                <a id="add-meth-btn" class="btn-small green accent-4 text-shadow">Add</a>
+                <a id="remove-meth-btn" class="btn-small red darken-1 text-shadow">Remove</a>
             </div>
             <!-- other ingredient -->
             <div class="row">
-                <div id="new-input" class="input-field col s6">
+                <div id="new-input" class="input-field col s8">
                     <i class="fas fa-glass-martini-alt prefix tooltipped" data-position="bottom" 
                         data-tooltip="Add your other ingredients and measurements. Click the Add/Remove buttons opposite to add/remove other ingredients"></i>
                     <input id="other_ingredient" name="other_ingredient" minlength="2" maxlength="20"
                         type="text" class="js-remove-test validate" required>
                     <label for="other_ingredient">Other Ingredients and Measuerments</label>
                 </div>
-                <div class="col s6">
-                    <a id="add-other-btn" class="btn-large green accent-4 text-shadow">Add</a>
-                    <a id="remove-other-btn" class="btn-large red darken-1 text-shadow">Remove</a>
-                </div>
+                <!-- <div class="col s2"> -->
+                    <a id="add-other-btn" class="btn-small green accent-4 text-shadow">Add</a>
+                    <a id="remove-other-btn" class="btn-small red darken-1 text-shadow">Remove</a>
+                <!-- </div> -->
             </div>
             <div class="row">
                 <!-- preperation time -->
@@ -98,11 +98,11 @@
                 <div class="col s12 center-align">
                     <!-- cancel button -->
                     <a href="{{ url_for('profile', username=session['user']) }}" class="btn-large red darken-1 text-shadow">
-                        Cancel <i class="fas fa-times-circle right"></i>
+                        Cancel <i class="fas fa-times-circle right hide-on-med-and-down"></i>
                     </a>
                     <!-- submit button -->
-                    <button type="submit" class="btn-large green accent-4 text-shadow">
-                        Add Cocktail to My Cabinet<i class="fas fa-plus-square right"></i>
+                    <button type="submit" class="btn-large green accent-4 text-shadow ">
+                        Add Cocktail to My Cabinet<i class="fas fa-plus-square right hide-on-med-and-down"></i>
                     </button>
                 </div>
             </div>
