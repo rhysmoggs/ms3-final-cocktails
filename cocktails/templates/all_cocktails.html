@@ -63,11 +63,17 @@
                         <a href="#!" class="modal-close btn-small green accent-4 text-shadow">Cancel</a>
                     </div>
                 </div>
-                <div class="card-content">
+                <div class="card-content row">
                     <strong>Category: {{ cocktail.category_name }}</strong>
+                    <br>
                     <p>{{ cocktail.cocktail_description }}</p>
-                    <p>Prep: {{ cocktail.prep_time }}</p>
-                    <p>Servings: {{ cocktail.servings }}</p>
+                    <br>
+                    <div class="col s6">
+                        <p>Prep: {{ cocktail.prep_time }}</p>
+                    </div>
+                    <div class="col s6">
+                        <p>Servings: {{ cocktail.servings }}</p>
+                    </div>
                 </div>
                 <div class="card-action">
                     <a href="{{ url_for('view_cocktail', cocktail_id=cocktail._id ) }}">View Cocktail</a> by: {{ cocktail.created_by }}

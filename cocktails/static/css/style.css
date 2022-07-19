@@ -205,6 +205,10 @@ main {
     text-align: center;
   }
 
+.card-content {
+    min-height: 285px;
+}
+
 
   /* Pagination */
 /* to overwrite default materializecss pagination style, centre page numbers */

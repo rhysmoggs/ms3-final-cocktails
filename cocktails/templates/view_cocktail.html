@@ -33,10 +33,13 @@
                     <a href="#!" class="modal-close btn-small green accent-4 text-shadow">Cancel</a>
                 </div>
             </div>
-            <div class="card-content">
+            <div class="card-content row">
                 <strong>Category: {{ cocktail.category_name }}</strong>
+                <br>
                 <p>{{ cocktail.cocktail_description }}</p>
+                <br>
                 <p>Main Ingredient: {{ cocktail.main_ingredient }}</p>
+                <br>
                 <p>Method:
                     <ol>
                     {% for method in cocktail.method %}
@@ -46,6 +49,7 @@
                     {% endfor %}
                     </ol>
                 </p>
+                <br>
                 <p>Other Ingredients:
                     <ul>
                     {% for ingredient in cocktail.other_ingredient %}
@@ -55,8 +59,15 @@
                     {% endfor %}
                     </ul>
                 </p>
-                <p>Prep: {{ cocktail.prep_time }}</p>
-                <p>Servings: {{ cocktail.servings }}</p>
+                <br>
+                <div class="col s6">
+                    <p>Prep: {{ cocktail.prep_time }}</p>
+                </div>
+                <div class="col s6">
+                    <p>Servings: {{ cocktail.servings }}</p>
+                </div>
+                <br>
+                <br>
                 <div class="card-action center-align">
                     <p>by: {{ cocktail.created_by }}</p>
                 </div>
