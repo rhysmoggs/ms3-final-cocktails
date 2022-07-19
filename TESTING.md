@@ -8,10 +8,9 @@ Welcome to a new cocktail recipe website: The Cocktail Cabinet.
 
 The Cocktail Cabinet for the Milestone Project 3, for [Code Institute's](https://codeinstitute.net/) Diploma in Web App Development.
 
-The Cocktail Cabinet is a passion project, with its idea birthed from the depths of a continious and a seemingly neverending lockdown during the COVID-19 pandemic. Just like many others, the creator discovered a range of hobbies and projects ranging from the wholesome and worthwhile to the downright forgettable (or wish to forget?). Some of those interests stuck around and become a part of everyday normality, others were left behind and to never be spoken about again. Thankfully, cocktail making and drinking (responsibly) remained. The creator has a desire to share that love with a greater audience: those new to cocktails, other like-minded people, creative minds and curious tipple chasers - all are welcome to discover, share and enjoy! The creator is excited to launch The Cocktail Cabinet and hope to attract more and more cocktail lovers from across the world.
 
 
-# Table of Contents
+# Testing Table of Contents
 1. [Intro/Concept](#example)
 2. [User Stories](#user-stories)
     - [As a New User](#as-a-new-user)
@@ -45,237 +44,9 @@ The Cocktail Cabinet is a passion project, with its idea birthed from the depths
 ## [Fourth Example](http://www.fourthexample.com) 
 
 
-### Project Goals:
 
-The main brief for this project is to showcase the CRUD featuresa of both a relational and a non-relational database management ssytem. The goal is to combine a conventional relational database (postgreSQL) and a non-relational database (mongodb) and to allow them to work seemlessly together, with the ability to link both databases with no impact on the user experience. By combining both, the project can serve multiple approches to database management and CRUD functionality.
 
-The website is a full stack project that aims to showcase the creators backend and frontend development skills, learned during the MS3 portion of the course. Code Institute's brief was to develop a project that utilized both a conventional relational database and a non-relational database, and aim for them to synchronize and link data. A focus on CRUD functionality.
 
-### Website Concept:
-
-A website open to all above the age of 18 (due to drinking age). The The Cocktail Cabinet is a fully interactive and social website, with it's purpose to find, share and enjoy cocktail and mocktail recipes.
-
-Visitors can browse through the website and even search through the current user-uploaded recipies, or for even more cool features - they can sign up for free to open up The Cocktails Cabinet's true potential and unique attraction. These features annd possibilities will be not only obvious from the website, but will also be explained in detail throughout this README document.
-
-The website will clearly display information for new and returning customers including the creators contact information via social media links. The website is fully responsible on a range of devices - from hand-held devices to larger screens such as monitors and even TVs. This is to ensure that as many people as possible can visit the website.
-
-The website is welcoming to a range of visitors, and gives a very nice user experience with plenty of on-screen prompts (explained here[Features](#features)) on dispaly and a whole host of fancy tech working in the background to ensure a smooth and user-friendly experince.
-
-The website can store enough cocktail recipes to fill your home bar tenfold, along with every other users recipes.
-By signing up, the user has even more access and capabilities such as adding, editing, liking and commenting on cocktail recipes.
-
-## User Stories
-
-Following are the goals that the website should provide for each user.
-
-#### As a New User :
-* I want to to be able to access and view the website on the device I'm using.
-* I want to to be able to navigate the website with ease.
-* I want to to be able to understand the website immediately.
-* I want to to be able to view guidence or some form of help if needs be.
-* I want to to be able to contact the website developers if I wish to.
-* I want a reason to return.
-
-#### As a Returning User :
-* I want to find information about the company's background, their story and growth.
-* I want to find the best way to get in contact with the company with any questions I may have.
-* I want to be able to contact the company in many different ways.
-* I want to be able to view my own cocktail recipes.
-* I want to be able to add my own cocktail recipes.
-* I want to to be able to access and view the website on a range of devices/browsers.
-
-
-## Data Schema Design
-Here is the Database Schema layout for The Cocktail Cabinet website. It shows each collection, what data is kept, their type and how they are linked together.
-
-<img src="wireframes/data-schema.png">
-
-This schema is vital in developing the website's functionality, it's features and what all users are capable of doing. A breakdown of every feature can be found here [Features]() along with the code, and how everything links together.
-
-The models.py file [link or screenshot] holds the postgres side of things (list data and purpose), and the mongodb (give more info) holds the rest. A full setup can be found here [Development?](link) These can be adjusted for future projects or an adjustment to this one by:
-
-explain steps. for admin. developer/creator and for end-user
-
-
-## Aesthetic Design
-Once the user goals and the projects intentions were set out, the next step was to design the aesthetic aspects of the The Cocktail Cabinet.
-
-<img src="wireframes/site-flow-1.png">
-<img src="wireframes/site-flow-2.png">
-<img src="wireframes/site-flow-3.png">
-
-
-### Wireframes
-Wireframes were drawn using [Balsamiq](https://balsamiq.com/) at the beginning of the project. They were referenced throughout the design and building of the website. Following are a series of images showing The Cocktail Cabinet on the three main screen sizes: desktop, tablet and mobile. Every major section of the website is also included.
-
-#### Desktop
-
-
-(((link in file? less clutter)))
-
-
-- Home Page Wireframe
-
-<img src="cocktails/documentation/wireframes/desktop-home.png">
-
-- The Bar / All Cocktails Wireframe
-
-<img src="cocktails/documentation/wireframes/desktop-all-cocktails.png">
-
-- Filtered Cocktails Wireframe
-
-<img src="cocktails/documentation/wireframes/desktop-filtered.png">
-
-- View Cocktail Wireframe
-
-<img src="cocktails/documentation/wireframes/desktop-view-cocktail.png">
-
-- My Cabinet / Profile Wireframe
-
-<img src="cocktails/documentation/wireframes/desktop-profile.png">
-
-- Add Cocktail Wireframe
-
-<img src="cocktails/documentation/wireframes/desktop-add-cocktail.png">
-
-- Edit Cocktail Wireframe
-
-<img src="cocktails/documentation/wireframes/desktop-edit-cocktail.png">
-
-- Manage Categories Wireframe
-
-<img src="cocktails/documentation/wireframes/desktop-manage-categories.png">
-
-- Add Category Wireframe
-
-<img src="cocktails/documentation/wireframes/desktop-add-category.png">
-
-- Edit Category Wireframe
-
-<img src="cocktails/documentation/wireframes/desktop-edit-category.png">
-
-- Log In Wireframe
-
-<img src="cocktails/documentation/wireframes/desktop-login.png">
-
-- Register Wireframe
-
-<img src="cocktails/documentation/wireframes/desktop-register.png">
-
-#### Tablet
-
-- Home Page Wireframe
-
-<img src="cocktails/documentation/wireframes/tablet-home.png">
-
-- The Bar / All Cocktails Wireframe
-
-<img src="cocktails/documentation/wireframes/tablet-all-cocktails.png">
-
-- Filtered Cocktails Wireframe
-
-<img src="cocktails/documentation/wireframes/tablet-filtered.png">
-
-- View Cocktail Wireframe
-
-<img src="cocktails/documentation/wireframes/tablet-view-cocktail.png">
-
-- My Cabinet / Profile Wireframe
-
-<img src="cocktails/documentation/wireframes/tablet-profile.png">
-
-- Add Cocktail Wireframe
-
-<img src="cocktails/documentation/wireframes/tablet-add-cocktail.png">
-
-- Edit Cocktail Wireframe
-
-<img src="cocktails/documentation/wireframes/tablet-edit-cocktail.png">
-
-- Manage Categories Wireframe
-
-<img src="cocktails/documentation/wireframes/tablet-manage-categories.png">
-
-- Add Category Wireframe
-
-<img src="cocktails/documentation/wireframes/tablet-add-category.png">
-
-- Edit Category Wireframe
-
-<img src="cocktails/documentation/wireframes/tablet-edit-category.png">
-
-- Log In Wireframe
-
-<img src="cocktails/documentation/wireframes/tablet-login.png">
-
-- Register Wireframe
-
-<img src="cocktails/documentation/wireframes/tablet-register.png">
-
-#### Mobile
-
-- Home Page Wireframe
-
-<img src="cocktails/documentation/wireframes/mobile-home.png">
-
-- The Bar / All Cocktails Wireframe
-
-<img src="cocktails/documentation/wireframes/mobile-all-cocktails.png">
-
-- Filtered Cocktails Wireframe
-
-<img src="cocktails/documentation/wireframes/mobile-filtered.png">
-
-- View Cocktail Wireframe
-
-<img src="cocktails/documentation/wireframes/mobile-view-cocktail.png">
-
-- My Cabinet / Profile Wireframe
-
-<img src="cocktails/documentation/wireframes/mobile-profile.png">
-
-- Add Cocktail Wireframe
-
-<img src="cocktails/documentation/wireframes/mobile-add-cocktail.png">
-
-- Edit Cocktail Wireframe
-
-<img src="cocktails/documentation/wireframes/mobile-edit-cocktail.png">
-
-- Manage Categories Wireframe
-
-<img src="cocktails/documentation/wireframes/mobile-manage-categories.png">
-
-- Add Category Wireframe
-
-<img src="cocktails/documentation/wireframes/mobile-add-category.png">
-
-- Edit Category Wireframe
-
-<img src="cocktails/documentation/wireframes/mobile-edit-category.png">
-
-- Log In Wireframe
-
-<img src="cocktails/documentation/wireframes/mobile-login.png">
-
-- Register Wireframe
-
-<img src="cocktails/documentation/wireframes/mobile-register.png">
-
-### Colour Palette
-- The colour palette leans towards a darker range of shades and colours in an effort to evoke a cool, mysterious mood - inspired  by some of the cocktail bars the creator has visited. This contrasted well with what is predicted to be a fairly vast range of imagery chosen by the users - with cocktails covering every colour imaginable, often vibrant and bright. The main background hero image (bg.jpg) provides an array of browns, yellows, black and some shaded/darker colours.
-- The headings are white text, allowing the background image to be seen, but not interfere too much with the flow and visibility of the content. When text appears on top of cocktail images and recipes, they black text is contrasted by a slightly transparent white background to help readability and highlight the text.
-- By default, all buttons have a consistent style, size and layout throughout the website. See more in the buttons [Features](#features).
-- The text colour is white (rgb(255,255,255)) for the website's footer and navbar and also when placed upon hero images and cocktail imagery. This ensures a constant and obvious contrast between text and any background content or colours. When the background is much lighter, the text colour is revered to black (rgb(0,0,0)), again to ensure clarity. When text appears on top of cocktail images and recipes, they black text is contrasted by a slightly transparent white background to help readability and highlight the text.
-- Some shadows to texts and containers are used to help with depth and contrast.
-
-<img src="assets/readme-images/palette.png">
-
-- It was decided early on in the design stage that the black colour would be important for the website. Some of the other colours were chosen around having this colour in mind, especially to ensure the imagery and text was the focal point.
-
-- Here is the [Contrast Checker](https://webaim.org/resources/contrastchecker/) tool used to support this:
-
-<img src="assets/readme-images/contrast.png">
 
 
 ### Images
@@ -596,7 +367,37 @@ highscoresButton.onclick = function () {
 
 ## Testing
 
-This seperate document [here](TESTING.md) will document the full testing on The Cocktail Cabinet
+The W3C Markup Validator, W3C CSS Validator and JSHint tools were used to validate every page of the project to ensure there were no syntax errors in the project. If any were found during development, they were addressed.
+
+-   [W3C Markup Validator](https://validator.w3.org/#validate_by_input)
+
+index.html
+
+<img src="assets/readme-images/validator.png">
+
+end.html
+
+<img src="assets/readme-images/validator2.png">
+
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+style.css
+
+<img src="assets/readme-images/jigsaw.png">
+
+-   The Warnings(1), also seen on the above screenshot, references the Google imported style sheet, and that it won't check that.
+
+<img src="assets/readme-images/jigsaw-error.png">
+
+-   [JSHint](https://jshint.com/) 
+
+main.js
+
+<img src="assets/readme-images/jshint.png">
+
+end.js
+
+<img src="assets/readme-images/jshint2.png">
 
 ## Testing Original User Stories
 
@@ -702,54 +503,6 @@ There are many planned updates arranged for the The Cocktail Cabinet that includ
 -   Theme/colour palette toggle.
 -   +18 age restriction modal on site load
 
-## Deployment
-
-### GitHub Pages
-The following instructions are taken from Code Institutes [README.md template](https://github.com/Code-Institute-Solutions/SampleREADME/blob/master/README.md)
-
-The project was deployed to GitHub Pages using the following steps...
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
-
-### Forking the GitHub Repository
-
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
-
-### Making a Local Clone
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
-
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-```
-
-7. Press Enter. Your local clone will be created.
-
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-```
-
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 ## Credits
 
@@ -768,21 +521,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 - Dynamically setting active class with Flask and jinja2 [setup](https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621).
 
-### Inspiration
 
--   The Code Institute Slack community, especially projects from the peer-code-review channel.
-
-### Content & Media
-
--  Cocktail recipes from: books,websies
-
--   The main background image (bg.jpg) - Photo by Kelly L from Pexels found [here](https://www.pexels.com/photo/assorted-alcoholic-drinks-2796105/).
-
--   The logo (logo.png) was created using Canva.
-
--   The plane (plane.png) image for the progress bar was created using Canva.
-
--   Unless mentioned in the [Code](#code) section, all other code is written by the developer.
 
 ### Acknowledgements
 
@@ -821,297 +560,3 @@ technologies used:
 - era database/ design
 
 
-
-
-Data Schema:
-
-link both together through...
-
-
-- Relational Database:
-
-
-    PostgreSQL - open-source, Object-Relational Databse Management System (ORDBMS). fre use, licencing? good for future projects or launching this one if needs be.
-
-    primary key - A unique ID that identifies individual records regardless of any changes that occur
-
-
-
-- Non-Relational Database:
-    mongoDB - 
-
-------
-
-
-
-deployment of website:
-
-1. If you wish to - use Code Institute's template from here:  / copy this projects link/url?
-2. install two python packages. Flask and SQLAlchemy to work with Postgres databases. psycopg2 is necessary to work with Postgres database. In command line type: `pip3 install Flask-SQLAlchemy psycopg2`
-3. create "env.py" file
-4. Create a ".gitignore" file if you choose not to use Code Institute's template. Add `env.py` and the soon to be generated `__pyache__/` to it. All hidden and sensitive files/folders to be added here.
-5. in "env.py", type following:
-    ```
-    import os
-
-    os.environ.setdefault("IP", "0.0.0.0")
-    os.environ.setdefault("PORT", "5000")
-    os.environ.setdefault("SECRET_KEY", "any_secret_key")
-    os.environ.setdefault("DEBUG", "True")
-    os.environ.setdefault("DEVELOPMENT", "True")
-    os.environ.setdefault("DB_URL", "postgresql:///<DATABASE>")
-    ```
-
-    The `any_secret_key` can be called whatever you wish: `os.environ.setdefault("SECRET_KEY", "any_secret_key")`or generate a random and secure password here: https://randomkeygen.com/
-
-    make sure to change `os.environ.setdefault("DEBUG", "True")` to "False" before deploying/launching project.
-
-    `<DATABASE>` points to the databse to be created, in this case "my_cocktails".
-6. create a folder (in this case, folder is named "cocktails") in the root of your project.
-7. within that newly created folder, create a file called `__init__.py`
-8. write the following in the new file:
-    ```
-    import os
-    from flask import Flask
-    from flask_sqlalchemy import SQLAlchemy
-    if os.path.exists("env.py"):
-        import env  # noqa
-
-
-    app = Flask(__name__)
-    app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
-    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")
-
-    db = SQLAlchemy(app)
-
-    from cocktails import routes  # noqa
-    ```
-9. create a "routes.py" file within the "cocktails" folder
-10. within that "routes.py" file, write the following:
-    ```
-    from flask import render_template
-    from cocktails import app, db
-
-
-    @app.route("/")
-    def home():
-        return render_template("base.html")
-    ```
-11. in root of project, create "run.py" file
-12. within "run.py", write the following:
-    ```
-    import os
-    from cocktails import app
-
-
-    if __name__ == "__main__":
-        app.run(
-            host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
-            debug=os.environ.get("DEBUG")
-        )
-    ```
-13. within "cocktails" folder, create a new "templates" folder. This is where Flask will search for any html templates to be rendered.
-14. create a new file "base.html" within the "templates" folder.
-15. within the "base.html" file, write whatever you wish to be presented on your website.
-16. in the terminal, write `python3 run.py` to launch the project.
-17. add, commit and push.
-
-
-Setting up Databse - postgreSQL database:
-
-make sure you have postgreSQL installed locally if you are not using CI's template?
-set up the databse schema as follows:
-1. define our models by creating a "models.py" file within the "cocktails" folders
-2. write the following in the "models.py" file and create the tables:
-    ```
-    from cocktails import db
-
-
-    class Category(db.Model):
-        # schema for the Category model
-        id = db.Column(db.Integer, primary_key=True)
-        category_name = db.Column(db.String(25), unique=True, nullable=False)
-
-        def __repr__(self):
-            # __repr__ to represent itself in the form of a string
-            return self.category_name
-
-
-    class Users(db.Model):
-        # schema for the Users model
-        id = db.Column(db.Integer, primary_key=True)
-        user_name = db.Column(db.String(20), unique=True, nullable=False)
-        password = db.Column(db.String(260), nullable=False)
-
-        def __repr__(self):
-            # __repr__ to represent itself in the form of a string
-            return self.user_name
-    ```
-3. in "routes.py", import these newly created models:
-    ```
-    from cocktails.models import Category, Users
-    ```
-4. log in to postgreSQL terminal by typing psql in terminal.
-5. type `CREATE DATABASE cocktails;`
-6. then `\c cocktails;` to connect to the newly created database.
-7. finally `\q` to exit.
-8. use python to generate and migrate the models into the database. if any changes are made to this database, you must repeat the same steps to refresh and update your database. in the terminal, type `python3`.
-9. type `from cocktails import db`
-10. type `db.create_all()`
-11. if you wish to check that the tables exist, type `psql -d cocktails` followed by `\dt` then `\q` to quit, otherwise just exit via `exit()`.
-12. commit then push
-
-
-Setting up Database - MongoDB database:
-
-Make sure to that you have a MongoDB account.
-
-1. Create a cluster (https://www.mongodb.com/basics/clusters/mongodb-cluster-setup). This project uses a shared cluster. Choose the closest region to you which is free to use. Free cluster tier and then name your `<CLUSTER>` ("myFirstCluster", in this project).
-2. In Database Access, add a new database user (https://www.mongodb.com/docs/atlas/security-add-mongodb-users/#add-database-users).
-3. In Network Access, click add IP address and choose 'Allow Access From Anywhere'. Input the IP of your hosts here to add further security.
-4. In the newly created `<CLUSTER>`, click on Create a Database and under Database Name, enter a `<DATABASE>` name, ("my_cocktails", in this project)
-5. Under collection name, enter `<COLLECTION>` ("cocktails", in this project).
-6. Within the `<DATABASE>` ("my_cocktails"), click on Create Collection button and enter any other collections you wish to store.
-7. Within each collection, click on Insert Document, and enter the key-value pairs you wish to store in your document. For this project, the following key names and value data types were stored:
-    ```
-    _id: <ObjectId>
-    cocktail_name: <string>
-    category_name: <string>
-    cocktail_img: <string>
-    cocktail_description: <string>
-    created_by: <string>
-    main_ingredient: <string>
-    method: <string>
-    other_ingredients: <array>
-    prep_time: <Int32> with a default value of "0"
-    servings: <Int32> with a default value of "0"
-    ```
-8. In the terminal, install dnspython `pip3 install dnspython`
-9. Install pymongo too `pip3 install flask-pymongo`
-10. on the mongo website, in your collection, connect your cluster. Choose 'Connect your application' and choose Python and your version (3.6 or later, in this project).
-11. Copy the connection string.
-12. In the "env.py" file, add the following environment variables to the already present ones:
-    ```
-    os.environ.setdefault("MONGO_URI", "mongodb+srv://<USERNAME>:<PASSWORD>@<CLUSTER>.1megs.mongodb.net/<DATABASE>?retryWrites=true&w=majority")
-    os.environ.setdefault("MONGO_DBNAME", "<DATABASE>")
-    ```
-    Make sure to insert your own information for `<USERNAME>`, `<PASSWORD>`, `<CLUSTER>` and `<DATABASE>`.
-13. In "__init__.py" add  `from flask_pymongo import PyMongo`.
-14. Add and update:
-    ```
-    app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-    app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-
-    mongo = PyMongo(app)
-    ```
-15. In "routes.py", update entire file to be:
-    ```
-    from flask import (
-        flash, render_template,
-        request, redirect, session, url_for)
-    from bson.objectid import ObjectId
-    from cocktails import app, db, mongo
-    from cocktails.models import Category, Users
-
-
-    @app.route("/")
-    def home():
-        return render_template("cocktails.html")
-    ```
-16. In terminal, write `touch cocktails/templates/cocktails.html`
-17. In "cocktails.html" add your website content here (use templates and link "base.html" to all other pages etc)
-18. In terminal, "python3 run.py" to view your work.
-19. add, commit, push.
-
-
-Linking the databases:
-
-1. Using category_id
-2. 
-
-
-Deploy the application to Heroku:
-
-1. Create a "requirements.txt" by typing `pip3 freeze --local > requirements.txt` in the terminal. This lists what is necessary to run the project.
-2. Create a Procfile by typing `echo web: python run.py > Procfile` in the terminal. In the newly created "Procfile", check to see if a blank line appears under the written code. If there is, delete and save that change. It can cause issues with Heroku.
-3. Commit and push.
-4. On the Heroku website. Create a new app and name it. Choose the regeion closest to you.
-5. Create a new database on Heroku. Resources > Add-ons, search for heroku postgres and choose the 'Hobby Dev - Free' option, or whichever suits your needs.
-6. Once confirmed, go to Settings > Config Vars > Reveal Config Vars, and input the following:
-    ```
-    IP = 0.0.0.0
-    PORT = 5000
-    SECRET_KEY = your_secret_key_here
-    MONGO_URI = mongodb+srv://<USERNAME>:<PASSWORD>@<CLUSTER>.1megs.mongodb.net/<DATABASE>?retryWrites=true&w=majority
-    MONGO_DBNAME = your_database_name_here
-    ```
-    You can add:
-    ```
-    DEBUG = True
-    ```
-    temporarily but make sure to change to `False` when finalizing the app. Keep to `True` for error fixing during development.
-7. In your Config Vars in Heroku, if DATABASE_URL starts with `postgres` instead of `postgresql`, update your `__init__.py` file to:
-```
-import os
-import re
-from flask import Flask
-from flask_pymongo import PyMongo
-from flask_sqlalchemy import SQLAlchemy
-if os.path.exists("env.py"):
-    import env  # noqa
-
-
-app = Flask(__name__)
-app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
-app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-
-uri = os.environ.get("DATABASE_URL")
-if uri.startswith("postgres://"):
-    uri = uri.replace("postgres://", "postgresql://", 1)
-app.config["SQLALCHEMY_DATABASE_URI"] = uri  # heroku
-
-db = SQLAlchemy(app)
-mongo = PyMongo(app)
-
-from cocktails import routes  # noqa
-```
-This wil ensure that the database is correctly linked.
-8. In github, make sure you've added, commited and pushed your latest work.
-9. The following point is an extract taken from Code Institute:
-
-    ```Automated Deployments from GitHub disabled by Heroku
-    Due to a security issue, Heroku has disabled automated deployments from GitHub. Unfortunately, we have no indication if or when they will reactivate this. In order for you to deploy while this situation persists, please follow the steps below to deploy from your Gitpod workspace:
-
-    - Open the terminal.
-    - For those of you who are using MFA/2FA: please scroll down to see the additional steps required.
-    For those of you not using MFA/2FA: Log in to Heroku and enter your details.
-    command: heroku login -i
-    - Get your app name from heroku.
-    command: heroku apps
-    - Set the heroku remote. (Replace <app_name> with your actual app name and remove the <> characters)
-    command: heroku git:remote -a <app_name>
-    - Add and commit any changes to your code if applicable
-    command: git add . && git commit -m "Deploy to Heroku via CLI"
-    - Push to both GitHub and Heroku
-    command: git push origin main
-    command: git push heroku main
-
-    MFA/2FA enabled?
-    - Click on Account Settings (under the avatar menu) on the Heroku Dashboard.
-    - Scroll down to the API Key section and click Reveal. Copy the key.
-    - Back in your Gitpod workspace, enter the command: heroku_config , and enter your API key you copied when prompted.
-    - Continue from step 3 above. If you get prompted to log in at any point:
-      - Enter your Heroku username.
-      - Enter the API key you just copied.
-    
-    Need to deploy again?
-    You should just be able to add, commit and push, and if prompted enter your username and API key again.
-
-10. Click 'Open App' in heroku, and your project will be displayed here.
-11. Due to the automatic deployment issues on heroku's part, any changes to your app will need to manually be updated by following step 8. again.
-12. We need to create our tables on the Heroku database. In Heroku, on the top-right, clcik More > Run Console.
-13. Type `python3`
-14. Type `from cocktails import db` then `db.create_all()` then `exit()`
-15. In GitHub, change your `env.py` to reflet the newly created database by deleting `os.environ.setdefault("DB_URL", "postgresql:///cocktails")` and inserting `os.environ.setdefault("DATABASE_URL", "<heroku string>")` from Heroku's config vars.
