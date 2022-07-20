@@ -13,14 +13,8 @@ The Full Testing documentation, following on from the README [found here](README
 Lighthouse
 Code Testing: html, css, js, pep8
 
-
-
-
 2. [Design/Data Schema](#data-schema-design)
-
-
 4. [Features](#features)
-
 4. [Testing](#testing) tidy up and organize all.
 4. [Testing Original User Stories](#testing-original-user-stories)
     - [As a New User](#as-a-new-user) this goes to the first one?
@@ -125,110 +119,6 @@ As shown on the images below, the website logo and title is very clear and obvio
 <a href="{{ url_for('home') }}" class="brand-logo">The Cocktail Cabinet</a>
 ```
 
-#### Toggle Menu Elements
-
-Listed are the main features of the main menu of the quiz. The user simply clicks to show or hide the buttons to display info or return back to the main menu.
-
-#### - How to Play
-
-<img src="assets/readme-images/how-to-container.png">
-
-```javascript
-howToButton.onclick = function () {
-    if (howToDiv.style.display !== "block") {
-        howToDiv.style.display = "block";
-        startButton.classList.add('hide');
-        contactButton.classList.add('hide');
-        highscoresButton.classList.add('hide');
-    } else {
-        howToDiv.style.display = "none";
-        startButton.classList.remove('hide');
-        contactButton.classList.remove('hide');
-        highscoresButton.classList.remove('hide');
-    }
-};
-```
-
-#### - Contact
-
-Each icon for the social media links turn gold when the user hovers over them to highlight the focused icon.
-
-<img src="assets/readme-images/contact-container.png">
-<img src="assets/readme-images/contact-container-hover.png">
-
-```javascript
-contactButton.onclick = function () {
-    if (contactDiv.style.display !== "block") {
-        contactDiv.style.display = "block";
-        startButton.classList.add('hide');
-        howToButton.classList.add('hide');
-        highscoresButton.classList.add('hide');
-    } else {
-        contactDiv.style.display = "none";
-        startButton.classList.remove('hide');
-        howToButton.classList.remove('hide');
-        highscoresButton.classList.remove('hide');
-    }
-};
-```
-
-The social media links on smaller screens (below 481px - such as mobile phones) have a more mobile-friendly layout.
-
-<img src="assets/readme-images/mobile-social-links.jpg">
-
-#### - High Scores
-
-<img src="assets/readme-images/highscores-container.png">
-
-````javascript
-highscoresButton.onclick = function () {
-    if (highscoresDiv.style.display !== "block") {
-        highscoresDiv.style.display = "block";
-        startButton.classList.add('hide');
-        howToButton.classList.add('hide');
-        contactButton.classList.add('hide');
-    } else {
-        highscoresDiv.style.display = "none";
-        startButton.classList.remove('hide');
-        howToButton.classList.remove('hide');
-        contactButton.classList.remove('hide');
-    }
-};
-````
-
-#### Buttons
-
-#### - General Buttons
-- Almost every button is styled to look the same. A clean and clear button to make for user readability.
-
-<img src="assets/readme-images/button.png">
-
-- The colours simply invert when a cursor hovers over them. A simple visual indicator and keeping in line with the colour palette.
-
-<img src="assets/readme-images/button-hover.png">
-
-#### - Delete Button
-- Due to the nature of this button and it's significance, it was decided to style this differently with a golden (#) hue/ . This is pure bragging rights and to entice the players to compete for the highest score. it will be big factor for returning players.
-
-<img src="assets/readme-images/button-highscore.png">
-
-#### - Edit Button
-- The Save button is set as disabled as a default. Once the user inputs their name, the button returns to a normal state, just like the others.
-
-<img src="assets/readme-images/button-disabled.png">
-
-#### - Cancel Button
-
-- Gold (rgb(255,210,0)) indicates a correct answer.
-
-<img src="assets/readme-images/button-correct.png">
-
-#### - Input
-
-- The 'Enter your name' input field has a very basic style applied. IF the user chooses not to enter their name, then the Save button remains disabled and the user will not be able to save their score to the High Scores section.
-
-<img src="assets/readme-images/input.png">
-
 
 ## Testing
 
@@ -303,7 +193,7 @@ style.css
 
 <img src="cocktails/documentation/screenshots/jigsaw.png">
 
--   W3C CSS Validator returned no errors. 
+W3C CSS Validator returned no errors. 
 
 -   [JSHint](https://jshint.com/) 
 
@@ -311,7 +201,11 @@ script.js
 
 <img src="cocktails/documentation/screenshots/jshint.png">
 
-- JSHint returned these warnings. They were addressed and cleared once ran through JSHint again.
+- JSHint returned these warnings prior to creating the forms.js file in response to a console issue found here ()[]. They were addressed and cleared once ran through JSHint again.
+
+script.js - no errors found
+
+forms.js - no errors found
 
 ## Testing Original User Stories
 
@@ -436,6 +330,7 @@ To resolve this, the background-colour was specified in the style.css file, inst
 
 ### Bug Fixes
 Bug fixes were predominantly completed in real-time as soon as any issues arose. This was to ensure the project would continue developing smoothly without serious, unmanageable bugs arising later that could drastically reduce development time or the layout and functioning of the website.
+Lighthouse tests also exposed further bugs with readability and image scaling being two main factors in Accessibility and Performance. These were addressed as best as time allowed, but some Known Bugs still remain.
 
 
 
@@ -450,7 +345,7 @@ Jinja block scripts templates to insert the forms.js file to the add_cocktail.ht
 
 
 
--   As seen from the style.css file, there is a lot of custom CSS. Media queries were used at different breakpoints - although time consuming, it was vital to invest time into this to ensure the website was functioning correctly on various displays to ensure a major [User Targets](#as-a-new-user) was met. Some JavaScript tweaks were also implemented to alter the class width at different stages of the website e.g. the main menu, website itself or the end.
+-   As seen from the style.css file, there is a lot of custom CSS. Media queries were used at different breakpoints - although time consuming, it was vital to invest time into this to ensure the website was functioning correctly on various displays to ensure a major [User Targets](#as-a-new-user) was met.
 
 -   Placed a background-colour behind the score for readability purposes as a Lighthouse test had brought up contrast issues between the gold text colour and the lighter background.
 
@@ -460,24 +355,16 @@ Jinja block scripts templates to insert the forms.js file to the add_cocktail.ht
 
 -   Images not loading can sometimes cause bugs. Attempted to fix with alternative image code.
 
--   Card layout issues at certain breakpoints. Attempted to resolve with min-height.
+-   Card layout issues at certain breakpoints when viewing cocktail recipes. Attempted to resolve with adding and increasing min-height.
 
--   Reset and Search buttons along with the seach input on the all_cocktails.html page become cluttered on smaller screens (sub 694px). Attempted flexbox and column changes.
+-   Reset and Search buttons along with the seach input on the all_cocktails.html page becomes cluttered on smaller screens (sub 694px). Attempted flexbox and column changes.
+
+-   Pagination page numbers not centred. Adjusted default MaterializeCSS classes to improve, although not ideal.
 
 
-## Credits
+## Testing Credits
 
 ### Code
--   At the early stages of the development, the [How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial](https://www.youtube.com/watch?v=f4fB9Xg2JEY&list=FLoLMoJL7IfiYl8F3sN_CEqQ&index=16) tutorial was followed and the code was used as the basis of the quiz. Supporting GitHub code [here](https://github.com/briancodex/quiz-app-js). Original code was later added alongside that found in the YouTube video to suit the quiz. Code tweaks were made to suit this quiz, pre-determined code edited or removed along with adjustments and restyling to the majority of the CSS found in the credited video. Upon further searching, it seems that [Build a Quiz App - Intro](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) and that playlist of videos may be what that YouTube video was also inspired by.
-
--   'Web Dev Simplified' YouTube [video](https://www.youtube.com/watch?v=riDzcEQbX6k&list=FLoLMoJL7IfiYl8F3sN_CEqQ&index=13) was also used and combined with the above videos to help shape the The Cocktail Cabinet. Supporting GitHub code [here](https://github.com/WebDevSimplified/JavaScript-Quiz-App).
-
--   The API aspect of the quiz was introduced thanks to the [Build a Quiz App (11) - Fetch API to Load Questions API](https://www.youtube.com/watch?v=3aKOQn2NPFs&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=12) tutorial, to which edits were then made. Supporting link to GitHub [here](https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript).
-
--   The ability to toggle (show and hide) content via the How To Play, Contact and High Scores buttons on the main menu screen came from W3Schools documentation found [here](https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp), and a separate source [here](https://sebhastian.com/javascript-show-hide-div-onclick-toggle/) which was then edited to suit the project, along with additional customization.
-
--   This README.md document was based on Code Institutes [SampleREADME](https://github.com/Code-Institute-Solutions/SampleREADME/blob/master/README.md). The template was used as a guide, then filled with content related to this website. The MS2 Quiz [README.md](https://github.com/rhysmoggs/ms2-quiz/blob/main/README.md) file - the developers personal MS2 submission for the Code Institute course - was also used and then edited to suit this project.
-
 - Pagination [setup](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9).
 
 - Dynamically setting active class with Flask and jinja2 [setup](https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621).
