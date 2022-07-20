@@ -319,7 +319,7 @@ All of the following tests were repeated multiple times to ensure a fair test. T
 ### Further Testing
 
 -   Testing was predominantly made using Google Chrome's own developer tools and 'Inspect Mode', although testing was done sporadically on alternative browsers with each major addition to the website e.g new content, style updates and responsive changes via media queries.
--   Console.log() function was used for JavaScript code development and print() elsewhere.
+-   The browser console was used for error finding and print() in code development.
 -   All interactive elements of the website were tested. Button functions, clicking, hiding/showing content, user input, links and general flow of the website. Databse CRUD functionality and testing were made in real-time. Bugs were fixed as they arose.
 -   The website was tested on Google Chrome, Mozilla Firefox, Microsoft Edge and Opera browsers and ran efficiently on each one. There were slight stylistic differences when testing between browsers, but these were resolved afterwards. See below for an example when testing on the Opera browser:
 <img src="assets/readme-images/opera-test.png">

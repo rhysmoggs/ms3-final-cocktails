@@ -242,6 +242,15 @@ main {
     text-align: center;
 }
 
+.pagination li.active {
+    background-color: transparent;
+}
+
+#pagination nav {
+    color: white;
+    background-color: black;
+}
+
   /* Modal */
 .modal {
     text-shadow: none;

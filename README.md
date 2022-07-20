@@ -30,17 +30,10 @@ The Cocktail Cabinet is a passion project, with its idea birthed from the depths
 4. [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Frameworks, Libraries, Programs and Tools Used](#frameworks-libraries-programs-and-tools-used)
-7. [Testing](#testing) tidy up and organize all.
+7. [Testing](#testing)
 8. [Deployment](#deployment)
 9. [Credits](#credits)
 10. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
-
-
-## Example
-## Example2
-## Third Example
-## [Fourth Example](http://www.fourthexample.com) 
-
 
 ### Project Goals:
 
@@ -265,11 +258,15 @@ Wireframes were drawn using [Balsamiq](https://balsamiq.com/) at the beginning o
 <img src="cocktails/documentation/wireframes/mobile-register.png">
 
 ### Colour Palette
-- The colour palette leans towards a darker range of shades and colours in an effort to evoke a cool, mysterious mood - inspired  by some of the cocktail bars the creator has visited. This contrasted well with what is predicted to be a fairly vast range of imagery chosen by the users - with cocktails covering every colour imaginable, often vibrant and bright. The main background hero image (bg.jpg) provides an array of browns, yellows, black and some shaded/darker colours.
-- The headings are white text, allowing the background image to be seen, but not interfere too much with the flow and visibility of the content. When text appears on top of cocktail images and recipes, they black text is contrasted by a slightly transparent white background to help readability and highlight the text.
-- By default, all buttons have a consistent style, size and layout throughout the website. See more in the buttons [Features](#features).
-- The text colour is white (rgb(255,255,255)) for the website's footer and navbar and also when placed upon hero images and cocktail imagery. This ensures a constant and obvious contrast between text and any background content or colours. When the background is much lighter, the text colour is revered to black (rgb(0,0,0)), again to ensure clarity. When text appears on top of cocktail images and recipes, they black text is contrasted by a slightly transparent white background to help readability and highlight the text.
-- Some shadows to texts and containers are used to help with depth and contrast.
+- The colour palette is simply dark against light and vice versa. Black and white. There is some range of brighter colours for the [interactive elements](#interactive-element) in an effort to highlight these and make a drastic contrast between interactive elements and non-interactive content. This contrasted well with what is predicted to be a fairly vast range of imagery chosen by the users - with cocktails covering every colour imaginable, often vibrant and bright. The main background hero-image (bg.jpg) provides an array of browns, yellows, black and some shaded/darker colours. It aims to evoke a cool and mysterious mood - inspired  by some of the cocktail bars the creator has visited.
+
+- By default, all buttons have a consistent style, size and layout throughout the website. See more in the buttons [Features](#features) section.
+
+- The text colour is white (rgb(255,255,255)) for the website's footer and navbar and also when placed upon larger images and cocktail imagery. This ensures a constant and obvious contrast between text and any background content or colours. When the background is much lighter, the text colour is reversed to black (rgb(0,0,0)), again to ensure clarity.
+
+- The headings are white text, allowing the background image to be seen, but not interfere too much with the flow and visibility of the content. When text appears on top of cocktail images and recipes, the black text is contrasted by a slightly transparent white background to help readability and highlight the text.
+
+- Some shadows (slightly opaque black) are added to interactive and cards to help with depth and contrast. When the shadow appears on cursor hover, they serve as good hints to the user that that element can be interacted with.
 
 <img src="assets/readme-images/palette.png">
 
@@ -279,20 +276,16 @@ Wireframes were drawn using [Balsamiq](https://balsamiq.com/) at the beginning o
 
 <img src="assets/readme-images/contrast.png">
 
+Further contrast checks are covered in the [Testing](TESTING.md) doucmentation, especially during Lighthouse checks. Adjustments were made to favour readability.
+
 
 ### Images
-- The use of photography is vital in creating allure and desire, especially for this cocktail recipe website. Users are drawn by what they see. The bg.jpg background image is large and provides a fantastic colour to build an interface on. This inspired more imagery to be used for The Bar and My Cabinet especially.
+- The use of photography is vital in creating allure and desire, especially for this cocktail recipe website. Users are drawn by what they see. The bg.jpg background image is large and provides a fantastic colour to build an interface on. This inspired more imagery to be used for 'The Bar' and 'My Cabinet' pages especially.
 
-- It's vital for the theme to be clear and obvious. The background image makes the website recognizable and memorable so people recall and return to it, which will draw more eyes to the website. This, along with the CSS styling and colour palette solidifies the theme. The following image was used.
-
-<img src="assets/readme-images/bg.jpg">
-
-Logo
-
-<img src="assets/images/logo.png">
+- It's vital for the theme to be clear and obvious. The background image makes the website recognizable and memorable so people recall and return to it, which will draw more eyes to the website. This, along with the CSS styling and colour palette solidifies the theme.
 
 ### Font
--  The The Cocktail Cabinet uses the Poppins font. It provides that clean, clear style without compromising on readability - a vital design feature for any website. This is available for free via [Google Fonts](https://fonts.google.com/) and imported via CSS. Sans Serif is used as a secondary option in case of failure to import the font into the website correctly. Poppins is a clean font used frequently in designs, so it is both attractive and appropriate.
+-  The The Cocktail Cabinet uses the Poppins font. It provides that clean and clear style without compromising on readability - a vital design feature for any website. This is available for free via [Google Fonts](https://fonts.google.com/) and imported via CSS. Sans Serif is used as a secondary option in case of failure to import the font into the website correctly. Poppins is a font often used in designs, so it is both attractive and appropriate.
 
 ## Accessibility
 Extremely important aspect.
@@ -306,14 +299,14 @@ Extremely important aspect.
 ## Features
 There are universal features that are present throughout The Cocktail Cabinet website. These feature are:
 - Responsive on all device sizes - from 320px upwards to larger desktops reaching 1200px and more.
-- Fully-responsive nav bar, with simple, obvious and clean lines and text.
-- The nav bar menu is mobile friendly, adusting automatically at specific breakpoints thanks to Materializecss's easy-to-use framework.
-- The Cocktail Cabinet brand logo/name is seen at all times whether tucked to the left, central on reduced screen-sizes or at the top of the mobile menu on smaller and mobile devices. This is vital for brand consistency and serves as a simple way of reminding the user of the website's name. The logo is clickable and always takes the user to The Cocktail Cabinet home page (home.html).
+- Fully-responsive nav bar (including mobile nav bar)
+- Mobile-friendly, adusting automatically at specific breakpoints thanks to Materializecss's easy-to-use framework and custom overriding style classes.
+- The Cocktail Cabinet logo/name is seen at all times whether tucked to the left, central on reduced screen-sizes or at the top of the mobile menu on smaller and mobile devices. This is vital for brand consistency and serves as a simple way of reminding the user of the website's name. The logo is clickable and always takes the user to The Cocktail Cabinet home page (home.html).
 - Clear and obvious navbar links to other pages within the website.
 - Fully responsible footer which matches the design and colour palette of the top navbar.
-- Social links in footer, linking to creator/website social links and provides ways to contact them.
+- Social links in footer, linking to the creators social links and provides ways to contact them.
 - Name of website along with copyright info in footer.
-- All clickable images, buttons, links etc have a hovering cursor/pointer to signify that that element can be interacted with. The majority of these elements being visually promted either throgh a short zoom in/out animation, colour change or highlighting.
+- All clickable images, buttons, links etc have a hovering cursor to signify that that element can be interacted with. The majority of these elements being visually promted either throgh a short zoom in/out animation, colour change or highlighting.
 - A Flash text appears at the top of the webpage whenever a user or admin completes a task - by either adding, editing or deleting information. They are informed of this.
 
 Here's a breakdown of all the design features on each of the main webpages within The Cocktail Cabinet website:
@@ -324,39 +317,39 @@ Here's a breakdown of all the design features on each of the main webpages withi
 <img src="cocktails/documentation/screenshots/home-page2.png">
 
 The home page for The Cocktail Cabinet website. All visitors will be welcomed by this webpage. The features include:
-- The user is met with a 100vh hero image (bg.jpg) of a selection of alcohol bottles on a dark and slightly dimmed background - an obvious theme and impactful. A brief text gives the website's slogan.
+- The user is met with a full-screen hero-image (bg.jpg) with The Cocktail Cabinet centered above. A brief text gives the website's slogan.
 - A button to entice the user to 'Log In'. This button changes to 'My Cabinet' if the user is already logged in.
-- Underneath the hero image, a few simple suggestions/steps/instructions for users to follow and explore. Some guidence on what to do if new to the site, with the rounded images clickable and related to the text below. Quick links.
+- Underneath the hero image, a few simple suggestions for users to follow and explore. Some guidence on what to do if new to the site, with the rounded images clickable and related to the text below. Quick links.
 - Carousel. A carousel of all cocktail categories avilable on the website. Click leads to (filter_category.html) with all the related cocktails listed.
 
 ### - The Bar page (all_cocktails.html)
-<img src="cocktails/documentation/screenshots/the-bar-page.png">
+<img src="cocktails/documentation/screenshots/all-cocktails-page.png">
 
 The Bar. This is where every cocktail recipe on The Cocktail Cabinet website is listed. All visitors to the website can view this webpage. The features include:
-- Current/active page is highlighted on the nav bar
-- The user is met with a large image (bar-big.jpg) and the title of the page (The Bar) centered to the image with a brief text description of the pages purpose.
-- A search bar is located just under the image, for quick, easy access for user preferred searches. The user can search by name, ingredients, alcohol, as suggested by the placeholder and either use a keyboard ENTER entry, or use the 'Search' button to seatch though the entire websites's database of cocktail recipes.
-- Reset button next to the Seach bar, to clear and restart the user's search options.
+- Current page is highlighted on the nav bar
+- The user is met with a large image (bar-big.jpg) and the title of the page (The Bar) centered to the image with a brief text description of the page purpose.
+- A search bar is located just under the image, for quick, easy access for user preferred searches. The user can search by name, ingredients, alcohol, as suggested by the placeholder and either use a keyboard ENTER entry, or use the 'Search' button to search though the entire websites database of cocktail recipes.
+- Reset button next to the Search bar, to clear and restart the user's search options.
 - A list of every cocktail recipes on the website presented in card format, with purposefully limited but relavant information related to each cocktail recipe.
-- Ability to click on each cocktail recipie image to advance to the full recipe page (view_cocktail).
-- If the cocktail recipie was submitted by the user, the 'Edit' button under the cocktail recipe image forwards the user to the Edit Cocktail (edit_cocktail.html) page.
-- If the cocktail recipie was submitted by the user, the 'Delete' button under the cocktail recipe image allows the user to delete the cocktail recipe. The user is met with a modal that asks for confirmation on wheither they want to delete that cocktail or not. User must click 'Delete' again to confirm this (which will then delete the cocktail recipie from the website and the database), otherwise they can cancel by clicking the 'Cancel' button or by just clicking off screen or pressing ESC on the keyboard and the cocktail recipe will remain on the website. 
+- Ability to click on each cocktail recipe image to advance to the full recipe page (view_cocktail).
+- If the cocktail recipe was submitted by the user, the 'Edit' button under the cocktail recipe image forwards the user to the Edit Cocktail (edit_cocktail.html) page.
+- If the cocktail recipe was submitted by the user, the 'Delete' button under the cocktail recipe image allows the user to delete the cocktail recipe. The user is met with a modal that asks for confirmation on wheither they want to delete that cocktail or not. User must click 'Delete' again to confirm this (which will then delete the cocktail recipe from the website and the database), otherwise they can cancel by clicking the 'Cancel' button or by just clicking off screen or pressing ESC on the keyboard and the cocktail recipe will remain on the website. 
 - The 'Edit' and 'Delete' buttons are hidden if the user did not submit the cocktail recipe.
-- A clickable link at the bottom of each seperate cocktail recipie card to advance to the full recipe page (view_cocktail).
+- A clickable link at the bottom of each seperate cocktail recipe card to advance to the full recipe page (view_cocktail).
 - Pagination. A total of 9 cocktail recipes per page. The number of pages is based on the number of recipes found in the database. The user can select a specific page, or browse the list of recipes by clciking the previous or next buttons on either side of the page numbers.
 - Pagination info. A small text area informing the user of the amount of recipes on the current page and the total amount of cocktails in the database.
 
 ### - Filter Cocktails by Category (filter_category.html)
-<img src="cocktails/documentation/wireframes/filter_category.png">
-The Filter Cocktails by Category page is where users can view every cocktail recipie listed in a certain cocktail category (depending on which cocktail category they choose on the previous page, home.html) All visitors to the website can view this webpage. The features include:
+<img src="cocktails/documentation/screenshots/filter-category-page.png">
+The Filter Cocktails by Category page is where users can view every cocktail recipe listed in a certain cocktail category (depending on which cocktail category they choose on the previous page, home.html) All visitors to the website can view this webpage. The features include:
 
 - Name of the selected cocktail Category displayed as the page title in large text at top of page.
 - A list of every cocktail recipe within the selected cocktail Category presented in card format, with purposefully limited but relavant information related to each cocktail recipe.
-- Ability to click on each cocktail recipie image to advance to the full recipe page (view_cocktail).
-- If the cocktail recipie was submitted by the user, the 'Edit' button under the cocktail recipe image forwards the user to the Edit Cocktail (edit_cocktail.html) page.
-- If the cocktail recipie was submitted by the user, the 'Delete' button under the cocktail recipe image allows the user to delete the cocktail recipe. The user is met with a modal that asks for confirmation on wheither they want to delete that cocktail or not. User must click 'Delete' again to confirm this (which will then delete the cocktail recipie from the website and the database), otherwise they can cancel by clicking the 'Cancel' button or by just clicking off screen or pressing ESC on the keyboard and the cocktail recipe will remain on the website. 
+- Ability to click on each cocktail recipe image to advance to the full recipe page (view_cocktail).
+- If the cocktail recipe was submitted by the user, the 'Edit' button under the cocktail recipe image forwards the user to the Edit Cocktail (edit_cocktail.html) page.
+- If the cocktail recipe was submitted by the user, the 'Delete' button under the cocktail recipe image allows the user to delete the cocktail recipe. The user is met with a modal that asks for confirmation on wheither they want to delete that cocktail or not. User must click 'Delete' again to confirm this (which will then delete the cocktail recipe from the website and the database), otherwise they can cancel by clicking the 'Cancel' button or by just clicking off screen or pressing ESC on the keyboard and the cocktail recipe will remain on the website. 
 - The 'Edit' and 'Delete' buttons are hidden if the user did not submit the cocktail recipe.
-- A clickable link at the bottom of each seperate cocktail recipie card to advance to the full recipe page (view_cocktail).
+- A clickable link at the bottom of each seperate cocktail recipe card to advance to the full recipe page (view_cocktail).
 
 ### - My Cabinet page (profile.html)
 <img src="cocktails/documentation/screenshots/profile-page.png">
@@ -366,13 +359,13 @@ My Cabinet. This is where every cocktail recipe the user has submitted is stored
 - The users username presented in large text at the top of the page.
 - The 'Add Cocktail to My Cabinet' button under the username, when clicked advances to the 'Add Cocktail to My Cabinet' page.
 - A list of the specific users submitted cocktail recipes presented in card format, with purposefully limited but relavant information related to each cocktail recipe.
-- The 'Delete' and 'Edit' buttons visible on every cocktail recipie. As previously metioned, these have the same links and path, linked to the chosen cocktail and their data.
-- A clickable link at the bottom of each seperate cocktail recipie card to advance to the full recipe page (view_cocktail).
+- The 'Delete' and 'Edit' buttons visible on every cocktail recipe. As previously metioned, these have the same links and path, linked to the chosen cocktail and their data.
+- A clickable link at the bottom of each seperate cocktail recipe card to advance to the full recipe page (view_cocktail).
 
 ### Add Cocktail (add_cocktail.html)
 <img src="cocktails/documentation/screenshots/add-cocktail-page.png">
 
-The Add Cocktail / Add Cocktail to My Cabinet page is for users to add their cocktail recipie to the website via a form. Only registered users(and admin) can use this feature. The cocktail recipie is added to The Bar (all_cocktails.html), the My Cabinet (profile.html) page and to the cocktail's collection (whichever the user selects) that can then be found through either searching The Bar, or by the carousel on the home page which then leads to the (filter_category) page. The features include:
+The Add Cocktail / Add Cocktail to My Cabinet page is for users to add their cocktail recipe to the website via a form. Only registered users(and admin) can use this feature. The cocktail recipe is added to The Bar (all_cocktails.html), the My Cabinet (profile.html) page and to the cocktail's collection (whichever the user selects) that can then be found through either searching The Bar, or by the carousel on the home page which then leads to the (filter_category) page. The features include:
 - Placeholders and labels on all inputs serve as helpful guidence for users.
 - Validation on all user inputs (see code breakdown again? validate class).
 - Several inputs linked to the database (see data schema, code breakdown etc for explanation of inputs, types, data links etc.)
@@ -391,20 +384,20 @@ The Add Cocktail / Add Cocktail to My Cabinet page is for users to add their coc
 ### Edit Cocktail (edit_cocktail.html)
 <img src="cocktails/documentation/screenshots/edit-cocktail-page.png">
 
-The Edit Cocktail page is for users to edit their own cocktail recipie via a form. Only registered users(and admin) can use this feature. The cocktail edited cocktail recipie is updated when the form is submitted and found in the same places as the original recipie. The information expected from the user is the same as the add_cocktail.html page. The features include:
+The Edit Cocktail page is for users to edit their own cocktail recipe via a form. Only registered users(and admin) can use this feature. The cocktail edited cocktail recipe is updated when the form is submitted and found in the same places as the original recipe. The information expected from the user is the same as the add_cocktail.html page. The features include:
 - Labels on all inputs with the current cocktail related data/value on each input.
 - Validation on all user inputs (see code breakdown again? validate class).
-- 'Edit Button'. This button submits the form to the mongodb database if all inputs are valid and met and updates that specific cocktail recipie.
+- 'Edit Button'. This button submits the form to the mongodb database if all inputs are valid and met and updates that specific cocktail recipe.
 - 'Cancel' button. Leaves the page and returns to The Bar page.
 
 ### - View Cocktail page (view_cocktail.html)
 <img src="cocktails/documentation/screenshots/view-cocktail-page.png">
 
-The View Cocktail page is where the visitor can see the full recipie for the cocktail they selected. All visitors to the website can view this webpage. The features include:
-- Cocktail Name in large above the recipie.
+The View Cocktail page is where the visitor can see the full recipe for the cocktail they selected. All visitors to the website can view this webpage. The features include:
+- Cocktail Name in large above the recipe.
 - All data/cocktail information presented.
 - A large image of the cocktail.
-- 'Edit' and 'Delete' buttons if the cocktail recipie was submitted by the user (Edit and Delete buttons work the same as the others on the website).
+- 'Edit' and 'Delete' buttons if the cocktail recipe was submitted by the user (Edit and Delete buttons work the same as the others on the website).
 - 'Return to The Bar' button, which redirects the user to The Bar page.
 
 ### - Manage Categories page (/get_categories)
@@ -465,83 +458,41 @@ As shown on the images below, the website logo and title is very clear and obvio
 <a href="{{ url_for('home') }}" class="brand-logo">The Cocktail Cabinet</a>
 ```
 
-#### Toggle Menu Elements
-
-Listed are the main features of the main menu of the website. The user simply clicks to show or hide the buttons to display info or return back to the main menu.
-
-#### - How to Play
-
-<img src="assets/readme-images/how-to-container.png">
-
-```javascript
-howToButton.onclick = function () {
-    if (howToDiv.style.display !== "block") {
-        howToDiv.style.display = "block";
-        startButton.classList.add('hide');
-        contactButton.classList.add('hide');
-        highscoresButton.classList.add('hide');
-    } else {
-        howToDiv.style.display = "none";
-        startButton.classList.remove('hide');
-        contactButton.classList.remove('hide');
-        highscoresButton.classList.remove('hide');
-    }
-};
-```
-
-#### - Contact
-
-Each icon for the social media links turn gold when the user hovers over them to highlight the focused icon.
-
-<img src="assets/readme-images/contact-container.png">
-<img src="assets/readme-images/contact-container-hover.png">
-
-```javascript
-contactButton.onclick = function () {
-    if (contactDiv.style.display !== "block") {
-        contactDiv.style.display = "block";
-        startButton.classList.add('hide');
-        howToButton.classList.add('hide');
-        highscoresButton.classList.add('hide');
-    } else {
-        contactDiv.style.display = "none";
-        startButton.classList.remove('hide');
-        howToButton.classList.remove('hide');
-        highscoresButton.classList.remove('hide');
-    }
-};
-```
-
-The social media links on smaller screens (below 481px - such as mobile phones) have a more mobile-friendly layout.
-
-<img src="assets/readme-images/mobile-social-links.jpg">
-
 #### Buttons
+The buttons predominantly serve as triggers for users to achieve something they wish. An action is called on those buttons and are linked on the back-end.
 
-#### - General Buttons
-- Almost every button is styled to look the same. A clean and clear button to make for user readability.
+#### - Main Buttons
+- The larger and more focused green buttons. These are usually something the creator wants the user to click on - such as links to Log In, Register, visit My Cabinet - or something the user specifically has requested - such as Add a Cocktail to My Cabinet or Edit Cocktail - and the button click is next logical step. They are large, green and styled to look the same. A clean and clear button to make for user readability and purpose.
 
-<img src="assets/readme-images/button.png">
+<img src="cocktails/documentation/screenshots/buttons.png">
 
-- The colours simply invert when a cursor hovers over them. A simple visual indicator and keeping in line with the colour palette.
+The button on the home.html page changes from Log In to My Cabinet depending on if the user is logged in or not. This is done by user sesssion capabilites and Jinja templating:
 
-<img src="assets/readme-images/button-hover.png">
+```
+{% if session.user %}
+    <a href="{{ url_for('profile', username=session['user']) }}" class="btn-large green accent-4 text-shadow">My Cabinet</a>
+{% else %}
+    <a href="{{ url_for('login') }}" class="btn-large green accent-4 text-shadow">Log In</a>
+{% endif %}
+```
 
-#### - Delete Button
-- Due to the nature of this button and it's significance, it was decided to style this differently with a golden (#) hue/ . This is pure bragging rights and to entice the players to compete for the highest score. it will be big factor for returning players.
+Depending on the background image/colour, the buttons can give depth through the addition of MaterializeCSS "hoverable" class or through adusting the box-shadows to suit. This serve as a simple visual indicator for the site user.
 
-<img src="assets/readme-images/button-highscore.png">
+#### - Delete, Reset and Cancel Buttons
+- Due to the nature of this button and it's significance, it was decided to style this differently with a red colour. Red tends to indicate danger or a warning, and so it ensures the users double-check before clicking any of these buttons.
+
+<img src="cocktails/documentation/screenshots/buttons-red.png">
 
 #### - Edit Button
-- The Save button is set as disabled as a default. Once the user inputs their name, the button returns to a normal state, just like the others.
+- A blue button. Intentionally different to the typically green for good and red for bad.
 
-<img src="assets/readme-images/button-disabled.png">
+<img src="cocktails/documentation/screenshots/buttons-blue.png">
 
-#### - Cancel Button
+#### - Disabled Button
 
-- Gold (rgb(255,210,0)) indicates a correct answer.
+Using Materializecss' .disabled class. This button is featured on the add_cocktail.html and edit_cocktail.html pages. It runs in conjuction with input fields being and added and removed via the custom javascript found in forms.js. The button remains visible, but with a muted colour and no functionality or clickable option.
 
-<img src="assets/readme-images/button-correct.png">
+<img src="cocktails/documentation/screenshots/buttons-disable.png">
 
 #### - Input
 

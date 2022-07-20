@@ -5,6 +5,7 @@ let remove_meth_btn = document.getElementById('remove-meth-btn');
 let maximum = 8;
 let remove_meth = document.getElementsByClassName('remove-meth');
 let tally = remove_meth.length;
+let method_counter = 1;
 
 // variables related to add and remove 'other ingredients'
 let new_input = document.getElementById('new-input');
@@ -13,6 +14,7 @@ let remove_other_btn = document.getElementById('remove-other-btn');
 let max = 8;
 let js_remove_test = document.getElementsByClassName('js-remove-test');
 let counter = js_remove_test.length;
+let other_counter = 1;
 
 if (tally === 1) {
     remove_meth_btn.classList.add("disabled");
@@ -31,12 +33,14 @@ add_meth_btn.onclick = function() {
         add_meth_btn.classList.add("disabled");
     } else {
     var newMethod = document.createElement('input');
+    newMethod.setAttribute('id', `method_${method_counter}`);
     newMethod.setAttribute('name', 'method');
     newMethod.setAttribute('minlength', '5');
     newMethod.setAttribute('max-length', '75');
     newMethod.setAttribute('class', 'remove-meth remove-meth-btn validate');
     newMethod.setAttribute('type', 'text');
     newMethod.setAttribute('placeholder', 'Add another step');
+    method_counter = method_counter +1;
     newMethod.required = true;
     new_method.appendChild(newMethod);
     remove_meth_btn.classList.remove("disabled");
@@ -86,12 +90,14 @@ add_other_btn.onclick = function() {
         add_other_btn.classList.add("disabled");
     } else {
     var newIngredient = document.createElement('input');
+    newIngredient.setAttribute('id', `other_${other_counter}`);
     newIngredient.setAttribute('name', 'other_ingredient');
     newIngredient.setAttribute('minlength', '2');
     newIngredient.setAttribute('max-length', '20');
     newIngredient.setAttribute('class', 'js-remove-test remove-other-btn validate');
     newIngredient.setAttribute('type', 'text');
     newIngredient.setAttribute('placeholder', 'Add more ingredients and measurements');
+    other_counter = other_counter +1;
     newIngredient.required = true;
     new_input.appendChild(newIngredient);
     remove_other_btn.classList.remove("disabled");
