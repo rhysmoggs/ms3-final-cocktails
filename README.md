@@ -334,7 +334,7 @@ The home page for The Cocktail Cabinet website. All visitors will be welcomed by
 
 The Bar. This is where every cocktail recipe on The Cocktail Cabinet website is listed. All visitors to the website can view this webpage. The features include:
 - Current/active page is highlighted on the nav bar
-- The user is met with a large image (bar.jpg) and the title of the page (The Bar) centered to the image with a brief text description of the pages purpose.
+- The user is met with a large image (bar-big.jpg) and the title of the page (The Bar) centered to the image with a brief text description of the pages purpose.
 - A search bar is located just under the image, for quick, easy access for user preferred searches. The user can search by name, ingredients, alcohol, as suggested by the placeholder and either use a keyboard ENTER entry, or use the 'Search' button to seatch though the entire websites's database of cocktail recipes.
 - Reset button next to the Seach bar, to clear and restart the user's search options.
 - A list of every cocktail recipes on the website presented in card format, with purposefully limited but relavant information related to each cocktail recipe.

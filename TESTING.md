@@ -349,6 +349,8 @@ Following are the original [User Stories](#user-stories) set out in the early de
 
 Following are the Google Chrome Lighthouse results for each page.
 
+Changes were made due to the results of the Lighthouse tests. These were predominantley stylistic changes in the style.css file. Readability was improved by adding borders to MaterializeCSS default buttons, altering the disabled buttons to give more depth and clarity and increasing the clarity on the form labels.
+
 home.html
 
 <img src="cocktails/documentation/screenshots/home-lh.png">
@@ -371,7 +373,12 @@ profile.html
 
 add_cocktail.html
 
-<img src="cocktails/documentation/screenshots/add-cocktail-lh.png">
+<img src="cocktails/documentation/screenshots/add-cocktail-lh1.png">
+
+The issue with the nav link was resolved by adding "aria-label" to it.
+
+<img src="cocktails/documentation/screenshots/add-cocktail-lh2.png">
+<img src="cocktails/documentation/screenshots/add-cocktail-lh3.png">
 
 edit_cocktail.html
 

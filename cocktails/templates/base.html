@@ -22,7 +22,7 @@
         <nav class="black">
             <div class="nav-wrapper">
                 <a href="{{ url_for('home') }}" class="brand-logo">The Cocktail Cabinet</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right" aria-label="clickable mobile menu link"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li class="{{'active' if active_page == 'all_cocktails' }}"><a href="{{ url_for('all_cocktails') }}">The Bar</a></li>
                     {% if session.user %}
