@@ -8,17 +8,17 @@ The Full Testing documentation, following on from the README [found here](README
 
 
 # Testing Table of Contents
-1. [Intro](#example)
+1. [Intro](#intro)
+
+Lighthouse
+Code Testing: html, css, js, pep8
+
+
+
+
 2. [Design/Data Schema](#data-schema-design)
-3. [Aesthetic Design](#aesthetic-design)
-    - [Wireframes](#wireframes)
-        - [Desktop](#desktop)
-        - [Tablet](#tablet)
-        - [Mobile](#mobile)
-    - [Colour Palette](#colour-palette)
-    - [Images](#images)
-    - [Font](#font)
-4. [Accessibility](#accessibility)
+
+
 4. [Features](#features)
 
 4. [Testing](#testing) tidy up and organize all.
@@ -26,10 +26,6 @@ The Full Testing documentation, following on from the README [found here](README
     - [As a New User](#as-a-new-user) this goes to the first one?
     - [As a Returning User](#as-a-returning-user) this goes to the first one?
 4. [Credits](#credits)
-
-
-
-
 
 
 
@@ -240,33 +236,82 @@ The W3C Markup Validator, W3C CSS Validator and JSHint tools were used to valida
 
 -   [W3C Markup Validator](https://validator.w3.org/#validate_by_input)
 
-index.html
+HTML validation was tested on all pages of the website. Due to the Jinja2 templating, the source code was taken from the live website. This was done by right-clicking and selecting 'View Page Source' (on Google Chrome, Windows). All page results are as follows:
 
-<img src="assets/readme-images/validator.png">
+base.html
 
-end.html
+<img src="cocktails/documentation/screenshots/w3-pass.png">
 
-<img src="assets/readme-images/validator2.png">
+home.html
+
+<img src="cocktails/documentation/screenshots/w3-pass.png">
+
+filter_category.hml
+
+<img src="cocktails/documentation/screenshots/w3-pass.png">
+
+view_cocktail.hml
+
+<img src="cocktails/documentation/screenshots/w3-pass.png">
+
+all_cocktails.html
+
+<img src="cocktails/documentation/screenshots/w3-pass.png">
+
+profile.html
+
+<img src="cocktails/documentation/screenshots/w3-pass.png">
+
+add_cocktail.html
+
+<img src="cocktails/documentation/screenshots/w3-pass.png">
+
+edit_cocktail.html
+
+<img src="cocktails/documentation/screenshots/edit-cocktails-w3.png">
+
+The following errors occurred due to an oversight during the develoment period. Each addition of an input created a duplicated ID along with it.
+
+
+categories.html
+
+<img src="cocktails/documentation/screenshots/w3-pass.png">
+
+add_category.html
+
+<img src="cocktails/documentation/screenshots/w3-pass.png">
+
+edit_category.html
+
+<img src="cocktails/documentation/screenshots/w3-pass.png">
+
+login.html
+
+<img src="cocktails/documentation/screenshots/w3-pass.png">
+
+register.html
+
+<img src="cocktails/documentation/screenshots/w3-pass.png">
+
+404.html
+
+<img src="cocktails/documentation/screenshots/w3-pass.png">
 
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 
 style.css
 
-<img src="assets/readme-images/jigsaw.png">
+<img src="cocktails/documentation/screenshots/jigsaw.png">
 
--   The Warnings(1), also seen on the above screenshot, references the Google imported style sheet, and that it won't check that.
-
-<img src="assets/readme-images/jigsaw-error.png">
+-   W3C CSS Validator returned no errors. 
 
 -   [JSHint](https://jshint.com/) 
 
-main.js
+script.js
 
-<img src="assets/readme-images/jshint.png">
+<img src="cocktails/documentation/screenshots/jshint.png">
 
-end.js
-
-<img src="assets/readme-images/jshint2.png">
+- JSHint returned these warnings. They were addressed and cleared once ran through JSHint again.
 
 ## Testing Original User Stories
 
@@ -304,13 +349,57 @@ Following are the original [User Stories](#user-stories) set out in the early de
 
 Following are the Google Chrome Lighthouse results for each page.
 
-- Main menu and quiz area/ index.html
+home.html
 
-<img src="assets/readme-images/lighthouse-index.png">
+<img src="cocktails/documentation/screenshots/home-lh.png">
 
-- End page / end.html
+filter_category.hml
 
-<img src="assets/readme-images/lighthouse-end.png">
+<img src="cocktails/documentation/screenshots/filter-category-lh.png">
+
+view_cocktail.hml
+
+<img src="cocktails/documentation/screenshots/view-cocktail-lh.png">
+
+all_cocktails.html
+
+<img src="cocktails/documentation/screenshots/all-cocktails-lh.png">
+
+profile.html
+
+<img src="cocktails/documentation/screenshots/profile-lh.png">
+
+add_cocktail.html
+
+<img src="cocktails/documentation/screenshots/add-cocktail-lh.png">
+
+edit_cocktail.html
+
+<img src="cocktails/documentation/screenshots/edit-cocktail-lh.png">
+
+categories.html
+
+<img src="cocktails/documentation/screenshots/get-categories-lh.png">
+
+add_category.html
+
+<img src="cocktails/documentation/screenshots/add-category-lh.png">
+
+edit_category.html
+
+<img src="cocktails/documentation/screenshots/edit-category-lh.png">
+
+login.html
+
+<img src="cocktails/documentation/screenshots/login-lh.png">
+
+register.html
+
+<img src="cocktails/documentation/screenshots/register-lh.png">
+
+404.html
+
+<img src="cocktails/documentation/screenshots/404-lh.png">
 
 ### Testing Website Flow and Functionality
 
@@ -341,6 +430,19 @@ To resolve this, the background-colour was specified in the style.css file, inst
 ### Bug Fixes
 Bug fixes were predominantly completed in real-time as soon as any issues arose. This was to ensure the project would continue developing smoothly without serious, unmanageable bugs arising later that could drastically reduce development time or the layout and functioning of the website.
 
+
+
+- An error showing through the console on the majority of pages. This error is related to the JS script linked to the Add and Remove buttons found on the add_cocktail.html and edit_cocktail pages:
+
+<img src="cocktails/documentation/screenshots/console-error.png">
+
+This console error was resolved by creating a new js file (forms.js) and removing the relevant script from the main.js file.
+Jinja block scripts templates to insert the forms.js file to the add_cocktail.html and edit_cocktail.html files. Console error cleared after testing and functionality still working as desired.
+
+
+
+
+
 -   As seen from the style.css file, there is a lot of custom CSS. Media queries were used at different breakpoints - although time consuming, it was vital to invest time into this to ensure the website was functioning correctly on various displays to ensure a major [User Targets](#as-a-new-user) was met. Some JavaScript tweaks were also implemented to alter the class width at different stages of the website e.g. the main menu, website itself or the end.
 
 -   Placed a background-colour behind the score for readability purposes as a Lighthouse test had brought up contrast issues between the gold text colour and the lighter background.
@@ -349,7 +451,11 @@ Bug fixes were predominantly completed in real-time as soon as any issues arose.
 
 ### Known Bugs
 
--   The background image (maps.jpg) repeats slightly towards the very bottom of the Surface Pro 7 (912px x 1368px) device. It can also do this on larger TVs or wide-display devices such as tablets.
+-   Images not loading can sometimes cause bugs. Attempted to fix with alternative image code.
+
+-   Card layout issues at certain breakpoints. Attempted to resolve with min-height.
+
+-   Reset and Search buttons along with the seach input on the all_cocktails.html page become cluttered on smaller screens (sub 694px). Attempted flexbox and column changes.
 
 
 ## Credits

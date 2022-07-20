@@ -15,7 +15,7 @@ body {
 /* overwrite Materializecss nav bar effects */
 nav ul li.active {
     text-decoration: underline solid white 20%;
-    background-color: none;
+    background-color: transparent;
 }
 
 nav ul a:hover {

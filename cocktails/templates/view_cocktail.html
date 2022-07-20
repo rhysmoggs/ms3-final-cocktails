@@ -40,7 +40,7 @@
                 <br>
                 <p>Main Ingredient: {{ cocktail.main_ingredient }}</p>
                 <br>
-                <p>Method:
+                <p>Method:</p>
                     <ol>
                     {% for method in cocktail.method %}
                         <li>
@@ -48,9 +48,8 @@
                         </li>
                     {% endfor %}
                     </ol>
-                </p>
                 <br>
-                <p>Other Ingredients:
+                <p>Other Ingredients:</p>
                     <ul>
                     {% for ingredient in cocktail.other_ingredient %}
                         <li>
@@ -58,7 +57,6 @@
                         </li>
                     {% endfor %}
                     </ul>
-                </p>
                 <br>
                 <div class="col s6">
                     <p>Prep: {{ cocktail.prep_time }}</p>

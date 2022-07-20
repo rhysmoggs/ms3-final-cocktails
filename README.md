@@ -4,7 +4,7 @@
 
 Welcome to a new cocktail recipe website: The Cocktail Cabinet.
 
-<h2 align="center"><img src="assets/readme-images/am-i-responsive.png"></h2>
+<h2 align="center"><img src="cocktails/documentation/screenshots/am-i-responsive.png"></h2>
 
 The Cocktail Cabinet for the Milestone Project 3, for [Code Institute's](https://codeinstitute.net/) Diploma in Web App Development.
 
@@ -17,7 +17,7 @@ The Cocktail Cabinet is a passion project, with its idea birthed from the depths
     - [As a New User](#as-a-new-user)
     - [As a Returning User](#as-a-returning-user)
 3. [Design/Data Schema](#data-schema-design)
-3. [Aesthetic Design](#aesthetic-design)
+4. [Aesthetic Design](#aesthetic-design)
     - [Wireframes](#wireframes)
         - [Desktop](#desktop)
         - [Tablet](#tablet)
@@ -25,15 +25,15 @@ The Cocktail Cabinet is a passion project, with its idea birthed from the depths
     - [Colour Palette](#colour-palette)
     - [Images](#images)
     - [Font](#font)
-4. [Accessibility](#accessibility)
-4. [Features](#features)
+5. [Accessibility](#accessibility)
+6. [Features](#features)
 4. [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Frameworks, Libraries, Programs and Tools Used](#frameworks-libraries-programs-and-tools-used)
-4. [Testing](#testing) tidy up and organize all.
-4. [Deployment](#deployment)
-4. [Credits](#credits)
-4. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
+7. [Testing](#testing) tidy up and organize all.
+8. [Deployment](#deployment)
+9. [Credits](#credits)
+10. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
 
 
 ## Example
