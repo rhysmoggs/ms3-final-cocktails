@@ -16,7 +16,8 @@ The Cocktail Cabinet is a passion project, with its idea birthed from the depths
 2. [User Stories](#user-stories)
     - [As a New User](#as-a-new-user)
     - [As a Returning User](#as-a-returning-user)
-3. [Design/Data Schema](#data-schema-design)
+    - [As an Admin](#as-an-admin)
+3. [Data and Data Schema](#data-schema-design)
 4. [Aesthetic Design](#aesthetic-design)
     - [Wireframes](#wireframes)
         - [Desktop](#desktop)
@@ -25,6 +26,8 @@ The Cocktail Cabinet is a passion project, with its idea birthed from the depths
     - [Colour Palette](#colour-palette)
     - [Images](#images)
     - [Font](#font)
+5. [Technical Design](#technical-design)
+    - [Template Design](#template)
 5. [Accessibility](#accessibility)
 6. [Features](#features)
 4. [Technologies Used](#technologies-used)
@@ -33,13 +36,14 @@ The Cocktail Cabinet is a passion project, with its idea birthed from the depths
 7. [Testing](#testing)
 8. [Deployment](#deployment)
 9. [Credits](#credits)
-10. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
 
 ### Project Goals:
 
 The main brief for this project is to showcase the CRUD featuresa of both a relational and a non-relational database management ssytem. The goal is to combine a conventional relational database (postgreSQL) and a non-relational database (mongodb) and to allow them to work seemlessly together, with the ability to link both databases with no impact on the user experience. By combining both, the project can serve multiple approches to database management and CRUD functionality.
 
 The website is a full stack project that aims to showcase the creators backend and frontend development skills, learned during the MS3 portion of the course. Code Institute's brief was to develop a project that utilized both a conventional relational database and a non-relational database, and aim for them to synchronize and link data. A focus on CRUD functionality.
+
+It'll be the first 
 
 ### Website Concept:
 
@@ -59,33 +63,29 @@ By signing up, the user has even more access and capabilities such as adding, ed
 Following are the goals that the website should provide for each user.
 
 #### As a New User :
-* I want to to be able to access and view the website on the device I'm using.
-* I want to to be able to navigate the website with ease.
-* I want to to be able to understand the website immediately.
-* I want to to be able to view guidence or some form of help if needs be.
-* I want to to be able to contact the website developers if I wish to.
-* I want a reason to return.
+* 001 - I want to to be able to access and view the website on the device I'm using.
+* 002 - I want to to be able to navigate the website with ease.
+* 003 - I want to to be able to understand the website immediately.
+* 004 - I want to to be able to view guidence or some form of help if needs be.
+* 005 - I want to to be able to contact the website developers if I wish to.
+* 006 - I want a reason to return.
 
 #### As a Returning User :
-* I want to find information about the company's background, their story and growth.
-* I want to find the best way to get in contact with the company with any questions I may have.
-* I want to be able to contact the company in many different ways.
-* I want to be able to view my own cocktail recipes.
-* I want to be able to add my own cocktail recipes.
-* I want to to be able to access and view the website on a range of devices/browsers.
+* 007 - I want to find information about the company's background, their story and growth.
+* 008 - I want to find the best way to get in contact with the company with any questions I may have.
+* 009 - I want to be able to contact the company in many different ways.
+* 010 - I want to be able to view my own cocktail recipes.
+* 011 - I want to be able to add my own cocktail recipes.
+* 012 - I want to be able to edit my own cocktail recipes.
+* 013 - I want to be able to delete my own cocktail recipes.
+* 014 - I want to to be able to access and view the website on a range of devices/browsers.
 
-
-## Data Schema Design
-Here is the Database Schema layout for The Cocktail Cabinet website:
-
-<img src="cocktails/documentation/data-schema.png">
-
-It shows each collection, what data is kept, their type and how they are linked together.
-This schema is vital in developing the website's functionality, its features and what users are capable of doing. A breakdown of every feature can be found here [Features](#features) along with the code, and how everything links together.
-
-The models.py file [link or screenshot] holds the postgres side of things (list data and purpose), and the mongodb (give more info) holds the rest. A full setup can be found here [Development?](link) These can be adjusted for future projects or an adjustment to this one by:
-
-explain steps. for admin. developer/creator and for end-user
+#### As an Admin :
+* 015 - I want to have more control than any other user.
+* 016 - I want to be able to view more data than other users.
+* 017 - I want to be able to add data to the website.
+* 018 - I want to be able to edit data from the website..
+* 019 - I want to be able to delete data from the website.
 
 
 ## Aesthetic Design
@@ -287,6 +287,56 @@ Further contrast checks were made in the [Testing](TESTING.md) documentation, es
 ### Font
 -  The The Cocktail Cabinet uses the Poppins font. It provides that clean and clear style without compromising on readability - a vital design feature for any website. This is available for free via [Google Fonts](https://fonts.google.com/) and imported via CSS. Sans Serif is used as a secondary option in case of failure to import the font into the website correctly. Poppins is a font often used in designs, so it is both attractive and appropriate.
 
+## Data Schema Design
+Here is the Database Schema layout for The Cocktail Cabinet website:
+
+<img src="cocktails/documentation/data-schema.png">
+
+It shows each collection, what data is kept, their type and how they are linked together.
+This schema is vital in developing the website's functionality, its features and what users are capable of doing. A breakdown of every feature can be found here [Features](#features) along with the code, and how everything links together.
+
+The models.py file holds the postgres side of things, and the mongodb holds the cocktail recipes. A full setup can be found here [Development](#development) These can be adjusted for future projects or an adjustment to this one by:
+
+## Technical Design
+Once the user goals and the projects intentions were set out, the next step was to design the technical aspects of the The Cocktail Cabinet.
+
+routes.py = main CRUD functions and data manipulation are written here. Server-side control for the back-end.
+models.py = posgres model template/design
+run.py    = flask linking
+cocktails folder = runs as the flask app with all site related content
+templates folder = contains all html webpages found on The Cocktail Cabinet
+
+Procfile - to link to Heroku
+
+
+### Jinja Template
+
+Jinja2 was used as the templating enginge. The structure is as follows:
+
+base.html > main website structure and navigation is defined here. A base template creates a platform for all other pages within the website to extend from. All templates reference the base.htm as seen here:
+
+```
+{% extends "base.html" %}
+```
+```
+{% block content %}
+{% endblock %}
+```
+
+### Defensive Programming
+Used throughout The Cocktail Cabinet. By linking the session cookie to the username, the rest can be controlled:
+```
+if "user" not in session or session["user"] != "admin":
+```
+When not met, the current user/visitor is presented with a Flash message to inform them.
+
+## Modal
+Modals form an integral part of the websites design. They act as a reminder if the users actions were intended and creates a much more user-friendly experience. Confirming the actions throgh the modal allows the user to think again, confirm or avoid making a mistake (such as accidentally clicking a button and instantly deleting a favourite cocktail recipe).
+Materializecss' modal was used and then tweaked. The button in the modal itself deletes the related data:
+```
+<a href="{{ url_for('delete_cocktail', cocktail_id=cocktail._id ) }}" class="modal-close btn-small red darken-1 text-shadow">Delete</a>
+```
+
 ## Accessibility
 Extremely important aspect.
 -   Semantic design.
@@ -446,7 +496,7 @@ The Register page is where visitors can enter their details for the first time t
 - 'Register' button. When clicked, the user is forwarded to their personal My Cabinet (profile.html) page.
 
 
-## Interactive Elements
+## Interactive Elements & Features
 Following is a list of all interactive elements of the The Cocktail Cabinet website.
 
 #### The Cocktail Cabinet website logo
@@ -496,10 +546,23 @@ Using Materializecss' .disabled class. This button is featured on the add_cockta
 
 #### Flash messages
 
-These messages appear at the top of each page to inform the user of CRUD happenings. Some examples are:
+Flask provides a simple to use Flash method that relays a message that appears at the top of each page to inform the user of their actions. Some examples are:
 
 <img src="cocktails/documentation/screenshots/flash.png">
 
+The design stems from the base.html template so that the feature is available to use from all subsequent pages. The messages themselves are written as part of the functions in the routes.py file.
+
+```
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="row flashes">
+                <h4 class="center-align">{{ message }}</h4>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+```
 
 ## Technologies Used
 
@@ -508,15 +571,9 @@ These messages appear at the top of each page to inform the user of CRUD happeni
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
--   Python
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language)
+-   [Jinja2](https://en.wikipedia.org/wiki/Jinja_(template_engine)
 
-
-technologies used:
-
-- python
-- JS
-- CSS3
-- HTML5
 
 - PostgreSQL - 
 - MongoDB - 
@@ -526,26 +583,23 @@ technologies used:
 - Flask - 
 - Flash - 
 - dnspython - 
-- Jinja2? - template
+
 - flask-paginate
-- jquery
+
 - materialize(sp?) - 
-- fontawesome - icons
-- google fonts
+
 - heroku - 
 - git, gitpod, github
 
-- image editing websites/software here
-- balsamiq
 - era database/ design
 
 
 ### Frameworks, Libraries, Programs and Tools Used
 
 1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts is used to import the 'Poppins' font into the style.css file which is used on all fonts within the quiz.
+    - Google fonts is used to import the 'Poppins' font into the style.css file which is used on all fonts within the website.
 1. [Font Awesome:](https://fontawesome.com/)
-    - Font Awesome is used on all pages throughout the quiz to add icons for aesthetic and UX purposes.
+    - Font Awesome is used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [jQuery:](https://jquery.com/)
     - jQuery is used to simplify and manipulate some tasks instead of regular JS.
 1. [Git:](https://git-scm.com/)
@@ -558,22 +612,18 @@ technologies used:
     - This colour picker tool was used to to pick and experiment with colours.
 1. [Coolors:](https://coolors.co/)
     - This tool was used to to setup the colour palette [here](#colour-palette).
-1. [Canva:](https://www.canva.com/)
-    - Canva is used to create the quiz logo and small plane image seen in the progress bar.
 1. [TinyPNG:](https://tinypng.com/)
-    - TinyPNG is used to optimize images used in the quiz and this README.
+    - TinyPNG is used to optimize images used in the website and documentation.
 1. [Miscrosoft Paint:](https://support.microsoft.com/en-us/windows/get-microsoft-paint-a6b9578c-ed1c-5b09-0699-4ed8115f9aa9)
     - Microsoft Paint is used to crop and resize images and editing photos for the project.
-1. [Snip & Sketch:](https://www.microsoft.com/en-gb/p/snip-sketch/9mz95kl8mr0l)
-    - Snip & Sketch is used to screenshot the majority of images used for this README.
 1. [WPS Office:](https://www.wps.com/)
-    - WPS Office is used to create the table for the [Testing Quiz Flow and Functionality](#testing-quiz-flow-and-functionality) and README.md spell-checking.
+    - WPS Office is used to create the flow charts, the tables found in the [Testing](TESTING.md) and for spell-checking.
 1. [Am I Responsive?:](http://ami.responsivedesign.is/)
     - Used to create the image at the very top of this document.
 
 ## Testing
 
-This seperate document [here](TESTING.md) will document the full testing on The Cocktail Cabinet
+Due to the extensive testing necessary for The Cocktail Cabinet, the full documentation can be found [here](TESTING.md).
 
 ### Future Updates
 
@@ -585,9 +635,10 @@ There are many planned updates arranged for the The Cocktail Cabinet that includ
     - Commenting on cocktail recipes
     - Instant social media links to share, comment, link etc
 -   Link email for subscription, mail etc
--   Link email for subscription, mail etc
--   Delete profile
--   Give suggested cocktail categories to Admin/creator
+-   Users able to:
+    - Delete profile
+    - Edit profile further
+-   Give suggested Cocktail Categories to Admin
 -   More admin rights such as:
     - Delete all user profiles
     - Edit all user profiles
@@ -595,6 +646,7 @@ There are many planned updates arranged for the The Cocktail Cabinet that includ
 -   Theme colour changes.
 -   Theme/colour palette toggle.
 -   +18 age restriction modal on site load
+-   Affiliated links to external sites so users can pruchase alcohol, ingredients and other cocktail-related products
 
 ## Deployment
 

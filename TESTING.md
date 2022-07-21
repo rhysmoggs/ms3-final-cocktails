@@ -10,41 +10,35 @@ The Full Testing documentation, following on from the README [found here](README
 # Testing Table of Contents
 1. [Intro](#intro)
 
-Lighthouse
-Code Testing: html, css, js, pep8
+4. [Validation](#validation)
+4. [Lighthouse](#lighthouse)
+2. [Data Testing](#data-schema-design)
+4. [Features Testing](#features-testing)
 
-2. [Design/Data Schema](#data-schema-design)
-4. [Features](#features)
-4. [Testing](#testing) tidy up and organize all.
 4. [Testing Original User Stories](#testing-original-user-stories)
-    - [As a New User](#as-a-new-user) this goes to the first one?
-    - [As a Returning User](#as-a-returning-user) this goes to the first one?
-4. [Credits](#credits)
+    - [As a New User](#as-a-new-user)
+    - [As a Returning User](#as-a-returning-user)
+    - [As an Admin](#as-an-admin)
+4. [Testing Credits](#testing-credits)
+    - [Reading and Guidence](#reading-and-guidence)
+    - [Code](#code)
 
 
 
-### Images Testing
-- The use of photography is vital in creating allure and desire, especially for this cocktail recipe website. Users are drawn by what they see. The bg.jpg background image is large and provides a fantastic colour to build an interface on. This inspired more imagery to be used for The Bar and My Cabinet especially.
-
-- It's vital for the theme to be clear and obvious. The background image makes the website recognizable and memorable so people recall and return to it, which will draw more eyes to the website. This, along with the CSS styling and colour palette solidifies the theme. The following image was used.
-
-<img src="assets/readme-images/bg.jpg">
-
-Logo
-
-<img src="assets/images/logo.png">
-
-### Font Testing
--  The The Cocktail Cabinet uses the Poppins font. It provides that clean, clear style without compromising on readability - a vital design feature for any website. This is available for free via [Google Fonts](https://fonts.google.com/) and imported via CSS. Sans Serif is used as a secondary option in case of failure to import the font into the website correctly. Poppins is a clean font used frequently in designs, so it is both attractive and appropriate.
-
-## Accessibility Testing
-Extremely important aspect.
--   Semantic design.
--   The use of alt to describe images and other content.
--   Aria-labelledby to link sections.
--   Colour and contrast considerations and testing.
--   Adding labels to forms.
--   Prompts to help guide users.
+### User-Related Image Testing
+- The website uses the following code to overcome errors if images are failed to load:
+```
+onerror="this.onerror=null;this.src='static/images/whiskey-sour.jpg';"
+```
+The use of Jinja attempts to overcome some possible errors for the 'cocktail_image' data. Due to the nature of how the images are given and presented, alternative measures were put in place to try and handle different outcomes (along with the form validation found when initially filling the 'cocktail_image' input on the Add Cocktail and Edit Cocktail pages). Overall, the combination looks like this:
+```
+{% if cocktail.cocktail_img %}
+    <img src="{{ cocktail.cocktail_img }}" alt="picture of user submitted cocktail" onerror="this.onerror=null;this.src='static/images/whiskey-sour.jpg';" width="100" height="250">
+{% else %}
+    <img src="{{ url_for('static', filename='static/images/whiskey-sour.jpg') }}" alt="picture of a whiskey sour cocktail" width="100"
+    height="250">
+{% endif %}
+```
 
 ## Features Testing
 
@@ -107,20 +101,8 @@ Extremely important aspect.
 <img src="cocktails/documentation/screenshots/register-test1.png">
 <img src="cocktails/documentation/screenshots/register-test2.png">
 
-## Interactive Elements
-Following is a list of all interactive elements of the The Cocktail Cabinet website.
 
-#### The Cocktail Cabinet website logo
-As shown on the images below, the website logo and title is very clear and obvious. The centrepiece, always there and clickable. It serves as a constant reminder to the user about the brand and the website they are visiting. The logo itself is a clickable link (a cursor appears when hovering over), and returns the user back to the home page at any time. 
-
-<img src="assets/readme-images/logo-click.png">
-
-```
-<a href="{{ url_for('home') }}" class="brand-logo">The Cocktail Cabinet</a>
-```
-
-
-## Testing
+## Validation Testing
 
 The W3C Markup Validator, W3C CSS Validator and JSHint tools were used to validate every page of the project to ensure there were no syntax errors in the project. If any were found during development, they were addressed.
 
@@ -219,35 +201,87 @@ These issues were addressed:
 
 ## Testing Original User Stories
 
-Following are the original [User Stories](#user-stories) set out in the early design stages of the project. They were individually tested to see if each goal was satisfied against the completed project.
+Following are the original User Stories set out in the early design stages of the project found on the [README](README.md) page. They were individually tested to see if each goal was satisfied against the completed project.
 
 #### As a New User :
-* I want to to be able to access and view the website on the device I'm using.
-    - The quiz has been tested for ease of access and responsiveness on dozens of devices (handheld devices such as mobile phones and tablets, laptops, desktop computers and larger Samsung TVs) and is fully responsible from at least a minimum of 320px up to at least 1200px. See [here](#further-testing) for more testing related tasks.
-* I want to to be able to navigate the website with ease..
-    - Part of the biggest draw to quiz by nature is their simplicity and easy of use. The quiz is a click-and-play format and the interactive prompts and layout make it very clear to understand for any first-time user.
-* I want to to be able to understand the website immediately.
-    - The style and layout, along with the interactive features and prompts enable first-time users to understand the quiz, the theme and it's purpose.
-* I want to to be able to view guidence or some form of help if needs be.
-    - The How to Play [button](#how-to-play) is clear and obvious from the first screen the user is presented with. A minimal styling setup and only 4 buttons ensure that information is displayed clearly and to not overwhelm users. All instructions are found after clicking on this button.
-* I want to to be able to contact the website developers if I wish to.
-    - The Contact [button](#contact) is clear and obvious from the first screen the user is presented with. A minimal styling setup and only 4 buttons ensure that information is displayed clearly and to not overwhelm users. All contact information is found after clicking on this button.
-* I want a reason to return.
+* 001 - I want to to be able to access and view the website on the device I'm using.
+    - The quiz has been tested for ease of access and responsiveness on dozens of devices (handheld devices such as mobile phones and tablets, laptops, desktop computers and larger Samsung TVs) and is fully responsible from at least a minimum of 320px up to at least 1200px.
+* 002 - I want to to be able to navigate the website with ease.
+    - Part of the biggest draw to The Cocktail Cabinet is having so many cocktail recipes in one place. This, along with the cocktail recipes simplicity and the interactive prompts and layout make it very clear to understand for any first-time user.
+* 003 - I want to to be able to understand the website immediately.
+    - The style and layout, along with the interactive features and prompts enable first-time users to understand the website, the theme and it's purpose.
+* 004 - I want to to be able to view guidence or some form of help if needs be.
+    - The home page has a simple guide on how to interact with the website. Head to The Bar, Add a Cocktail or Share a Cocktail all provide clear instructions and links to users. Visual prompts, large text and page detail (e.g. The Bar), tooltips, labels and other design feature all provide a clear and helpful guide for all users to the website.
+* 005 - I want to to be able to contact the website developers if I wish to.
+    - The Footer social links are clear and obvious from every page. A minimal styling setup and ensures that the links displayed clearly and to not overwhelm users. All contact information is found after clicking on thiese logos.
+* 006 - I want a reason to return.
     - The ability for the user to view cocktail the entire libraby of cocktail recipes is a reason to return. The option to register and share their own is another. The very likely possibility for new recipes to be added by other users is too.
 
 #### As a Returning User :
-* I want to find information about the developer's background, their story and growth.
-    - The social media links found on the footer [footer](#footer) of every page provides links to all of the developers social media [links](#contact) (instagram, facebook, twitter, tikitok and LinkedIn). The contact information can be found on those platforms. For example the developers contact information is on each profile of these social media websites e.g. there tikitoks of the developing stage, snippets of inside-info on instagram stories and all professional history and access via LinkedIn.
-* I want to find the best way to get in contact with the company with any questions I may have.
+* 007 - I want to find information about the company's background, their story and growth.
+    - The social media links found on the footer of every page provides links to all of the developers social media (instagram, facebook, twitter, tikitok and LinkedIn). The contact information can be found on those platforms. For example the developers contact information is on each profile of these social media websites e.g. there tikitoks of the developing stage, snippets of inside-info on instagram stories and all professional history and access via LinkedIn.
+* 008 - I want to find the best way to get in contact with the company with any questions I may have.
     - The contact information can be found on the social media platforms, linked in the footer of each page. They provide a quick and direct link to the website's developer.
-* I want to be able to contact the company in many different ways.
+* 009 - I want to be able to contact the company in many different ways.
     - The footer links gives access to 5 social media options the user can choose to contact the developer through.
-* I want to be able to view my own cocktail recipes.
-    - Once the High Scores [button](#high-scores) is clicked, it gives access to the high scores list, with a maximum of 5 user names and scores capable of being displayed.
-* I want to be able to add my own cocktail recipes.
-    - After completing all 10 questions, the quiz displays the [end screen](#the-end-screen) to the user. Here, the user can choose to enter their name in the prompted [input field](#input) and the previously disabled Save [button](#save-button) is made clickable. If clicked, the user name is saved to the High Scores list if it made the top 5 high scores.
-* I want to to be able to access and view the website on a range of devices/browsers.
-    - The quiz has been tested for ease of access and responsiveness on dozens of devices (handheld devices such as mobile phones and tablets, laptops, desktop computers and larger Samsung TVs) and is fully responsible from at least a minimum of 320px up to at least 1200px. it also works on multiple browsers as stated [here](#further-testing).
+* 010 - I want to be able to view my own cocktail recipes.
+    - Once registered and logged in, the user can view all of their own recipes at the My Cabinet page. They will also be added to The Bar page along with ALL user recipes. They'll be automatically added to the Filter Cocktail Category page and will also be avaiable to view in full via the View Cocktail page.
+* 011 - I want to be able to add my own cocktail recipes.
+    - Once registered and logged in, the user can add their own cocktail recipes at the My Cabinet page by clicking the green Add Cocktail to My Cabinet button and filling in the form.
+* 012 - I want to be able to edit my own cocktail recipes.
+    - Once registered and logged in, the user can edit all of their own recipes at the My Cabinet page, or any part of the website where cocktail recipes are displayed (The Bar, Filter Cocktail Category, View Cocktail).
+* 013 - I want to be able to delete my own cocktail recipes.
+    - Once registered and logged in, the user can add their own cocktail recipes at the My Cabinet page by clicking the red delete button next to their specific cocktail. They are able to do this on any part of the website where cocktail recipes are displayed, and are their own (The Bar, Filter Cocktail Category, View Cocktail).
+* 014 - I want to to be able to access and view the website on a range of devices/browsers.
+    - The quiz has been tested for ease of access and responsiveness on dozens of devices (handheld devices such as mobile phones and tablets, laptops, desktop computers and larger Samsung TVs) and is fully responsible from at least a minimum of 320px up to at least 1200px.
+
+#### As an Admin:
+* 015 - I want to have more control than any other user.
+    - The admin has all the rights and features avaiable to a standard registered user. On top pf this, the admin has access to the Manage Categories page where admin has solo rights to CRUD functionality and what is displayed on The Cocktail Cabinet webpage.
+    - This is achieved through the following code attached to every related function in the routes.py file:
+    ```
+    session["user"] != "admin":
+    ```
+    or
+    ```
+    session["user"] == "admin":
+    ```
+    - If these are not met, then a Flash message informs the current user/visitor of the reasons:
+    ``
+    flash("You must be admin to manage cocktail categories!")
+    ``
+* 016 - I want to be able to view more data than other users.
+    - This is acheived through the ```get_categories``` function with:
+    ```
+    categories = list(Category.query.order_by(Category.category_name).all())
+    ```
+    - The admin can view more data via the Manage Categories page. All current cocktail categories will be displayed here.
+    - This is again achieved by the ```session["user"]``` code, along with allowing only the admin to see the Manage Cateogies navbar link:
+    ```
+    {% if session.user|lower == "admin"|lower %}
+        <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+    {% endif %}
+    ```
+* 017 - I want to be able to add data to the website.
+    - The admin can add cocktail categories via the Add Cocktail Category button found on the Manage Categories page.
+    - This is acheived through the ```add_category``` function with:
+    ```
+    category = Category(category_name=request.form.get("category_name"))
+    db.session.add(category)
+    db.session.commit()
+    ```
+* 018 - I want to be able to edit data from the website.
+    - The admin can edit cocktail categories via the blue edit buttons linked to each individual category found on the Manage Categories page.
+    ```
+    <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn-small blue lighten-1">Edit <i class="fas fa-edit right"></i></a>
+    ```
+    - The button triggers the ```edit_category``` function (found in the routes.py file) and pulls the current category_id found in the page url during session. 
+* 019 - I want to be able to delete data from the website.
+    - The admin can delete cocktail categories via the red delete buttons linked to each individual category found on the Manage Categories page:
+    ```
+    <a href="{{ url_for('delete_category', category_id=category.id) }}" class="modal-close btn-small red darken-1 text-shadow">Delete</a>
+    ```
+    - This Delete button triggers the ```delete_category``` function (found in the routes.py file) and pulls the current category_id found in the page url during session.
 
 ## Google Chrome Lighthouse Test
 
@@ -308,10 +342,6 @@ register.html
 
 <img src="cocktails/documentation/screenshots/register-lh.png">
 
-404.html
-
-<img src="cocktails/documentation/screenshots/404-lh.png">
-
 ### Testing Website Flow and Functionality
 
 All of the following tests were repeated multiple times to ensure a fair test. The same tests were then repeated multiple times on different browsers (Google Chrome, Mozilla Firefox, Microsoft Edge and Opera) and then finally the same tests were repeated again on multiple occasions and for different devices (mobile phones, tablets, laptops and larger screen sizes).
@@ -342,18 +372,12 @@ To resolve this, the background-colour was specified in the style.css file, inst
 Bug fixes were predominantly completed in real-time as soon as any issues arose. This was to ensure the project would continue developing smoothly without serious, unmanageable bugs arising later that could drastically reduce development time or the layout and functioning of the website.
 Lighthouse tests also exposed further bugs with readability and image scaling being two main factors in Accessibility and Performance. These were addressed as best as time allowed, but some Known Bugs still remain.
 
-
-
 - An error showing through the console on the majority of pages. This error is related to the JS script linked to the Add and Remove buttons found on the add_cocktail.html and edit_cocktail pages:
 
 <img src="cocktails/documentation/screenshots/console-error.png">
 
 This console error was resolved by creating a new js file (forms.js) and removing the relevant script from the main.js file.
 Jinja block scripts templates to insert the forms.js file to the add_cocktail.html and edit_cocktail.html files. Console error cleared after testing and functionality still working as desired.
-
-
-
-
 
 -   As seen from the style.css file, there is a lot of custom CSS. Media queries were used at different breakpoints - although time consuming, it was vital to invest time into this to ensure the website was functioning correctly on various displays to ensure a major [User Targets](#as-a-new-user) was met.
 
