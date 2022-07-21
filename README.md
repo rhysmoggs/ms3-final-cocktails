@@ -949,19 +949,30 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 - Dynamically setting active class with Flask and jinja2 [setup](https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621).
 
+- forms.js inital code was used from a former CI student found through SLACK. This was adapated and expanded to adhere to The Cocktail Cabinet's functionality and features. See[here](https://github.com/kaanalptkn/myrecepie.ka3/blob/main/static/js/script.js)
+
+- js image error handling [here](https://stackoverflow.com/questions/3984287/how-to-show-alternate-image-if-source-image-is-not-found-onerror-working-in-ie/9891041#9891041)
+
+- footer help [here](https://www.youtube.com/watch?v=yc2olxLgKLk)
+
+- Error handline [here](https://flask.palletsprojects.com/en/2.1.x/errorhandling/)
+
 ### Inspiration
 
 -   The Code Institute Slack community, especially projects from the peer-code-review channel.
 
 ### Content & Media
 
--  Cocktail recipes from: books,websies
-
 -   The main background image (bg.jpg) - Photo by Kelly L from Pexels found [here](https://www.pexels.com/photo/assorted-alcoholic-drinks-2796105/).
 
--   The logo (logo.png) was created using Canva.
-
--   The plane (plane.png) image for the progress bar was created using Canva.
+-   Images were from Pexels, free-to-use, or BBC Good Food.
+    [here](https://www.pexels.com/photo/group-of-people-doing-cheers-544961/)
+    [here](https://www.pexels.com/photo/stylish-interior-of-bar-in-restaurant-5490965/)
+    [here](https://www.pexels.com/photo/black-frame-under-red-pendant-lamp-1185434/)
+    [here](https://www.pexels.com/photo/man-in-white-long-sleeve-shirt-holding-glass-bottle-4667036/)
+    [here](https://www.pexels.com/photo/man-in-white-dress-shirt-holding-bottle-4667150/)
+    [here](https://www.pexels.com/photo/clear-drinking-glass-with-brown-liquid-on-table-3740333/)
+    [here](https://www.pexels.com/photo/assorted-wine-bottles-1283219/)
 
 -   Unless mentioned in the [Code](#code) section, all other code is written by the developer.
 
