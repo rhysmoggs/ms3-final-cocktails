@@ -266,17 +266,17 @@ Wireframes were drawn using [Balsamiq](https://balsamiq.com/) at the beginning o
 
 - The headings are white text, allowing the background image to be seen, but not interfere too much with the flow and visibility of the content. When text appears on top of cocktail images and recipes, the black text is contrasted by a slightly transparent white background to help readability and highlight the text.
 
-- Some shadows (slightly opaque black) are added to interactive and cards to help with depth and contrast. When the shadow appears on cursor hover, they serve as good hints to the user that that element can be interacted with.
+- Some shadows (slightly opaque black) are added to interactive elements and cards to help with depth and contrast. When the shadow appears on cursor hover, they serve as hints to the user that that element can be interacted with.
 
-<img src="assets/readme-images/palette.png">
+<img src="cocktails/documentation/screenshots/palette.png">
 
 - It was decided early on in the design stage that the black colour would be important for the website. Some of the other colours were chosen around having this colour in mind, especially to ensure the imagery and text was the focal point.
 
-- Here is the [Contrast Checker](https://webaim.org/resources/contrastchecker/) tool used to support this:
+- Here is the [Contrast Checker](https://webaim.org/resources/contrastchecker/) tool used to show just how powerful something so simple can be:
 
-<img src="assets/readme-images/contrast.png">
+<img src="cocktails/documentation/screenshots/contrast.png">
 
-Further contrast checks are covered in the [Testing](TESTING.md) doucmentation, especially during Lighthouse checks. Adjustments were made to favour readability.
+Further contrast checks were made in the [Testing](TESTING.md) documentation, especially during Lighthouse checks. Adjustments were made to favour readability.
 
 
 ### Images
@@ -494,11 +494,11 @@ Using Materializecss' .disabled class. This button is featured on the add_cockta
 
 <img src="cocktails/documentation/screenshots/buttons-disable.png">
 
-#### - Input
+#### Flash messages
 
-- The 'Enter your name' input field has a very basic style applied. IF the user chooses not to enter their name, then the Save button remains disabled and the user will not be able to save their score to the High Scores section.
+These messages appear at the top of each page to inform the user of CRUD happenings. Some examples are:
 
-<img src="assets/readme-images/input.png">
+<img src="cocktails/documentation/screenshots/flash.png">
 
 
 ## Technologies Used
@@ -648,15 +648,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ## Credits
 
 ### Code
--   At the early stages of the development, the [How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial](https://www.youtube.com/watch?v=f4fB9Xg2JEY&list=FLoLMoJL7IfiYl8F3sN_CEqQ&index=16) tutorial was followed and the code was used as the basis of the quiz. Supporting GitHub code [here](https://github.com/briancodex/quiz-app-js). Original code was later added alongside that found in the YouTube video to suit the quiz. Code tweaks were made to suit this quiz, pre-determined code edited or removed along with adjustments and restyling to the majority of the CSS found in the credited video. Upon further searching, it seems that [Build a Quiz App - Intro](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) and that playlist of videos may be what that YouTube video was also inspired by.
-
--   'Web Dev Simplified' YouTube [video](https://www.youtube.com/watch?v=riDzcEQbX6k&list=FLoLMoJL7IfiYl8F3sN_CEqQ&index=13) was also used and combined with the above videos to help shape the The Cocktail Cabinet. Supporting GitHub code [here](https://github.com/WebDevSimplified/JavaScript-Quiz-App).
-
--   The API aspect of the quiz was introduced thanks to the [Build a Quiz App (11) - Fetch API to Load Questions API](https://www.youtube.com/watch?v=3aKOQn2NPFs&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=12) tutorial, to which edits were then made. Supporting link to GitHub [here](https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript).
-
--   The ability to toggle (show and hide) content via the How To Play, Contact and High Scores buttons on the main menu screen came from W3Schools documentation found [here](https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp), and a separate source [here](https://sebhastian.com/javascript-show-hide-div-onclick-toggle/) which was then edited to suit the project, along with additional customization.
-
--   This README.md document was based on Code Institutes [SampleREADME](https://github.com/Code-Institute-Solutions/SampleREADME/blob/master/README.md). The template was used as a guide, then filled with content related to this website. The MS2 Quiz [README.md](https://github.com/rhysmoggs/ms2-quiz/blob/main/README.md) file - the developers personal MS2 submission for the Code Institute course - was also used and then edited to suit this project.
+- This README.md document was based on Code Institutes [SampleREADME](https://github.com/Code-Institute-Solutions/SampleREADME/blob/master/README.md). The template was used as a guide, then filled with content related to this website. The MS2 Quiz [README.md](https://github.com/rhysmoggs/ms2-quiz/blob/main/README.md) file - the developers personal MS2 submission for the Code Institute course - was also used and then edited to suit this project.
 
 - Pagination [setup](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9).
 
@@ -682,7 +674,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 -   Stack Overflow [website](https://stackoverflow.com/) for general problem solving.
 
--   My Mentor for helpful feedback and input, especially with help towards the [progress bar](#progress-bar) development.
+-   Mentor Antonio Rodriquez for helpful feedback and input.
 
 -   Tutor support at Code Institute.
 

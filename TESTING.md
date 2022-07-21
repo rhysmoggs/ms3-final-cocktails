@@ -160,8 +160,8 @@ edit_cocktail.html
 
 <img src="cocktails/documentation/screenshots/edit-cocktails-w3.png">
 
-The following errors occurred due to an oversight during the develoment period. Each addition of an input created a duplicated ID along with it.
-
+The following errors occurred on both the add_cocktail.html and edit_cocktail.html pages. These were due to an oversight during the develoment period. Each addition of an input also created a duplicated id.
+This was resolved on the add_cocktail.html page with some guidence from mentor Antonio Rodriguez by creating a counter for an id element, and then attaching that counter to a prefixed id, giving an unique number, and thus id to each input. The edit_cocktails.html errors remain.
 
 categories.html
 
@@ -206,6 +206,16 @@ script.js
 script.js - no errors found
 
 forms.js - no errors found
+
+-   [PEP8](http://pep8online.com/)
+
+The following errors occurred:
+
+<img src="cocktails/documentation/screenshots/pep8.png">
+
+These issues were addressed:
+
+<img src="cocktails/documentation/screenshots/pep8-fix.png">
 
 ## Testing Original User Stories
 
@@ -364,7 +374,13 @@ Jinja block scripts templates to insert the forms.js file to the add_cocktail.ht
 
 ## Testing Credits
 
+### Reading and Guidence
+
+- [Pep8 Guidence](https://realpython.com/python-pep8/)
+
 ### Code
+- pylint resolution [warning](https://stackoverflow.com/questions/27980121/pylint-warning-possible-unbalanced-tuple-unpacking-with-sequence)
+
 - Pagination [setup](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9).
 
 - Dynamically setting active class with Flask and jinja2 [setup](https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621).
