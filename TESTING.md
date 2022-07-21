@@ -1,44 +1,24 @@
 <h1 align="center">The Cocktail Cabinet</h1>
 
-[View the live project here.](https://ms3-final-cocktails.herokuapp.com/)
-
-
 The Full Testing documentation, following on from the README [found here](README.md)
 
-
-
 # Testing Table of Contents
-1. [Intro](#intro)
 
-4. [Validation](#validation)
-4. [Lighthouse](#lighthouse)
-2. [Data Testing](#data-schema-design)
-4. [Features Testing](#features-testing)
-
+1. [Features Testing](#features-testing)
+2. [User-Related Image Testing](#user-related-image-testing)
+3. [Validation](#validation)
 4. [Testing Original User Stories](#testing-original-user-stories)
     - [As a New User](#as-a-new-user)
     - [As a Returning User](#as-a-returning-user)
     - [As an Admin](#as-an-admin)
-4. [Testing Credits](#testing-credits)
+5. [Lighthouse](#lighthouse)
+6. [Further Testing](#further-testing)
+7. [Bug Fixes](#bug-fixes)
+8. [Known Bugs](#known-bug)
+9. [Testing Credits](#testing-credits)
     - [Reading and Guidence](#reading-and-guidence)
     - [Code](#code)
 
-
-
-### User-Related Image Testing
-- The website uses the following code to overcome errors if images are failed to load:
-```
-onerror="this.onerror=null;this.src='static/images/whiskey-sour.jpg';"
-```
-The use of Jinja attempts to overcome some possible errors for the 'cocktail_image' data. Due to the nature of how the images are given and presented, alternative measures were put in place to try and handle different outcomes (along with the form validation found when initially filling the 'cocktail_image' input on the Add Cocktail and Edit Cocktail pages). Overall, the combination looks like this:
-```
-{% if cocktail.cocktail_img %}
-    <img src="{{ cocktail.cocktail_img }}" alt="picture of user submitted cocktail" onerror="this.onerror=null;this.src='static/images/whiskey-sour.jpg';" width="100" height="250">
-{% else %}
-    <img src="{{ url_for('static', filename='static/images/whiskey-sour.jpg') }}" alt="picture of a whiskey sour cocktail" width="100"
-    height="250">
-{% endif %}
-```
 
 ## Features Testing
 
@@ -101,8 +81,22 @@ The use of Jinja attempts to overcome some possible errors for the 'cocktail_ima
 <img src="cocktails/documentation/screenshots/register-test1.png">
 <img src="cocktails/documentation/screenshots/register-test2.png">
 
+### User-Related Image Testing
+- The website uses the following code to overcome errors if images are failed to load:
+```
+onerror="this.onerror=null;this.src='static/images/whiskey-sour.jpg';"
+```
+The use of Jinja attempts to overcome some possible errors for the 'cocktail_image' data. Due to the nature of how the images are given and presented, alternative measures were put in place to try and handle different outcomes (along with the form validation found when initially filling the 'cocktail_image' input on the Add Cocktail and Edit Cocktail pages). Overall, the combination looks like this:
+```
+{% if cocktail.cocktail_img %}
+    <img src="{{ cocktail.cocktail_img }}" alt="picture of user submitted cocktail" onerror="this.onerror=null;this.src='static/images/whiskey-sour.jpg';" width="100" height="250">
+{% else %}
+    <img src="{{ url_for('static', filename='static/images/whiskey-sour.jpg') }}" alt="picture of a whiskey sour cocktail" width="100"
+    height="250">
+{% endif %}
+```
 
-## Validation Testing
+## Validation
 
 The W3C Markup Validator, W3C CSS Validator and JSHint tools were used to validate every page of the project to ensure there were no syntax errors in the project. If any were found during development, they were addressed.
 
@@ -214,6 +208,9 @@ Following are the original User Stories set out in the early design stages of th
     - The home page has a simple guide on how to interact with the website. Head to The Bar, Add a Cocktail or Share a Cocktail all provide clear instructions and links to users. Visual prompts, large text and page detail (e.g. The Bar), tooltips, labels and other design feature all provide a clear and helpful guide for all users to the website.
 * 005 - I want to to be able to contact the website developers if I wish to.
     - The Footer social links are clear and obvious from every page. A minimal styling setup and ensures that the links displayed clearly and to not overwhelm users. All contact information is found after clicking on thiese logos.
+
+<img src="cocktails/documentation/screenshots/socials.png">
+
 * 006 - I want a reason to return.
     - The ability for the user to view cocktail the entire libraby of cocktail recipes is a reason to return. The option to register and share their own is another. The very likely possibility for new recipes to be added by other users is too.
 
@@ -226,12 +223,17 @@ Following are the original User Stories set out in the early design stages of th
     - The footer links gives access to 5 social media options the user can choose to contact the developer through.
 * 010 - I want to be able to view my own cocktail recipes.
     - Once registered and logged in, the user can view all of their own recipes at the My Cabinet page. They will also be added to The Bar page along with ALL user recipes. They'll be automatically added to the Filter Cocktail Category page and will also be avaiable to view in full via the View Cocktail page.
+    - This is done by the ```all_cocktails``` function found in the routes.py file.
+    ```cocktails = list(mongo.db.cocktails.find())`` finds all the cocktails in the mongo db cocktails collection and Jinja is then used to relay that data.
 * 011 - I want to be able to add my own cocktail recipes.
     - Once registered and logged in, the user can add their own cocktail recipes at the My Cabinet page by clicking the green Add Cocktail to My Cabinet button and filling in the form.
+    - This is done by the ```add_cocktail``` function found in the routes.py file.
 * 012 - I want to be able to edit my own cocktail recipes.
     - Once registered and logged in, the user can edit all of their own recipes at the My Cabinet page, or any part of the website where cocktail recipes are displayed (The Bar, Filter Cocktail Category, View Cocktail).
+    - This is done by the ```edit_cocktail``` function found in the routes.py file.
 * 013 - I want to be able to delete my own cocktail recipes.
     - Once registered and logged in, the user can add their own cocktail recipes at the My Cabinet page by clicking the red delete button next to their specific cocktail. They are able to do this on any part of the website where cocktail recipes are displayed, and are their own (The Bar, Filter Cocktail Category, View Cocktail).
+    - This is done by the ```edit_cocktail``` function found in the routes.py file.
 * 014 - I want to to be able to access and view the website on a range of devices/browsers.
     - The quiz has been tested for ease of access and responsiveness on dozens of devices (handheld devices such as mobile phones and tablets, laptops, desktop computers and larger Samsung TVs) and is fully responsible from at least a minimum of 320px up to at least 1200px.
 
@@ -283,7 +285,7 @@ Following are the original User Stories set out in the early design stages of th
     ```
     - This Delete button triggers the ```delete_category``` function (found in the routes.py file) and pulls the current category_id found in the page url during session.
 
-## Google Chrome Lighthouse Test
+## Lighthouse
 
 Following are the Google Chrome Lighthouse results for each page.
 
@@ -342,29 +344,12 @@ register.html
 
 <img src="cocktails/documentation/screenshots/register-lh.png">
 
-### Testing Website Flow and Functionality
-
-All of the following tests were repeated multiple times to ensure a fair test. The same tests were then repeated multiple times on different browsers (Google Chrome, Mozilla Firefox, Microsoft Edge and Opera) and then finally the same tests were repeated again on multiple occasions and for different devices (mobile phones, tablets, laptops and larger screen sizes).
-
-#### - Main Menu Test
-<img src="assets/readme-images/main-menu-test.png">
-
-#### - Quiz Area Test
-<img src="assets/readme-images/quiz-area-test.png">
-<img src="assets/readme-images/quiz-area-test2.png">
-
-#### - End Screen Test
-<img src="assets/readme-images/end-screen-test.png">
-
 ### Further Testing
 
 -   Testing was predominantly made using Google Chrome's own developer tools and 'Inspect Mode', although testing was done sporadically on alternative browsers with each major addition to the website e.g new content, style updates and responsive changes via media queries.
 -   The browser console was used for error finding and print() in code development.
 -   All interactive elements of the website were tested. Button functions, clicking, hiding/showing content, user input, links and general flow of the website. Databse CRUD functionality and testing were made in real-time. Bugs were fixed as they arose.
--   The website was tested on Google Chrome, Mozilla Firefox, Microsoft Edge and Opera browsers and ran efficiently on each one. There were slight stylistic differences when testing between browsers, but these were resolved afterwards. See below for an example when testing on the Opera browser:
-<img src="assets/readme-images/opera-test.png">
-
-To resolve this, the background-colour was specified in the style.css file, instead of allowing the browsers default styling/button colours decide. This encouraged further testing and ensuring that all important style factors were specified.
+-   The website was tested on Google Chrome, Mozilla Firefox, Microsoft Edge and Opera browsers and ran efficiently on each one. There were slight stylistic differences when testing between browsers, but these were resolved afterwards.
 -   The quiz was viewed on a variety of devices such as Desktop, Laptop, iPad & iPhoneX.
 -   Feedback from friends and family, testing the quiz with no prior instruction or expectations. Adjustments were made if necessary to satisfy the [User Targets](#as-a-new-user).
 
@@ -379,7 +364,7 @@ Lighthouse tests also exposed further bugs with readability and image scaling be
 This console error was resolved by creating a new js file (forms.js) and removing the relevant script from the main.js file.
 Jinja block scripts templates to insert the forms.js file to the add_cocktail.html and edit_cocktail.html files. Console error cleared after testing and functionality still working as desired.
 
--   As seen from the style.css file, there is a lot of custom CSS. Media queries were used at different breakpoints - although time consuming, it was vital to invest time into this to ensure the website was functioning correctly on various displays to ensure a major [User Targets](#as-a-new-user) was met.
+-   As seen from the style.css file, there is a lot of custom CSS. Media queries were used at different breakpoints - although time consuming, it was vital to invest time into this to ensure the website was functioning correctly on various displays to ensure a major User Targets was met.
 
 -   Placed a background-colour behind the score for readability purposes as a Lighthouse test had brought up contrast issues between the gold text colour and the lighter background.
 
